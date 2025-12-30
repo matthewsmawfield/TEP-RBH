@@ -1,0 +1,190 @@
+<h2>1. Introduction: The RBH-1 Anomaly</h2>
+
+<p>In December 2025, JWST spectroscopy confirmed the existence of the first candidate runaway supermassive black hole. Designated RBH-1, this object has an inferred mass of approximately $10^7 M_\odot$ and a proper motion of $v_{\bullet} = 954^{+110}_{-126}$ km/s, leaving behind a 62 kpc linear feature of active star formation. The discovery is consistent with theoretical predictions that supermassive black holes can be ejected from their host galaxies via gravitational wave recoil following a black hole merger (van Dokkum et al. 2025; Campanelli et al. 2007).</p>
+
+<p>At $z \approx 0.96$, RBH-1 appears as a luminous streak extending from the galaxy RCP 28 in the constellation Sextans. A bow-shaped interaction region marks its leading edge, while the wake exhibits active star formation along its entire extent.</p>
+
+<figure style="margin: 30px 0;">
+    <img src="figures/figure_01_observation.png" alt="RBH-1 Observation" style="width: 100%; height: auto; border-radius: 4px;">
+    <figcaption style="margin-top: 10px; font-size: 13px; color: #495773; font-style: italic; line-height: 1.4;">
+        Figure 1: RBH-1 Observation. The linear wake extending from the host galaxy (RCP 28), with the bow-shock candidate at the tip. (Image adapted from van Dokkum et al. 2023).
+    </figcaption>
+</figure>
+
+<h2>The Observational Puzzle</h2>
+
+<p>
+    While the confirmation of RBH-1 as a runaway black hole is itself remarkable, the object presents a deeper observational anomaly. It appears as a linear streak of light extending 62 kpc ($\sim$200,000 light-years) from a distant galaxy ($z\approx 0.96$). At its tip lies a bright, bow-shaped interaction region where JWST spectroscopy reveals a sharp kinematic discontinuity: a line-of-sight velocity change of order $\sim 600$–$650$ km/s across $\sim$1 kpc (van Dokkum et al. 2023; van Dokkum et al. 2025).
+</p>
+
+<p>
+    In a purely hydrodynamic picture, a compact perturber moving at $v \sim 10^3$ km/s through circumgalactic gas would be expected to drive a strong bow shock and turbulent wake, producing post-shock temperatures of order $10^7$ K and associated hot-phase emission. RBH-1 instead exhibits a narrow, structurally coherent wake whose line diagnostics are consistent with gas cool enough to support ongoing star formation. This creates a fundamental quantitative tension.
+</p>
+
+<div>
+    <h2>Empirical constraints (primary measurements)</h2>
+    
+    <h3>Table 1: Fiducial Parameters and Assumptions</h3>
+    <table class="data-table" style="margin: 20px 0;">
+    <thead>
+    <tr>
+        <th>Parameter</th>
+        <th>Value</th>
+        <th>Source</th>
+        <th>Role in Analysis</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>RBH-1 Mass ($M_{\bullet}$)</td>
+        <td>$\sim 2 \times 10^7 M_{\odot}$</td>
+        <td>van Dokkum et al. (2025)</td>
+        <td>Sets soliton radius scale</td>
+    </tr>
+    <tr>
+        <td>Wake Velocity ($v_{\text{wake}}$)</td>
+        <td>$954^{+110}_{-126}$ km/s</td>
+        <td>van Dokkum et al. (2025)</td>
+        <td>Defines shock Mach number</td>
+    </tr>
+    <tr>
+        <td>Velocity Jump ($\Delta v_{\text{obs}}$)</td>
+        <td>$\sim 600$ km/s</td>
+        <td>JWST NIRSpec</td>
+        <td>Primary observable to explain</td>
+    </tr>
+    <tr>
+        <td>Wake Radius ($R_{\text{wake}}$)</td>
+        <td>$\sim 0.7$ kpc</td>
+        <td>HST WFC3/UVIS</td>
+        <td>Constrains dynamical time</td>
+    </tr>
+    <tr>
+        <td>Ambient Density ($n_{\text{CGM}}$)</td>
+        <td>$10^{-3} \text{ cm}^{-3}$</td>
+        <td>Standard CGM Model</td>
+        <td>Controls cooling efficiency</td>
+    </tr>
+    <tr>
+        <td>Saturation Density ($\rho_c$)</td>
+        <td>$20 \text{ g/cm}^3$</td>
+        <td>Paper 7 (TEP-UCD)</td>
+        <td>External Input (Fixed)</td>
+    </tr>
+    <tr>
+        <td>Critical Threshold ($t_{\text{cool}}/t_{\text{dyn}}$)</td>
+        <td>$> 1$ (Inefficient)</td>
+        <td>Radiative Physics</td>
+        <td>Criterion for "cold" wake</td>
+    </tr>
+    </tbody>
+    </table>
+    <p><em>Note: All calculations assume solar metallicity and standard optically thin cooling functions unless otherwise noted.</em></p>
+
+    <ul>
+    <li>Redshift and extent: $z\approx 0.96$, wake length 62 kpc (van Dokkum et al. 2023; van Dokkum et al. 2025).</li>
+<li>JWST kinematics at apex: $\Delta v_{\mathrm{LOS}}\sim 650$ km/s across $\sim$1 kpc ($\sim$0.10") at the tip (van Dokkum et al. 2025).</li>
+<li>Best-fit perturber motion: $v_{\bullet}=954^{+110}_{-126}$ km/s, inclination $i=29^{+6}_{-3}\,\mathrm{deg}$ (van Dokkum et al. 2025).</li>
+</ul>
+</div>
+
+<p>
+    Taken together, the kinematics and thermodynamic diagnostics suggest a large perturbation with limited thermalization. The following sections frame this tension through two related problems: the Temperature Paradox and the Geometry Problem.
+</p>
+
+<h2>The Cooling Bottleneck</h2>
+<p>
+    A bow shock at $v_s \sim 10^3$ km/s corresponds to Mach numbers $\mathcal{M} \gg 1$ in typical circumgalactic conditions. Standard Rankine–Hugoniot jump conditions mandate substantial conversion of bulk kinetic energy into thermal energy. For $v_s \approx 1000$ km/s, the characteristic post-shock temperature is:
+</p>
+<div>
+    $$ T_s \approx \frac{3}{16k_B} \mu m_p v_s^2 \approx 1.4 \times 10^7 \text{ K} $$
+</div>
+<p>
+    At this temperature, thermal pressure strongly suppresses gravitational collapse. Since the Jeans mass scales as $M_J \propto T^{3/2}$, raising the temperature from $100$ K to $10^7$ K increases the characteristic collapse mass scale by a factor of $10^{7.5}$ ($\sim 3\times 10^7$), making in-situ star formation in recently shocked gas difficult without highly efficient cooling.
+</p>
+
+<h3>The Cooling Bottleneck ($t_{\mathrm{cool}} \gg t_{\mathrm{dyn}}$)</h3>
+<p>
+    The standard resolution invokes rapid radiative cooling, potentially aided by turbulent mixing or thermal instabilities (e.g., Gronke &amp; Oh 2018). However, the viability of this mechanism is quantitatively constrained by the cooling physics. The following calculation demonstrates that under fiducial CGM conditions and standard optically thin cooling, the thermal model faces a fundamental timescale crisis.
+</p>
+
+<h4>Bremsstrahlung Cooling Time</h4>
+<p>
+    The thermal energy density of a fully ionized plasma is $E = (3/2) n k_B T$, and the radiative cooling rate per volume is $\dot{E} = n^2 \Lambda(T)$, where $\Lambda(T)$ is the cooling function. At $T \sim 10^7$ K, cooling is dominated by free-free (Bremsstrahlung) emission with contributions from metal-line cooling, yielding $\Lambda(T) \approx 2.5 \times 10^{-23}$ erg cm$^3$ s$^{-1}$ for solar metallicity (Sutherland &amp; Dopita 1993). The cooling time is:
+</p>
+<div>
+    $$ t_{\mathrm{cool}} = \frac{E}{\dot{E}} = \frac{3 k_B T}{2 n \Lambda(T)} $$
+</div>
+<p>
+    Substituting the post-shock temperature $T = 1.4 \times 10^7$ K and a post-shock density $n = 0.1$ cm$^{-3}$ (this high value is adopted as a conservative upper bound for a compressed/clumpy phase, distinct from the ambient CGM mean $n_{\rm CGM} \sim 10^{-3}$ cm$^{-3}$; note that since $t_{\rm cool} \propto 1/n$, lower densities would yield even longer cooling times):
+</p>
+<div>
+    $$ t_{\mathrm{cool}} = \frac{3 \times (1.38 \times 10^{-16}\,\mathrm{erg\,K^{-1}}) \times (1.4 \times 10^7\,\mathrm{K})}{2 \times (0.1\,\mathrm{cm^{-3}}) \times (2.5 \times 10^{-23}\,\mathrm{erg\,cm^3\,s^{-1}})} \approx 36\,\mathrm{Myr} $$
+</div>
+
+<h4>Dynamical Timescale</h4>
+<p>
+    The relevant comparison timescale is the sound-crossing time of the wake. The post-shock sound speed for a fully ionized plasma ($\gamma = 5/3$, mean molecular weight $\mu = 0.6$) at $T = 1.4 \times 10^7$ K is:
+</p>
+<div>
+    $$ c_s = \sqrt{\frac{\gamma k_B T}{\mu m_p}} \approx 560\,\mathrm{km\,s^{-1}} $$
+</div>
+<p>
+    For the observed wake radius $w \approx 0.7$ kpc (van Dokkum et al. 2025), the dynamical timescale is:
+</p>
+<div>
+    $$ t_{\mathrm{dyn}} = \frac{w}{c_s} \approx 1.2\,\mathrm{Myr} $$
+</div>
+
+<h4>The Critical Inequality</h4>
+<p>
+    Comparing these timescales yields the fundamental constraint:
+</p>
+<div>
+    $$ \frac{t_{\mathrm{cool}}}{t_{\mathrm{dyn}}} = \frac{36\,\mathrm{Myr}}{1.2\,\mathrm{Myr}} \approx 30 $$
+</div>
+<div class="result-box">
+    $$ t_{\mathrm{cool}} \gg t_{\mathrm{dyn}} \quad (\text{by a factor of } \sim 30) $$
+</div>
+    <p>
+        This inequality is robust across the plausible parameter space. Sensitivity analysis shows that only at densities $n \gtrsim 1$ cm$^{-3}$ (an order of magnitude higher than typical circumgalactic values) does the ratio approach unity. While dust-gas collisional cooling can shorten timescales in some environments, high-velocity shocks ($v \sim 1000$ km/s) efficiently destroy dust grains via sputtering (Draine &amp; Salpeter 1979), reducing the efficacy of this pathway in the immediate post-shock region. For fiducial parameters, shock-heated gas at $10^7$ K would expand and rarefy long before radiating sufficient energy to reach star-forming temperatures ($T \lesssim 10^4$ K).
+    </p>
+
+    <figure style="margin: 30px 0;">
+        <img src="figures/figure_02_sensitivity.png" alt="Cooling Sensitivity Analysis" style="width: 100%; height: auto; border-radius: 4px;">
+        <figcaption style="margin-top: 10px; font-size: 13px; color: #495773; font-style: italic; line-height: 1.4;">
+            Figure 2: Cooling Sensitivity Analysis. The ratio of cooling time to dynamical time ($t_{\text{cool}}/t_{\text{dyn}}$) as a function of gas density. For standard CGM densities ($n \sim 10^{-3}$ cm$^{-3}$), the ratio is $\gg 1$, indicating a cooling bottleneck.
+        </figcaption>
+    </figure>
+
+<h4>The Observational Verdict</h4>
+<p>
+    Yet the RBH-1 wake exhibits active star formation immediately behind the apex. The observed stellar continuum colors are "well-fit by a simple model that has a monotonically increasing age with distance from the tip" (van Dokkum et al. 2023)—the youngest stars are at the tip, not 35 kpc behind it where the cooling delay would place them. This creates a fundamental tension:
+</p>
+<ul>
+    <li>If the gas was heated to $10^7$ K, it cannot cool fast enough to form stars ($t_{\rm cool}/t_{\rm dyn} \approx 30$).</li>
+    <li>If the gas was never heated, the observed $\sim 650$ km/s velocity discontinuity cannot arise from a collisional shock.</li>
+</ul>
+<p>
+    Standard hydrodynamic resolutions require invoking multiple mechanisms simultaneously: magnetic draping to suppress turbulence (explaining the 50:1 aspect ratio), turbulent mixing to bypass the cooling bottleneck (explaining the cold wake), and non-equilibrium ionization to reconcile line ratios (explaining anomalous preshock temperatures). Critically, these mechanisms are dynamically antagonistic—magnetic draping creates the laminar sheath that suppresses the turbulent mixing required to solve the cooling problem.
+</p>
+<p>
+    This motivates considering a non-thermal driver. It is proposed that the observed velocity discontinuity ($\sim 650$ km/s) may reflect a coherent redshift gradient—a metric shock—in which the velocity jump is an apparent effect of differential proper time rather than bulk thermalization.
+</p>
+
+<h2>The Geometry Problem</h2>
+<p>
+    The wake's geometry is also nontrivial. Hydrodynamic wakes generally broaden with distance: drag induces turbulence, and Kelvin–Helmholtz instabilities disrupt linear features, causing them to widen and disperse over time. Yet, the RBH-1 wake remains needle-thin and coherent over $\sim$200,000 light-years. It does not broaden as a typical turbulent wake; it remains exceptionally collimated.
+</p>
+
+<p>
+    This linearity has motivated alternative interpretations, including the possibility that the feature is a thin, edge-on galaxy (Sanchez Almeida et al. 2023). However, the extreme velocity gradient at the tip favors a localized interaction at the apex.
+</p>
+
+<h2>Implications</h2>
+
+<p>
+    The coexistence of a large kinematic discontinuity and weak thermalization creates a cooling bottleneck ($t_{\mathrm{cool}} \gg t_{\mathrm{dyn}}$) that places simple single-phase hydrodynamic bow-shock interpretations under quantitative tension.
+    
+    Section 2 establishes the theoretical framework for a gravitational soliton. Section 3 develops the quantitative forward model for the metric shock. Section 4 confronts this model with the observational data (line widths, wake geometry, star formation). Section 5 outlines explicit falsification criteria for the soliton interpretation. Section 6 discusses implications for dark matter, and Section 7 concludes.
+</p>

@@ -1,0 +1,65 @@
+{
+  "title": "The Soliton Wake: Identifying the Runaway Object RBH-1 as a Gravitational Soliton",
+  "sections": [
+    {
+      "id": "section-abstract",
+      "title": "Abstract",
+      "file": "1_abstract.html",
+      "order": 1
+    },
+    {
+      "id": "section-intro",
+      "title": "1. Introduction: The RBH-1 Anomaly",
+      "file": "2_introduction.html",
+      "order": 2
+    },
+    {
+      "id": "section-theory",
+      "title": "2. Theoretical Framework: Gravitational Soliton Phenomenology",
+      "file": "3_theoretical_framework.html",
+      "order": 3
+    },
+    {
+      "id": "section-forward-model",
+      "title": "3. Forward Model: Metric Shock Parameters",
+      "file": "4_forward_model.html",
+      "order": 4
+    },
+    {
+      "id": "section-observational-analysis",
+      "title": "4. Observational Analysis: Confrontation with Data",
+      "file": "5_observational_analysis.html",
+      "order": 5
+    },
+    {
+      "id": "section-falsification",
+      "title": "5. Falsification Criteria",
+      "file": "6_falsification.html",
+      "order": 6
+    },
+    {
+      "id": "section-discussion",
+      "title": "6. Discussion",
+      "file": "7_discussion.html",
+      "order": 7
+    },
+    {
+      "id": "section-conclusion",
+      "title": "7. Conclusion",
+      "file": "8_conclusion.html",
+      "order": 8
+    },
+    {
+      "id": "section-references",
+      "title": "8. References",
+      "file": "10_references.html",
+      "order": 9
+    },
+    {
+      "id": "appendix-future",
+      "title": "Appendix A: Future Directions",
+      "file": "11_appendix_a_future.html",
+      "order": 10
+    }
+  ]
+}

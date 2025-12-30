@@ -1,0 +1,112 @@
+/* Simple academic manuscript styling */
+
+section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  border-bottom: 2px solid #6B2D73;
+  padding-bottom: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #2D0140;
+}
+
+h3 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #6B2D73;
+  padding-bottom: 5px;
+  color: #2D0140;
+}
+
+h4 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+ul, ol {
+  line-height: 1.8;
+  margin: 10px 0 20px 20px;
+}
+
+table, table.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table th, table td,
+table.data-table th, table.data-table td {
+  padding: 8px 12px;
+  border: 1px solid #6B2D73;
+  text-align: left;
+}
+
+table th, table.data-table th {
+  background-color: rgba(75, 18, 89, 0.08);
+  font-weight: 600;
+  color: #2D0140;
+}
+
+table tr:nth-child(even),
+table.data-table tr:nth-child(even) {
+  background-color: rgba(75, 18, 89, 0.03);
+}
+
+.table-caption {
+  font-size: 0.9em;
+  color: #5C4B6B;
+  font-style: italic;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+.note, .caveat, .finding {
+  border-left: 3px solid #6B2D73;
+  padding-left: 20px;
+  margin: 20px 0;
+  font-style: italic;
+}
+
+blockquote {
+  border-left: 3px solid #6B2D73;
+  padding-left: 20px;
+  margin: 20px 0;
+  font-style: italic;
+}
+
+code {
+  background: rgba(75, 18, 89, 0.06);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+/* Citation styling - clean superscript numbers */
+sup.cite {
+  font-size: 0.7em;
+  color: #4A1259;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 1px;
+}
+
+sup.cite:hover {
+  text-decoration: underline;
+  color: #A64D79;
+}
+
+/* Reference list styling */
+.ref-item {
+  margin-bottom: 12px;
+  padding-left: 2em;
+  text-indent: -2em;
+}

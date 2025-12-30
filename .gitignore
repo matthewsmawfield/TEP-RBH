@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env / secrets
+.env*
+.env.local
+*.pem
+*.key
+credentials.json
+*secret*.json
+
+# Large binaries and archives
+*.tar
+*.tar.gz
+*.npz
+*.zip
+*.7z
+
+# Build artifacts
+site/node_modules/
+site/dist/
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
+
+tmp/
+
+# Data & Large Results
+# data/  # Uncommented - SPARC data is small and needed for reproducibility
+# results/
+# logs/
+
+# Ignore massive data files
+results/**/*.fits
+results/**/*.hdf5
+
+# Allow keeping the directory structure (optional)
+# !data/.gitkeep
+# !results/.gitkeep
+# !logs/.gitkeep
+
+# Private research notes (should never be committed)
+research
+.windsurf
+# IDE files
+*.code-workspace
+data/
