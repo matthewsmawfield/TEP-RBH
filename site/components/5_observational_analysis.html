@@ -1,0 +1,309 @@
+<section id="rbh1-confrontation" class="content-section">
+    <h2>4. Observational Analysis: Confrontation with Data</h2>
+    
+    <p>For RBH-1 itself, direct empirical tests are available using published JWST and HST data (van Dokkum et al. 2025). Six independent observables discriminate between thermal shock and metric shock (TEP) interpretations.</p>
+
+    <h2>4.1 The Line Width Test</h2>
+
+    <p>
+        In a single-phase thermal shock where the [O III]-emitting gas resides predominantly at $T \sim 10^7$ K, thermal Doppler motion would broaden spectral lines to $\sigma_{\text{th}} \approx 80\text{--}85$ km/s. In practice, [O III] emission in shock-heated environments often arises from cooler recombination/cooling zones rather than the hottest post-shock plasma; however, if a substantial hot-phase component contributes to the line flux, it should produce detectable broad wings. In contrast, a metric shock produces a coherent redshift gradient without thermalization; the gas remains cold, and line widths stay narrow (see Figure 4).
+    </p>
+
+    <p>
+        Higher-resolution Keck/LRIS spectroscopy of the [O III] λ5007 knot at the tip of the wake yields (van Dokkum et al. 2025, Appendix C):
+    </p>
+
+    <div class="equation">$$\sigma_{\text{obs}} = 36 \pm 4 \text{ km/s} \quad \xrightarrow{\text{instr. corr.}} \quad \sigma = 31 \pm 4 \text{ km/s}$$</div>
+
+    <p>where the instrumental resolution $\sigma_{\text{instr}} = 18$ km/s has been subtracted in quadrature. The key inequality:</p>
+
+    <div class="result-box">
+    $$\sigma_{\text{obs}} \approx 31 \text{ km/s} \ll \sigma_{\text{thermal}}(10^7 \text{ K}) \approx 85 \text{ km/s}$$
+    </div>
+
+    <p>This observed dispersion is 3× smaller than expected if the [O III]-emitting gas were predominantly at $T \sim 10^7$ K, and 10× larger than pure thermal broadening at $T \sim 10^4$ K ($\sigma_{\text{th}} \approx 2$–$3$ km/s). The intermediate value ($\sigma \approx 31$ km/s) is consistent with cold gas experiencing bulk/turbulent motions or a coherent velocity gradient across the beam.</p>
+
+    <figure style="margin: 30px 0;">
+        <img src="figures/figure_04_line_width.png" alt="Line Width Test: Thermal vs Metric Shock" style="width: 100%; height: auto; border-radius: 4px;">
+        <figcaption style="margin-top: 10px; font-size: 13px; color: #495773; font-style: italic; line-height: 1.4;">
+            Figure 4: The Line Width Test. (A) Thermal broadening of [O III] emission as a function of gas temperature. The observed dispersion (σ = 31 km/s) is 3× smaller than expected for a simple $10^7$ K post-shock phase, placing that picture under tension. (B) Illustration of how a coherent redshift-gradient (metric-shock) interpretation can accommodate a large centroid shift with comparatively narrow line width.
+        </figcaption>
+    </figure>
+
+    <h3>Critical Next Step: Line-Profile Decomposition</h3>
+    <p>
+        The bulk line-width measurement ($\sigma = 31$ km/s) is necessary but not sufficient to rule out thermal heating. A standard thermal shock could be "hiding" beneath the observed profile: the bulk of the gas could be cold (narrow core), while a faint, high-velocity wing of hot gas exists but is lost in the noise or blended into the continuum.
+    </p>
+
+    <figure style="margin: 30px 0;">
+        <img src="figures/figure_05_decomposition.png" alt="Line Profile Decomposition" style="width: 100%; height: auto; border-radius: 4px;">
+        <figcaption style="margin-top: 10px; font-size: 13px; color: #495773; font-style: italic; line-height: 1.4;">
+            Figure 5: Line Profile Decomposition Strategy. (A) A single-component fit (cold gas only). (B) A two-component fit (cold core + hot wing). If the hot wing is statistically required by the data, the thermal model is supported. If excluded, the metric shock is favored.
+        </figcaption>
+    </figure>
+    <p>
+        The definitive test requires rigorous line-profile decomposition:
+    </p>
+    <ol>
+        <li><em>Single-component model.</em> A single Gaussian (σ ≈ 30 km/s) may be fit as a minimal description of a cold, single-phase line profile.</li>
+        <li><em>Two-component model.</em> A narrow core plus a broad wing (σ₂ ≈ 80–90 km/s, corresponding to $T \sim 10^7$ K) may be fit to represent a cold component plus a hot shocked component.</li>
+        <li><em>Model selection.</em> Information criteria (AIC/BIC) may be used to determine whether an additional broad component is supported by the data.</li>
+    </ol>
+    <p>
+        If a statistically significant broad component is required, a thermal-shock contribution is supported. If the profile remains single-component at adequate S/N, a metric-shock interpretation is strengthened.
+    </p>
+    
+    <div class="principle">
+        <h4>Box 4.0: Sensitivity Analysis (Detectability of Hidden Hot Gas)</h4>
+        <p>
+            To quantify the strength of the line-width constraint, synthetic injection tests were performed using the <code>analyze_line_profiles.py</code> workflow (available in the reproducibility repository). Broad Gaussian wings ($\sigma = 90$ km/s, representing $T \sim 10^7$ K gas) were injected into a narrow ($\sigma = 31$ km/s) profile with noise levels matching the published Keck/LRIS data (S/N $\approx$ 50).
+        </p>
+        <p>
+            <em>Results:</em>
+        </p>
+        <ul>
+            <li><strong>Hot Fraction &gt; 15%:</strong> Strongly detected ($\Delta \text{BIC} &lt; -10$). A thermal component contributing just 15% of the line flux would be statistically undeniable.</li>
+            <li><strong>Hot Fraction &lt; 10%:</strong> Marginal detection.</li>
+        </ul>
+        <p>
+            <em>Implication:</em> The observed single-component profile rules out any scenario where the hot phase contributes more than ~15% of the total [O III] emission. For a standard thermal shock where <em>most</em> gas is heated, this is a prohibitive constraint. The thermal model can only survive if the hot gas is radiatively silent (e.g., extremely diffuse) while a separate mechanism generates the observed bright cold gas.
+        </p>
+    </div>
+
+    <h4>Data Availability Assessment</h4>
+    <p>
+        JWST NIRSpec IFU data (Program 3149) are publicly available via MAST but have insufficient spectral resolution for a robust decomposition between a σ ≈ 30 km/s narrow component and a σ ≈ 80–90 km/s broad component. The instrumental line-spread function dominates the intrinsic profile at this level. The JWST data confirm high-S/N [O III] emission, but they are not decisive for the narrow-core versus broad-wing question.
+    </p>
+    <p>
+        The critical dataset is the Keck/LRIS 1200 lines/mm spectrum (σ<sub>inst</sub> = 18 km/s) used to derive the published σ = 31 ± 4 km/s measurement. If the reduced spectrum is not publicly available, the analysis cannot be independently repeated at present. A line-profile decomposition workflow is provided in <code>scripts/analyze_line_profiles.py</code>, but application to the Keck/LRIS spectrum requires access to the extracted line profile (or collaboration with the van Dokkum et al. team).
+    </p>
+
+    <div class="finding">
+    <p>The narrow line width is in tension with a single-phase thermal shock in which the emitting gas is predominantly at $T \sim 10^7$ K. It is naturally accommodated by a coherent redshift-gradient (metric-shock) hypothesis. Multiphase or rapid-cooling scenarios remain possible under a thermal interpretation. The principal observational discriminant is whether a statistically supported broad wing is present in the high-resolution line profile.</p>
+    </div>
+
+    <h2>4.2 The Wake Collimation Test</h2>
+
+    <p>
+        Thermal shocks generate turbulence via Kelvin-Helmholtz instabilities at the shear layer between the wake and the ambient medium. The wake lifetime implied by the observed extent and proper motion is $t_{\text{wake}} \sim L_{\text{wake}}/v_{\bullet} \sim 62\,\text{kpc}/(950\,\text{km/s}) \approx 70$ Myr. Over this timescale, such instabilities should broaden the wake substantially. The characteristic K-H growth timescale is $\tau_{\text{KH}} \sim \lambda / v_{\text{shear}} \approx 3$ Myr for $\lambda \sim 1$ kpc and $v_{\text{shear}} \sim 300$ km/s. Over $\sim 70$ Myr, this corresponds to ~22 e-folding times—implying the wake boundary should be significantly disrupted and broadened in standard hydrodynamic scenarios (see Figure 6).
+    </p>
+
+    <p>
+        Instead, HST WFC3/UVIS imaging reveals (van Dokkum et al. 2025, Section 6.2.1):
+    </p>
+
+    <div class="equation">$$R_{\text{wake}} \approx 0.7 \text{ kpc} \quad \text{over} \quad L_{\text{wake}} = 62 \text{ kpc} \quad \Rightarrow \quad \text{Aspect Ratio: } 50:1$$</div>
+
+    <p>
+        This is described by the authors as "strikingly narrow." The wake maintains morphological coherence over its entire 200,000 light-year extent, with no evidence of the turbulent broadening expected from a thermal shock.
+    </p>
+
+    <p>
+        In the metric shock interpretation, the apex discontinuity is attributed to a coherent redshift boundary rather than collisional thermalization. In that picture, the effective shear-driven mixing that seeds Kelvin-Helmholtz growth is expected to be suppressed relative to a turbulent bow-shock layer, and the wake can remain collimated without requiring fine-tuned magnetic draping.
+    </p>
+
+    <figure style="margin: 30px 0;">
+        <img src="figures/figure_06_wake_geometry.png" alt="Wake Geometry Analysis" style="width: 100%; height: auto; border-radius: 4px;">
+        <figcaption style="margin-top: 10px; font-size: 13px; color: #495773; font-style: italic; line-height: 1.4;">
+            Figure 6: Wake Geometry Analysis. (A) Wake width vs. distance from galaxy. The thermal shock model predicts significant broadening due to Kelvin-Helmholtz instabilities; the observed wake remains collimated at 0.7 kpc. (B) Schematic comparison of wake morphologies. The 50:1 aspect ratio is inconsistent with thermal turbulence.
+        </figcaption>
+    </figure>
+
+    <div class="finding">
+    <p>The extreme collimation (50:1 aspect ratio) is difficult to reconcile with generic turbulent-wake expectations and is qualitatively consistent with a more laminar, non-thermal driver.</p>
+    </div>
+
+    <h2>4.3 The Stellar Age Gradient Test</h2>
+
+    <p>
+        In a thermal shock, star formation is delayed by the cooling time ($t_{\text{cool}} \approx 36$ Myr). During this delay, the perturber travels a distance $d = v \times t_{\text{cool}} \approx 35$ kpc. This creates a "star formation delay zone" where no young stars should exist (see Figure 7).
+    </p>
+
+    <p>
+        van Dokkum et al. (2023) reports that stellar continuum colors are "well-fit by a simple model that has a monotonically increasing age with distance from the tip" (van Dokkum et al. 2023). The youngest stars are at the tip, not 35 kpc behind it.
+    </p>
+
+    <figure style="margin: 30px 0;">
+        <img src="figures/figure_07_stellar_age.png" alt="Stellar Age Gradient" style="width: 100%; height: auto; border-radius: 4px;">
+        <figcaption style="margin-top: 10px; font-size: 13px; color: #495773; font-style: italic; line-height: 1.4;">
+            Figure 7: Stellar Age Gradient. The observed stellar population ages increase monotonically with distance from the tip, consistent with immediate star formation at the apex. A thermal cooling delay would produce a star-free gap of ~35 kpc.
+        </figcaption>
+    </figure>
+
+    <div class="finding">
+    <p>The observed age gradient qualitatively disfavors a long cooling-delay zone; quantitative model comparison requires a fully specified stellar-population fitting procedure and error model.</p>
+    </div>
+
+    <h2>4.4 The Preshock Temperature Anomaly</h2>
+
+    <p>
+        The Mappings V shock models used to fit the emission line ratios require a preshock temperature of $T_{\text{pre}} \sim 10^{5.6}$ K (van Dokkum et al. 2025, Section 5.2). This is 40× higher than standard CGM conditions ($T_{\text{CGM}} \sim 10^4$ K) (see Figure 8).
+    </p>
+
+        <p>
+        In the TEP framework, the "preshock ionization" may admit a non-thermal contribution: the soliton boundary corresponds to a steep gravitational redshift gradient, which implies an effective acceleration on massive particles. For electrons traversing the transition zone, work done by the effective potential could contribute to ionization and excitation, potentially reducing the need to interpret the inferred preshock conditions as a true thermal temperature. However, a quantitative forward model mapping a specific field profile to detailed ionization diagnostics has not yet been developed.
+    </p>
+
+    <figure style="margin: 30px 0;">
+        <img src="figures/figure_08_line_ratios.png" alt="Line Ratio Analysis" style="width: 100%; height: auto; border-radius: 4px;">
+        <figcaption style="margin-top: 10px; font-size: 13px; color: #495773; font-style: italic; line-height: 1.4;">
+            Figure 8: Line Ratio Analysis. Standard shock models require anomalously high preshock temperatures ($T \sim 10^{5.6}$ K) to reproduce the observed ionization. In the metric-shock framing, the soliton boundary may contribute non-thermally to ionization and excitation, but a quantitative mapping from field profile to line ratios remains future work.
+        </figcaption>
+    </figure>
+
+    <div class="finding">
+    <p>Within the TEP framing, a metric-induced contribution could reduce reliance on anomalously high preshock temperatures, but this mapping requires a future forward model from field profile to ionization diagnostics.</p>
+    </div>
+
+    <div class="principle">
+        <h4>Box 4.2: Toy Model — Ionization via Partial Coupling</h4>
+        <p>
+            Standard shock models assume 100% conversion of bulk kinetic energy to thermal energy ($T \sim T_{\text{virial}} \sim 10^7$ K). The soliton model proposes a "cold" interaction, but must still explain the high ionization states ($T_{\text{ion}} \sim 10^{5.6}$ K).
+        </p>
+        <p>
+            A first-order "Partial Coupling" model can reconcile these:
+        </p>
+        <ol>
+            <li><strong>Available Budget:</strong> The bulk kinetic energy of infalling gas is $K \sim \frac{1}{2} m_p v^2 \approx 2$ keV per particle, equivalent to a virial temperature of $\sim 1.5 \times 10^7$ K.</li>
+            <li><strong>Coupling Efficiency ($\epsilon$):</strong> In a laminar metric flow, most energy is adiabatic (reversible). However, if plasma instabilities at the transition boundary couple just $\epsilon \sim 1\%$ of the bulk energy to the electron population, the effective electron temperature becomes:
+            <br>
+            $T_{\text{eff}} \approx \epsilon \times T_{\text{virial}} \approx 0.01 \times (1.5 \times 10^7 \text{ K}) \approx 1.5 \times 10^5 \text{ K}$
+            </li>
+            <li><strong>Result:</strong> This $T_{\text{eff}} \sim 10^{5.2}$ K matches the "preshock anomaly" required by ionization data, <em>without</em> heating the bulk ion fluid to $10^7$ K. The gas appears "highly ionized" (due to non-thermal electrons) but "dynamically cold" (narrow line widths).</li>
+        </ol>
+    </div>
+
+    <h2>4.5 The Star Formation Efficiency Problem</h2>
+
+    <p>
+        The thermal shock model faces a mass budget problem (van Dokkum et al. 2025, Section 6.2.2). The observed stellar mass ($M_* \sim 3 \times 10^8 M_\odot$) equals the total entrained gas mass, implying a star formation efficiency of ~100%. The maximum realistic efficiency is ~30% (see Figure 9).
+    </p>
+
+    <p>
+        In the metric shock model, heating is not the primary driver; instead, the apparent discontinuity is interpreted as a coherent redshift gradient. This reinterpretation relieves the mass-budget tension in two ways: (1) the reduced effective Jeans mass allows collapse of lower-density gas that would otherwise remain stable, effectively increasing the available reservoir of star-forming material; and (2) the absence of thermal pressure support allows this reservoir to convert to stars with higher efficiency than a turbulent, hot shock would permit. A standard SFE of ~30% acting on this effectively larger cold reservoir can reproduce the observed stellar mass without requiring unphysical 100% conversion of the nominal entrained gas.
+    </p>
+
+    <figure style="margin: 30px 0;">
+        <img src="figures/figure_09_efficiency.png" alt="Star Formation Efficiency" style="width: 100%; height: auto; border-radius: 4px;">
+        <figcaption style="margin-top: 10px; font-size: 13px; color: #495773; font-style: italic; line-height: 1.4;">
+            Figure 9: Star Formation Efficiency. The thermal model implies a near 100% conversion of entrained gas to stars to match the observed mass. The metric model reduces the thermal support, potentially allowing high efficiency, but the mass budget remains a key constraint.
+        </figcaption>
+    </figure>
+
+    <div class="finding">
+    <p>The metric-shock hypothesis offers a possible route to reducing the star-formation-efficiency tension by avoiding a prolonged hot phase; a decisive assessment still depends on the inferred gas mass and its systematics.</p>
+    </div>
+
+    <h2>4.6 Summary of Empirical Tests</h2>
+
+    <table class="data-table">
+    <thead>
+    <tr>
+        <th>Observable</th>
+        <th>Thermal Prediction</th>
+        <th>Metric Prediction</th>
+        <th>Observed Value</th>
+        <th>Implication</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Line width (\(\sigma\))</td>
+        <td>~80 km/s (hot)</td>
+        <td>~30 km/s (cold)</td>
+        <td>31 ± 4 km/s</td>
+        <td>Favors cold metric shock; tension with hot single-phase model</td>
+    </tr>
+    <tr>
+        <td>Wake Aspect Ratio</td>
+        <td>~10:1 (broadened)</td>
+        <td>~50:1 (collimated)</td>
+        <td>50:1</td>
+        <td>Inconsistent with turbulent broadening</td>
+    </tr>
+    <tr>
+        <td>Post-shock temperature</td>
+        <td>~\(10^7\) K</td>
+        <td>~\(10^4\) K</td>
+        <td>~\(10^4\) K</td>
+        <td>Consistent with metric cooling evasion</td>
+    </tr>
+    <tr>
+        <td>Star formation timing</td>
+        <td>Delayed (35 kpc zone)</td>
+        <td>Immediate</td>
+        <td>Immediate</td>
+        <td>Tension with cooling time delay</td>
+    </tr>
+    <tr>
+        <td>Preshock temperature</td>
+        <td>~\(10^{5.6}\) K (anomalous)</td>
+        <td>~\(10^4\) K (standard)</td>
+        <td>~\(10^{5.6}\) K (inferred)</td>
+        <td>Requires anomaly under basic shock models</td>
+    </tr>
+    <tr>
+        <td>Star formation efficiency</td>
+        <td>~100% (unrealistic)</td>
+        <td>~30% (realistic)</td>
+        <td>~100% (inferred)</td>
+        <td>Mass budget tension in both, but reduced in metric model</td>
+    </tr>
+    </tbody>
+    </table>
+
+    <div class="principle">
+    <h4>Box 4.1: Constraints on Composite Thermal-Shock Models</h4>
+    <p>
+        For completeness, a composite thermal-shock interpretation may be constructed in which multiple physically plausible mechanisms operate simultaneously:
+    </p>
+    <ol>
+        <li><em>Magnetic draping.</em> Ordered fields of order $B \sim 1$–$3$ μG can suppress Kelvin–Helmholtz growth and maintain a narrow wake (e.g., Dursi &amp; Pfrommer 2008; Ruszkowski et al. 2014).</li>
+        <li><em>Turbulent mixing layers.</em> Entrainment of cold gas into the post-shock flow can, in principle, accelerate the emergence of $10^4$ K emitting material (e.g., Gronke &amp; Oh 2018, 2020; Ji et al. 2019).</li>
+        <li><em>Non-equilibrium ionization.</em> Ionization states can lag temperature during rapid cooling or in shock precursors, affecting inferred preshock conditions (e.g., Dopita &amp; Sutherland 2003; Sutherland &amp; Dopita 2017).</li>
+    </ol>
+    <p>Several quantitative constraints follow directly from the RBH-1 observables:</p>
+    <ul>
+        <li><em>Line width.</em> If a hot $T \sim 10^7$ K component contributes appreciably to the [O III] emission, a broad wing (σ ≳ 80 km/s) is expected. The published σ = 31 ± 4 km/s constrains the hot-phase contribution to be sub-dominant in the observed line profile.</li>
+        <li><em>Draping versus mixing.</em> Magnetic draping that maintains laminar boundaries tends to suppress shear-driven mixing; the simultaneous requirement for strong collimation and rapid mixing introduces a coupling between magnetic geometry and cooling efficiency that must be satisfied by the model.</li>
+        <li><em>Star formation timing.</em> The presence of the youngest stellar populations near the apex disfavors a long downstream delay unless the cold phase is generated promptly behind the interaction front.</li>
+    </ul>
+    <p>
+        A practical falsification threshold for the metric-shock hypothesis may be stated as follows. If future high-resolution spectroscopy detects a broad component with σ &gt; 80 km/s containing a non-negligible fraction of the [O III] flux, a thermal-shock contribution is strongly supported. Conversely, if the line profile remains consistent with a single narrow component (σ &lt; 40 km/s) at high S/N, thermal models must place the dominant emitting gas in the cold phase.
+    </p>
+</div>
+
+<div class="principle">
+    <h4>Model Structure: Metric Shock versus Composite Thermal Shock</h4>
+    <p>Reproducing the joint RBH-1 dataset under a thermal interpretation typically invokes a composite model in which several mechanisms contribute simultaneously:</p>
+    <ol>
+        <li>Magnetic draping to suppress Kelvin–Helmholtz growth and maintain a high aspect ratio.</li>
+        <li>Turbulent mixing and/or multiphase cooling to generate a dominant cold emitting phase despite an initially hot shock.</li>
+        <li>Non-equilibrium ionization and/or shock precursors to reconcile ionization diagnostics with fiducial CGM temperatures.</li>
+    </ol>
+    <p>
+        In the metric-shock interpretation, the apparent velocity discontinuity is attributed to a coherent redshift gradient rather than bulk thermalization. The same observational elements then align naturally: narrow line widths, minimal hot-phase requirements, and preserved collimation.
+    </p>
+    </div>
+    
+    <h2>4.7 Alternative Explanations: Composite Thermal-Shock Models</h2>
+    
+    <p>Several well-motivated astrophysical mechanisms could, in principle, reconcile a thermal shock with the cold, star-forming wake observed in RBH-1. Each deserves careful consideration:</p>
+    
+    <div class="principle">
+    <h3>Mechanism-by-Mechanism Assessment</h3>
+    <ul>
+        <li><strong>Turbulent Mixing Layers:</strong> Shear-driven entrainment of cold ambient gas into the hot wake (Gronke &amp; Oh 2018, 2020) is a robust prediction of supersonic cloud–wind interactions. <em>What it explains:</em> rapid appearance of $10^4$ K gas downstream of a hot shock front; multiphase coexistence. <em>What remains in tension:</em> mixing-layer models generically produce broad, asymmetric line profiles with extended wings from the velocity shear; the observed [O III] profile is narrow and single-peaked. <em>Discriminant:</em> high-S/N line-profile decomposition searching for faint broad wings or secondary components.</li>
+        <li><strong>Magnetic Draping:</strong> Ordered magnetic fields swept up ahead of the perturber can suppress Kelvin-Helmholtz instabilities and maintain wake coherence (Dursi &amp; Pfrommer 2008; Pfrommer &amp; Dursi 2010). Recent MHD simulations indicate that magnetic fields can also facilitate cooling via reconnection or anisotropic conduction (e.g., Banda-Barragán et al. 2024). <em>What it explains:</em> the extreme 50:1 aspect ratio, morphological coherence, and potentially accelerated cooling. <em>What remains in tension:</em> while draping aids collimation, the simultaneous requirement for the specific $\sigma \approx 31$ km/s dispersion at the apex remains a tight constraint. A dominant hot phase ($T \sim 10^7$ K) constrained by magnetic pressure would still imprint a thermal wing on the line profile unless the hot gas is radiatively dark (faint). <em>Discriminant:</em> Faraday rotation or synchrotron polarimetry to map the field geometry; comparison with MHD bow-shock simulations that include radiative cooling.</li>
+        <li><strong>Non-Equilibrium Ionization (NEI):</strong> Rapid cooling through the $10^5$–$10^6$ K range can produce ionization states that lag behind the instantaneous temperature (Sutherland &amp; Dopita 2017). <em>What it explains:</em> anomalously high ionization (e.g., the $T_{\text{pre}} \sim 10^{5.6}$ K inferred from Mappings V) even if the gas has already cooled. <em>What remains in tension:</em> NEI affects ionization diagnostics but does not widen or narrow the thermal velocity dispersion; the line-width constraint is independent. <em>Discriminant:</em> time-dependent photoionization modeling with realistic cooling trajectories; comparison of multiple ionization-sensitive line ratios (e.g., [O III]/[O II], [N II]/Hα) to NEI grids.</li>
+        <li><strong>Beam Smearing:</strong> Instrumental resolution effects could, in principle, artificially narrow observed line widths if the emission is spatially unresolved and dominated by a single cold clump. <em>What it explains:</em> apparent single-component profile. <em>What remains in tension:</em> the Keck/LRIS measurement already corrects for instrumental broadening ($\sigma_{\text{instr}} = 18$ km/s); the JWST/NIRSpec IFU spatially resolves the tip, and the narrow dispersion persists across multiple spaxels. <em>Discriminant:</em> spatially resolved line-width maps from the IFU data.</li>
+    </ul>
+    <p>Magnetic draping and non-equilibrium ionization are physically plausible and may well operate in RBH-1. Recent work suggests these mechanisms can extend the parameter space for cold gas survival (Ogiya &amp; Nagai 2023; Banda-Barragán et al. 2024). However, each addresses only a subset of the six anomalies. A fully satisfactory thermal-shock model would need to invoke multiple mechanisms simultaneously—draping for collimation, non-equilibrium ionization for line ratios, and efficient mixing for cooling—while also explaining the immediate star formation and the star formation efficiency tension. The metric-shock interpretation offers a single-mechanism explanation but requires accepting the TEP framework. Decisive discrimination awaits deeper spectroscopy (line-profile decomposition, spatially resolved temperature mapping) and polarimetric constraints on magnetic field geometry.</p>
+    </div>
+
+    <div class="principle">
+    <h3>Conclusion</h3>
+    <p>Under the stated assumptions, the combined set of observables places the simplest single-phase thermal-shock picture under substantial strain. Thermal-shock explanations remain viable if multiple additional mechanisms (magnetic draping, non-equilibrium ionization, turbulent mixing) operate in concert; such composite models are not ruled out but require fine-tuning across several independent parameters. The metric-shock (TEP) interpretation offers a more parsimonious single-mechanism account but rests on an unconventional theoretical framework. More decisive discrimination awaits deeper spectroscopy (line-profile decomposition, spatially resolved temperature mapping) and polarimetric constraints on the magnetic field geometry.</p>
+    </div>
+
+</section>

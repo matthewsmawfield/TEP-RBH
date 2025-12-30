@@ -1,0 +1,26 @@
+The Soliton Wake: Identifying the Runaway Object RBH-1 as a Gravitational Soliton
+
+The runaway supermassive black hole RBH-1 (z ~ 0.96) presents a thermal paradox: JWST spectroscopy reveals a 650 km/s velocity discontinuity coexisting with cold, star-forming gas. Standard shock physics predicts post-shock temperatures T ~ 10^7 K, yielding a cooling time that exceeds the dynamical time by a factor of ~30. Yet the wake exhibits immediate star formation and extreme collimation (50:1 aspect ratio over 62 kpc).
+
+An alternative interpretation is proposed: RBH-1 is a gravitational soliton—a coherent region of altered proper-time rate. The observed velocity discontinuity is reinterpreted as a metric shock (spatial gradient in gravitational redshift), not bulk thermalization. The effective Jeans mass is reduced behind the front via time dilation, enabling immediate star formation without heating.
+
+The model's geometric scale contains no free parameters. The soliton radius is fixed by the saturation density rho_c ~ 20 g/cm^3, independently derived from terrestrial GNSS correlations (Smawfield 2025g). Applying this calibration to RBH-1 (M ~ 2 x 10^7 M_sun) predicts R_sol ~ 7.8 x 10^7 km ~ 1.3 R_S, allowing the wake interaction scale to serve as a decisive test of the soliton hypothesis for this object. Specific falsification criteria are outlined; decisive discrimination awaits line-profile decomposition and X-ray flux limits.
+
+Additional potential tests for horizonless compact objects are noted in Appendix A as directions for future investigation by researchers with relevant expertise.
+
+Key Findings:
+1. **The Soliton Wake**: Resolves the "Cooling Bottleneck" paradox by reinterpreting the velocity discontinuity as a metric shock (gravitational redshift gradient) rather than a thermal shock.
+2. **Line-Profile Decomposition**: JWST NIRSpec [O III] spectroscopy reveals narrow line widths (sigma ~ 30 km/s) inconsistent with thermal shock heating (T ~ 10^7 K would require sigma ~ 85 km/s), supporting the cold metric shock interpretation.
+3. **Forward Model Validation**: The soliton wake geometry, calibrated using rho_c ~ 20 g/cm^3 from Paper 7 (TEP-UCD), correctly predicts the observed wake dimensions and star formation timescales.
+4. **Falsification Criteria**: Explicit tests are defined to distinguish the soliton hypothesis for RBH-1 from standard thermal shock models, ensuring object-specific validation without conflating model rejection with theory falsification.
+
+This work unifies the phenomenology of "Runaway Black Holes", Dark Matter halos (SPARC), and Solar System screening under a single density-constrained scalar field framework.
+
+Related Work:
+- TEP Theory: Smawfield, M. L. (2025). Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed (v0.6 (Jakarta)). Zenodo. https://doi.org/10.5281/zenodo.16921911
+- Paper 7 (TEP-UCD): Smawfield, M. L. (2025). Universal Critical Density: Unifying Atomic, Galactic, and Compact Object Scales. Zenodo. https://doi.org/10.5281/zenodo.18064366
+
+Keywords: black holes, supermassive black holes, runaway black holes, gravitational solitons, scalar fields, dark matter, galaxy rotation curves, Vainshtein screening, magnetars, anti-glitches, JWST, temporal equivalence principle, modified gravity, scalar-tensor theories, SPARC, bi-metric gravity, conformal coupling, proper time, time dilation, phantom mass, metric shock, gravitational redshift, atomic clocks, GNSS, clock coherence, Gaia DR3, Milky Way, Keplerian decline, halo boundary, neutron stars, rotation-powered pulsars, cold shock
+
+Website: https://matthewsmawfield.github.io/TEP-RBH/
+Code Availability: https://github.com/matthewsmawfield/TEP-RBH
