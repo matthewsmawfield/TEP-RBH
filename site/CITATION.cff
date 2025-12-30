@@ -1,0 +1,54 @@
+cff-version: 1.2.0
+title: "The Soliton Wake: Identifying the Runaway Object RBH-1 as a Gravitational Soliton"
+message: "If you use this software, please cite it as below."
+type: article
+authors:
+  - family-names: "Smawfield"
+    given-names: "Matthew Lukin"
+    orcid: "https://orcid.org/0009-0003-8219-3159"
+abstract: >
+  The runaway supermassive black hole RBH-1 (z ~ 0.96) presents a thermal paradox: JWST spectroscopy reveals a 650 km/s velocity discontinuity coexisting with cold, star-forming gas. Standard shock physics predicts post-shock temperatures T ~ 10^7 K, yielding a cooling time that exceeds the dynamical time by a factor of ~30. Yet the wake exhibits immediate star formation and extreme collimation (50:1 aspect ratio over 62 kpc).
+
+  An alternative interpretation is proposed: RBH-1 is a gravitational soliton—a coherent region of altered proper-time rate. The observed velocity discontinuity is reinterpreted as a metric shock (spatial gradient in gravitational redshift), not bulk thermalization. The effective Jeans mass is reduced behind the front via time dilation, enabling immediate star formation without heating.
+
+  The model's geometric scale contains no free parameters. The soliton radius is fixed by the saturation density rho_c ~ 20 g/cm^3, independently derived from terrestrial GNSS correlations (Smawfield 2025g). Applying this calibration to RBH-1 (M ~ 2 x 10^7 M_sun) predicts R_sol ~ 7.8 x 10^7 km ~ 1.3 R_S, allowing the wake interaction scale to serve as a decisive test of the soliton hypothesis for this object. Specific falsification criteria are outlined; decisive discrimination awaits line-profile decomposition and X-ray flux limits.
+license: CC-BY-4.0
+version: 0.1
+date-released: 2025-12-28
+keywords:
+  - physics
+  - cosmology
+  - black holes
+  - RBH-1
+  - scalar soliton
+  - dark matter
+  - gravitation
+  - temporal equivalence principle
+  - magnetars
+  - JWST
+  - Gaia DR3
+  - rotation curves
+  - Milky Way
+  - cold shock
+  - neutron stars
+  - Vainshtein screening
+repository-code: "https://github.com/matthewsmawfield/TEP-RBH"
+url: "https://github.com/matthewsmawfield/TEP-RBH"
+doi: 10.5281/zenodo.18059251
+
+preferred-citation:
+  type: article
+  title: "The Soliton Wake: Identifying the Runaway Object RBH-1 as a Gravitational Soliton (Blantyre v0.1)"
+  authors:
+    - family-names: Smawfield
+      given-names: Matthew Lukin
+      orcid: "https://orcid.org/0009-0003-8219-3159"
+  year: 2025
+  journal: Zenodo
+  doi: 10.5281/zenodo.18059251
+  identifiers:
+  - type: doi
+    value: 10.5281/zenodo.18059251
+    description: Pre-print DOI
+  url: "https://doi.org/10.5281/zenodo.18059251"
+  notes: "Preprint"

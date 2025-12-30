@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#220126">
+    <meta name="msapplication-TileColor" content="#220126">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msvalidate.01" content="F8DFE14889E215877815871325AAE778" />
+    <title>The Soliton Wake: Identifying RBH-1 | Matthew Lukin Smawfield</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="The Soliton Wake: Identifying the Runaway Object RBH-1 as a Gravitational Soliton | Matthew Lukin Smawfield">
+    <meta name="description" content="RBH-1 reinterpreted as a gravitational soliton. Explains 650 km/s velocity with cold gas via metric shock, not thermal. Calibrated from GNSS data.">
+    <meta name="keywords" content="RBH-1, Runaway Black Hole, Scalar Soliton, TEP, Temporal Equivalence Principle, Dark Matter, Magnetars, Cold Shock, JWST, Gaia DR3, Milky Way, Rotation Curves, Vainshtein Screening, Gravitational Redshift, Neutron Stars, Anti-Glitches, gravitational soliton, metric shock, star formation, velocity discontinuity, thermal paradox, modified gravity, scalar-tensor theory, black hole physics">
+    <meta name="author" content="Matthew Lukin Smawfield">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="language" content="English">
+    <meta name="subject" content="Theoretical Physics">
+    <meta name="coverage" content="Worldwide">
+    <meta name="classification" content="Education, Science, Research, Physics">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://mlsmawfield.com/tep/rbh/">
+    
+    <!-- Alternate PDF Version (for Google Scholar) -->
+    <link rel="alternate" type="application/pdf" title="Full Preprint PDF" href="https://mlsmawfield.com/tep/rbh/public/docs/Smawfield_2025_SolitonWake_RBH1_v0.1_Blantyre.pdf">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://mlsmawfield.com/tep/rbh/">
+    <meta property="og:title" content="The Soliton Wake: Identifying the Runaway Object RBH-1 as a Gravitational Soliton">
+    <meta property="og:description" content="The runaway black hole RBH-1 (z ~ 0.96) presents a thermal paradox: a 650 km/s velocity discontinuity coexisting with cold, star-forming gas. This work proposes RBH-1 is a gravitational soliton—a coherent region of altered proper-time rate. The soliton radius, fixed by rho_c ~ 20 g/cm^3 from terrestrial GNSS data, predicts R_sol ~ 1.3 R_S for this object.">
+    <meta property="og:image" content="https://mlsmawfield.com/tep/rbh/public/image.webp">
+    <meta property="og:image:alt" content="TEP-RBH Soliton Wake Manuscript">
+    <meta property="og:image:width" content="1792">
+    <meta property="og:image:height" content="1024">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="TEP-RBH">
+    <meta property="article:author" content="Matthew Lukin Smawfield">
+    <meta property="article:published_time" content="2025-12-28T00:00:00Z">
+    <meta property="article:modified_time" content="2025-12-28T00:00:00Z">
+    <meta property="og:updated_time" content="2025-12-28T00:00:00Z">
+    <meta property="article:section" content="Physics">
+    <meta property="article:tag" content="Black Holes">
+    <meta property="article:tag" content="Dark Matter">
+    <meta property="article:tag" content="Cosmology">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://mlsmawfield.com/tep/rbh/">
+    <meta name="twitter:title" content="The Soliton Wake: Identifying RBH-1 as a Gravitational Soliton">
+    <meta name="twitter:description" content="The runaway black hole RBH-1 (z ~ 0.96) presents a thermal paradox: a 650 km/s velocity discontinuity coexisting with cold, star-forming gas. This work proposes RBH-1 is a gravitational soliton—a coherent region of altered proper-time rate. The soliton radius, fixed by rho_c ~ 20 g/cm^3 from terrestrial GNSS data, predicts R_sol ~ 1.3 R_S for this object.">
+    <meta name="twitter:image" content="https://mlsmawfield.com/tep/rbh/public/image.webp">
+    <meta name="twitter:image:alt" content="TEP-RBH Soliton Wake Manuscript">
+    <meta name="twitter:creator" content="@matthewsmawfield">
+    <meta name="twitter:site" content="@matthewsmawfield">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="public/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="public/favicon.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="public/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="public/android-chrome-512x512.png">
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Additional SEO -->
+    <meta name="revisit-after" content="7 days">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="format-detection" content="telephone=no">
+    
+    <meta name="citation_title" content="The Soliton Wake: Identifying the Runaway Object RBH-1 as a Gravitational Soliton">
+    <meta name="citation_author" content="Smawfield, Matthew Lukin">
+    <meta name="citation_author_institution" content="Independent Researcher">
+    <meta name="citation_author_email" content="matthewsmawfield@gmail.com">
+    <meta name="citation_author_orcid" content="https://orcid.org/0009-0003-8219-3159">
+    <meta name="citation_publication_date" content="2025/12/28">
+    <meta name="citation_online_date" content="2025/12/28">
+    <meta name="citation_doi" content="10.5281/zenodo.18059251">
+    <meta name="citation_pdf_url" content="https://mlsmawfield.com/tep/rbh/public/docs/Smawfield_2025_SolitonWake_RBH1_v0.1_Blantyre.pdf">
+    <meta name="citation_keywords" content="RBH-1; Runaway Black Hole; Scalar Soliton; TEP; Temporal Equivalence Principle; Dark Matter; Magnetars; Cold Shock; gravitational soliton; metric shock; modified gravity; black hole physics; JWST">
+    <meta name="citation_abstract_html_url" content="https://mlsmawfield.com/tep/rbh/">
+    <meta name="citation_fulltext_html_url" content="https://mlsmawfield.com/tep/rbh/">
+    <meta name="citation_language" content="en">
+    <meta name="citation_journal_title" content="Preprint">
+    <meta name="citation_technical_report_institution" content="Independent Research">
+    <meta name="citation_subject" content="Physics">
+    <meta name="citation_subject" content="Astrophysics">
+    <meta name="citation_subject" content="Black Holes">
+    <meta name="citation_subject" content="Dark Matter">
+
+    <!-- Dublin Core Metadata -->
+    <meta name="dc.title" content="The Soliton Wake: Identifying the Runaway Object RBH-1 as a Gravitational Soliton">
+    <meta name="dc.creator" content="Smawfield, Matthew Lukin">
+    <meta name="dc.subject" content="Physics; Astrophysics; Black Holes; Dark Matter; Temporal Equivalence Principle; Gravitational Solitons">
+    <meta name="dc.description" content="The runaway black hole RBH-1 (z ~ 0.96) presents a thermal paradox: a 650 km/s velocity discontinuity coexisting with cold, star-forming gas. This work proposes RBH-1 is a gravitational soliton. The soliton radius, fixed by rho_c ~ 20 g/cm^3 from terrestrial GNSS data, predicts R_sol ~ 1.3 R_S for this object.">
+    <meta name="dc.publisher" content="Independent Research">
+    <meta name="dc.date" content="2025-12-28">
+    <meta name="dc.type" content="Text.Article">
+    <meta name="dc.format" content="text/html">
+    <meta name="dc.identifier" content="https://mlsmawfield.com/tep/rbh/">
+    <meta name="dc.identifier.doi" content="10.5281/zenodo.18059251">
+    <meta name="dc.language" content="en">
+    <meta name="dc.rights" content="Creative Commons Attribution 4.0 International License">
+    <meta name="dc.relation" content="https://doi.org/10.5281/zenodo.16921911">
+    <meta name="dc.relation.ispartof" content="TEP Research Series">
+    <meta name="dc.coverage" content="World">
+    <meta name="dc.contributor" content="Smawfield, Matthew Lukin">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    
+    <!-- DNS prefetch for performance -->
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TGNEGZ67NX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-TGNEGZ67NX', { 'anonymize_ip': true });
+    </script>
+    
+    <!-- WebSite Schema for Google Search Site Name -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "TEP-RBH: The Soliton Wake",
+      "alternateName": ["TEP-RBH", "The Soliton Wake Manuscript", "RBH-1 Scalar Field"],
+      "url": "https://mlsmawfield.com/tep/rbh/"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://mlsmawfield.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "TEP Research",
+          "item": "https://mlsmawfield.com/#manuscripts"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "The Soliton Wake",
+          "item": "https://mlsmawfield.com/tep/rbh/"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "headline": "The Soliton Wake: Identifying the Runaway Object RBH-1 as a Gravitational Soliton",
+      "alternativeHeadline": "RBH-1 Soliton Identification",
+      "description": "The runaway black hole RBH-1 (z ~ 0.96) presents a thermal paradox: a 650 km/s velocity discontinuity coexisting with cold, star-forming gas. This work proposes RBH-1 is a gravitational soliton. The soliton radius, fixed by rho_c ~ 20 g/cm^3 from terrestrial GNSS data, predicts R_sol ~ 1.3 R_S for this object. Resolves the cooling bottleneck paradox through metric shock mechanism.",
+      "author": {
+        "@type": "Person",
+        "name": "Matthew Lukin Smawfield",
+        "email": "matthewsmawfield@gmail.com",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Independent Researcher"
+        },
+        "sameAs": [
+          "https://github.com/matthewsmawfield",
+          "https://orcid.org/0009-0003-8219-3159"
+        ]
+      },
+      "datePublished": "2025-12-28",
+      "dateModified": "2025-12-28",
+      "version": "v0.1 (Blantyre)",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Independent Research",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://mlsmawfield.com/tep/rbh/public/image.webp"
+        }
+      },
+      "keywords": [
+        "RBH-1",
+        "Runaway Black Hole",
+        "Scalar Soliton",
+        "TEP",
+        "Temporal Equivalence Principle",
+        "Dark Matter",
+        "Magnetars",
+        "Cold Shock",
+        "JWST",
+        "Gaia DR3",
+        "Milky Way",
+        "Rotation Curves",
+        "Vainshtein Screening",
+        "Gravitational Redshift",
+        "Neutron Stars",
+        "Anti-Glitches",
+        "SPARC",
+        "GNSS",
+        "Atomic Clocks",
+        "Metric Shock",
+        "Keplerian Decline"
+      ],
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Black Holes"
+        },
+        {
+          "@type": "Thing",
+          "name": "Dark Matter"
+        },
+        {
+          "@type": "Thing",
+          "name": "Theoretical Physics"
+        }
+      ],
+      "researchField": [
+        "Physics",
+        "Cosmology",
+        "Astrophysics",
+        "Theoretical Physics",
+        "Gravitation"
+      ],
+      "methodology": [
+        "Universal Scaling Law",
+        "Gravitational Redshift",
+        "Jeans Mass Analysis"
+      ],
+      "isBasedOn": [
+        {
+          "@type": "ScholarlyArticle",
+          "name": "Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed",
+          "url": "https://doi.org/10.5281/zenodo.16921911"
+        }
+      ],
+      "isPartOf": {
+        "@type": "CreativeWorkSeries",
+        "name": "TEP Research Series",
+        "url": "https://mlsmawfield.com/tep/rbh/"
+      },
+      "inLanguage": "en",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "DOI",
+          "value": "10.5281/zenodo.18059251"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "URL",
+          "value": "https://mlsmawfield.com/tep/rbh/"
+        }
+      ],
+      "citation": [
+        {
+          "@type": "ScholarlyArticle",
+          "name": "Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed",
+          "author": "Matthew Lukin Smawfield",
+          "datePublished": "2025-12-28",
+          "identifier": "https://doi.org/10.5281/zenodo.16921911"
+        }
+      ],
+      "hasPart": [
+        {
+          "@type": "Dataset",
+          "name": "SPARC Galaxy Rotation Curves",
+          "description": "175 galaxy rotation curves used for dark matter onset analysis",
+          "citation": "Lelli, F., McGaugh, S. S., & Schombert, J. M. 2016, AJ, 152, 157",
+          "creator": [
+            {
+              "@type": "Person",
+              "name": "Federico Lelli"
+            },
+            {
+              "@type": "Person",
+              "name": "Stacy S. McGaugh"
+            },
+            {
+              "@type": "Person",
+              "name": "James M. Schombert"
+            }
+          ],
+          "license": "https://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "encoding": [
+        {
+          "@type": "MediaObject",
+          "encodingFormat": "application/pdf",
+          "contentUrl": "https://mlsmawfield.com/tep/rbh/public/docs/Smawfield_2025_SolitonWake_RBH1_v0.1_Blantyre.pdf"
+        },
+        {
+          "@type": "MediaObject",
+          "encodingFormat": "text/html",
+          "contentUrl": "https://mlsmawfield.com/tep/rbh/"
+        }
+      ],
+      "isAccessibleForFree": true,
+      "creativeWorkStatus": "Preprint",
+      "url": "https://mlsmawfield.com/tep/rbh/",
+      "mainEntityOfPage": "https://mlsmawfield.com/tep/rbh/"
+    }
+    </script>
+    
+    <!-- MathJax for mathematical formulas -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/core-js-bundle@3/minified.js" integrity="sha384-a+6gkIz38wPEHKjTR3Nor/RhImyKCidfx586MNngKZKboaVzK58PLoXu37V9o+yl" crossorigin="anonymous"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" integrity="sha384-Wuix6BuhrWbjDBs24bXrjf4ZQ5aFeFWBuKkFekO2t8xFU0iNaLQfp2K6/1Nxveei" crossorigin="anonymous"></script>
+    
+    <style>
+        /* Prevent horizontal scrolling */
+        * {
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            overflow-x: hidden !important;
+            width: 100% !important;
+        }
+        
+        /* Force long URLs and text to wrap */
+        a {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            word-break: break-all;
+        }
+        
+        /* Code blocks and preformatted text */
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            overflow-x: auto;
+            max-width: 100%;
+        }
+        
+        /* Academic paper styling - Pastel Yellows & Greys palette */
+        :root {
+            --purple-deep: #17202A;  /* Dark Slate/Black for main headers */
+            --purple-dark: #2C3E50;  /* Dark Slate for borders/subheads */
+            --purple-mid: #7F8C8D;   /* Grey for secondary borders */
+            --purple-accent: #D4AC0D; /* Muted Gold for accents */
+            --magenta: #F1C40F;      /* Bright Gold for links/hover */
+            --magenta-light: #F7DC6F; /* Light Yellow */
+            --gray-purple: #7F8C8D;  /* Neutral Grey for meta text */
+            --gray-light: #ECF0F1;   /* Light Grey */
+            --text-dark: #17202A;    /* Almost Black for text */
+            --bg-tint: rgba(0, 0, 0, 0.02); /* Neutral tint */
+        }
+        
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #ffffff;
+            color: var(--text-dark);
+            overflow-x: hidden;
+            word-wrap: break-word;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--purple-dark);
+            padding-bottom: 20px;
+        }
+        
+        .header-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            font-weight: normal;
+            color: var(--gray-purple);
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        
+        .author {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        
+        .author .email-icon { 
+            display: inline-block; 
+            margin-left: 2px; 
+            font-size: 18px; 
+            color: var(--gray-purple); 
+            text-decoration: none; 
+        }
+        
+        .author .email-icon:hover { 
+            color: var(--magenta); 
+        }
+        
+        /* Link styling */
+        a {
+            color: var(--purple-dark);
+            text-decoration: none;
+        }
+        
+        a:visited {
+            color: var(--gray-purple);
+        }
+        
+        a:hover {
+            color: var(--magenta);
+            text-decoration: underline;
+        }
+        
+        .contact-section { 
+            margin-top: 40px; 
+            padding: 20px; 
+            background-color: rgba(75, 18, 89, 0.05); 
+            border-left: 4px solid var(--purple-dark); 
+            font-style: italic; 
+        }
+        
+        .contact-section h2 { 
+            margin-top: 0; 
+            font-size: 18px; 
+            font-weight: bold; 
+            font-style: normal; 
+            color: var(--purple-deep); 
+        }
+        
+        .version, .date, .status-chip, .doi {
+            font-size: 14px;
+            color: var(--gray-purple);
+            margin-bottom: 5px;
+        }
+        
+        .paper-series {
+            font-size: 13px;
+            color: var(--purple-dark);
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .abstract {
+            background-color: rgba(75, 18, 89, 0.04);
+            padding: 20px;
+            margin: 30px 0;
+            border-left: 4px solid var(--purple-dark);
+            font-style: italic;
+        }
+        
+        .abstract h2 {
+            margin-top: 0;
+            font-size: 18px;
+            font-weight: bold;
+            font-style: normal;
+        }
+        
+        h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--purple-deep);
+            border-bottom: 1px solid var(--purple-mid);
+            padding-bottom: 5px;
+        }
+        
+        h2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--purple-deep);
+        }
+        
+        h3 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            color: var(--purple-deep);
+        }
+        
+        h4 {
+            font-size: 15px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            color: var(--purple-deep);
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .equation {
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px;
+            overflow-x: auto;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+        
+        .theorem, .principle {
+            background-color: rgba(75, 18, 89, 0.04);
+            border: 1px solid var(--purple-mid);
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .theorem h3, .principle h3, .theorem h4, .principle h4 {
+            margin-top: 0;
+            color: var(--purple-dark);
+        }
+        
+        .proof {
+            font-style: italic;
+            margin-left: 20px;
+            color: var(--gray-purple);
+        }
+        
+        .experimental-section {
+            background-color: rgba(75, 18, 89, 0.03);
+            border: 1px solid var(--purple-mid);
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .experimental-section h1:first-of-type, .experimental-section h2:first-of-type, .experimental-section h3:first-of-type {
+            margin-top: 4px;
+        }
+        
+        .key-finding {
+            background-color: rgba(75, 18, 89, 0.06);
+            border: 2px solid var(--purple-dark);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        
+        .key-finding h3 {
+            margin-top: 0;
+            color: var(--purple-dark);
+        }
+        
+        .validation-box {
+            background-color: rgba(34, 139, 34, 0.08);
+            border: 1px solid rgba(34, 139, 34, 0.4);
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .warning-box {
+            background-color: rgba(255, 165, 0, 0.08);
+            border: 1px solid rgba(255, 165, 0, 0.4);
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .error-budget {
+            font-family: 'Courier New', monospace;
+            background-color: rgba(75, 18, 89, 0.03);
+            padding: 10px;
+            border-radius: 3px;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        
+        .references {
+            font-size: 14px;
+            margin-top: 0px;
+            padding-top: 0px;
+        }
+        
+        .references h1 {
+            font-size: 18px;
+        }
+        
+        .ref-item {
+            margin-bottom: 8px;
+            text-indent: -20px;
+            margin-left: 20px;
+        }
+        
+        .appendix {
+            margin-top: 40px;
+            page-break-before: always;
+            border-top: 2px solid var(--purple-mid);
+            padding-top: 20px;
+        }
+        
+        .significance {
+            background-color: rgba(75, 18, 89, 0.06);
+            border: 1px solid var(--purple-mid);
+            border-radius: 5px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        
+        .critical-analysis {
+            background-color: rgba(75, 18, 89, 0.04);
+            border: 2px solid var(--purple-mid);
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        
+        .critical-analysis h2 {
+            margin-top: 0;
+            color: var(--purple-dark);
+            font-size: 18px;
+            font-weight: bold;
+            border-bottom: 2px solid var(--purple-mid);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .critical-analysis h3 {
+            color: var(--purple-dark);
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 12px;
+        }
+        
+        .critical-analysis ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        
+        .critical-analysis li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        .critical-analysis strong {
+            color: var(--purple-dark);
+        }
+        
+        /* Data tables */
+        table, table.data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+        
+        th, td,
+        table.data-table th, table.data-table td {
+            border: 1px solid var(--purple-mid);
+            padding: 8px 12px;
+            text-align: left;
+        }
+        
+        th, table.data-table th {
+            background-color: rgba(75, 18, 89, 0.08);
+            font-weight: bold;
+            color: var(--purple-deep);
+        }
+        
+        tr:nth-child(even),
+        table.data-table tr:nth-child(even) {
+            background-color: rgba(75, 18, 89, 0.03);
+        }
+        
+        .table-caption {
+            font-size: 0.9em;
+            color: var(--gray-purple);
+            font-style: italic;
+            margin-top: -10px;
+            margin-bottom: 20px;
+        }
+        
+        /* Figure styling */
+        figure {
+            margin: 25px 0;
+            text-align: center;
+        }
+        
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        
+        figcaption {
+            margin-top: 10px;
+            font-size: 13px;
+            color: var(--gray-purple);
+            font-style: italic;
+            text-align: justify;
+        }
+        
+        /* Math styling */
+        .MathJax {
+            font-size: 1.1em !important;
+        }
+        
+        /* Loading indicator */
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: var(--gray-purple);
+            font-style: italic;
+        }
+        
+        /* Code blocks */
+        code {
+            font-family: 'Courier New', monospace;
+            background-color: rgba(75, 18, 89, 0.06);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 13px;
+        }
+        
+        pre code {
+            display: block;
+            padding: 15px;
+            overflow-x: auto;
+        }
+        
+        /* Mobile responsiveness */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 20px 15px;
+                font-size: 16px;
+                overflow-x: hidden;
+            }
+            
+            .title {
+                font-size: 20px;
+                word-wrap: break-word;
+                hyphens: auto;
+            }
+            
+            .subtitle {
+                font-size: 16px;
+            }
+            
+            .header-image {
+                margin-bottom: 15px;
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            h1 {
+                font-size: 18px;
+                word-wrap: break-word;
+            }
+            
+            h2 {
+                font-size: 16px;
+                word-wrap: break-word;
+            }
+            
+            .abstract, .theorem, .principle, .experimental-section {
+                padding: 15px;
+                margin: 15px 0;
+                overflow-x: hidden;
+            }
+            
+            .equation {
+                overflow-x: auto;
+                font-size: 14px;
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+            
+            .doi a {
+                word-break: break-all;
+                overflow-wrap: break-word;
+            }
+            
+            figure {
+                max-width: 100%;
+                overflow: hidden;
+            }
+            
+            figure img {
+                max-width: 100%;
+                height: auto;
+            }
+            
+            table {
+                font-size: 12px !important;
+            }
+            
+            table th, table td {
+                padding: 4px !important;
+                word-wrap: break-word;
+                hyphens: auto;
+                min-width: 0;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            body {
+                padding: 15px 10px;
+                font-size: 15px;
+                overflow-x: hidden;
+            }
+            
+            .title {
+                font-size: 18px;
+                line-height: 1.2;
+                word-wrap: break-word;
+                hyphens: auto;
+            }
+            
+            .abstract, .theorem, .principle, .experimental-section {
+                padding: 12px;
+                margin: 12px 0;
+                overflow-x: hidden;
+            }
+            
+            .equation {
+                font-size: 12px;
+                padding: 5px;
+            }
+            
+            .doi a {
+                font-size: 13px;
+                word-break: break-all;
+            }
+            
+            table {
+                font-size: 10px !important;
+            }
+            
+            table th, table td {
+                padding: 2px !important;
+                line-height: 1.2;
+            }
+        }
+
+        header .title { border-bottom: none; padding-bottom: 0; }
+        .doi .pdf-link { display: inline-flex; align-items: center; margin-left: 8px; color: #495773; opacity: 0.8; }
+        .doi .pdf-link:hover { color: #2D0140; opacity: 1; text-decoration: none; }
+        .doi .pdf-link svg { width: 14px; height: 14px; vertical-align: middle; }
+        
+        /* Print styles */
+        @media print {
+            body {
+                font-size: 12pt;
+                line-height: 1.4;
+            }
+            .no-print { display: none !important; }
+            
+            .abstract, .theorem, .principle {
+                break-inside: avoid;
+            }
+            .abstract {
+                break-inside: auto;
+            }
+            .abstract h2 {
+                break-after: avoid;
+            }
+        }
+    </style>
+  </head>
+<body>
+    <header class="header" role="banner">
+        <img src="public/image.webp" alt="The Soliton Wake: RBH-1 as a Gravitational Soliton" class="header-image">
+        <h1 class="title">The Soliton Wake: Identifying the Runaway Object RBH-1 as a Gravitational Soliton</h1>
+        <div class="author">Matthew Lukin Smawfield</div>
+        <div class="version">Version: v0.1 (Blantyre)</div>
+        <div class="date">First published: 28 December 2025 · Last updated: 28 December 2025</div>
+        <div class="doi">DOI: <a href="https://doi.org/10.5281/zenodo.18059251">10.5281/zenodo.18059251</a></div>
+    </header>
+
+    <main id="main-content" role="main">
+        <div id="loading" class="loading">
+            Loading manuscript components...
+        </div>
+        <div id="manuscript-content" style="display: none;">
+            <!-- Components will be loaded here -->
+        </div>
+    
+    
+
+
+
+
+
+
+
+
+
+<!-- Manuscript Navigation Component -->
+<nav class="manuscript-nav" role="navigation" aria-label="Manuscript navigation">
+    <div class="manuscript-nav-header">
+        <a href="/" class="nav-home" title="Home">← Home</a>
+        <h3>TEP Research Series</h3>
+    </div>
+    
+    <ol class="manuscript-nav-list">
+        <li><a href="/tep/theory/" class="nav-item" data-manuscript="theory">Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed <span class="nav-meta">18 Aug 2025</span></a></li>
+        <li><a href="/tep/gnss-i/" class="nav-item" data-manuscript="gnss-i">Global Time Echoes: Distance-Structured Correlations in GNSS Clocks <span class="nav-meta">17 Sep 2025</span></a></li>
+        <li><a href="/tep/gnss-ii/" class="nav-item" data-manuscript="gnss-ii">25-Year Temporal Evolution of Distance-Structured Correlations in GNSS <span class="nav-meta">3 Nov 2025</span></a></li>
+        <li><a href="/tep/gnss-iii/" class="nav-item" data-manuscript="gnss-iii">Global Time Echoes: Raw RINEX Validation <span class="nav-meta">17 Dec 2025</span></a></li>
+        <li><a href="/tep/gl/" class="nav-item" data-manuscript="gl">Temporal-Spatial Coupling in Gravitational Lensing <span class="nav-meta">19 Dec 2025</span></a></li>
+        <li><a href="/tep/gte/" class="nav-item" data-manuscript="gte">Global Time Echoes: Empirical Validation of TEP <span class="nav-meta">21 Dec 2025</span></a></li>
+        <li><a href="/tep/ucd/" class="nav-item" data-manuscript="ucd">Universal Critical Density: Unifying Atomic, Galactic, and Compact Object Scales <span class="nav-meta">28 Dec 2025</span></a></li>
+        <li><a href="/tep/rbh/" class="nav-item" data-manuscript="rbh">The Soliton Wake: Identifying RBH-1 as a Gravitational Soliton <span class="nav-meta">28 Dec 2025</span></a></li>
+    </ol>
+    
+    <div class="manuscript-nav-controls">
+        <button class="nav-prev" onclick="navigatePrev()" title="Previous manuscript">← Previous</button>
+        <button class="nav-next" onclick="navigateNext()" title="Next manuscript">Next →</button>
+    </div>
+</nav>
+
+<style>
+.manuscript-nav {
+    margin: 0;
+    padding: 24px;
+    background: #1a1a1a;
+    border-radius: 0;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.3);
+}
+
+.manuscript-nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 20px;
+    border-bottom: 1px solid #444;
+}
+
+.manuscript-nav-header h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.nav-home {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-home:hover {
+    color: #fff;
+}
+
+.manuscript-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: manuscript-counter;
+}
+
+.manuscript-nav-list li {
+    counter-increment: manuscript-counter;
+    border-bottom: 1px solid #333;
+}
+
+.manuscript-nav-list li:last-child {
+    border-bottom: none;
+}
+
+.nav-item {
+    display: block;
+    padding: 14px 0 14px 32px;
+    text-decoration: none;
+    color: #ccc;
+    font-size: 15px;
+    line-height: 1.5;
+    position: relative;
+}
+
+.nav-item::before {
+    content: counter(manuscript-counter) ".";
+    position: absolute;
+    left: 0;
+    color: #666;
+    font-weight: 600;
+}
+
+.nav-meta {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 12px;
+    color: #666;
+    font-weight: 400;
+}
+
+.nav-item:hover {
+    color: #fff;
+}
+
+.nav-item:hover .nav-meta {
+    color: #888;
+}
+
+.nav-item.active {
+    color: #fff;
+    font-weight: 600;
+    background: #2a2a2a;
+}
+
+.nav-item.active::before {
+    color: #999;
+}
+
+.nav-item.active .nav-meta {
+    color: #888;
+}
+
+.manuscript-nav-controls {
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    padding: 20px 0 0;
+    border-top: 1px solid #444;
+}
+
+.nav-prev, .nav-next {
+    padding: 8px 16px;
+    background: transparent;
+    border: none;
+    color: #ccc;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.nav-prev:hover, .nav-next:hover {
+    color: #fff;
+}
+
+.nav-prev:disabled, .nav-next:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.nav-prev:disabled:hover, .nav-next:disabled:hover {
+    color: #ccc;
+}
+
+@media (max-width: 768px) {
+    .manuscript-nav {
+        padding: 16px;
+    }
+    
+    .nav-item {
+        font-size: 14px;
+        padding: 12px 0 12px 28px;
+    }
+    
+    .manuscript-nav-header h3 {
+        font-size: 12px;
+    }
+}
+</style>
+
+<script>
+// Manuscript navigation logic
+(function() {
+    const manuscripts = [
+        { id: 'theory', path: '/tep/theory/', name: 'Theory' },
+        { id: 'gnss-i', path: '/tep/gnss-i/', name: 'GNSS-I' },
+        { id: 'gnss-ii', path: '/tep/gnss-ii/', name: 'GNSS-II' },
+        { id: 'gnss-iii', path: '/tep/gnss-iii/', name: 'GNSS-III' },
+        { id: 'gl', path: '/tep/gl/', name: 'Lensing' },
+        { id: 'gte', path: '/tep/gte/', name: 'GTE' },
+        { id: 'ucd', path: '/tep/ucd/', name: 'UCD' },
+        { id: 'rbh', path: '/tep/rbh/', name: 'RBH-1' }
+    ];
+    
+    // Detect current manuscript from URL
+    const currentPath = window.location.pathname;
+    let currentIndex = manuscripts.findIndex(m => currentPath.includes(m.path));
+    
+    // Highlight active manuscript
+    if (currentIndex !== -1) {
+        const activeItem = document.querySelector(`.nav-item[data-manuscript="${manuscripts[currentIndex].id}"]`);
+        if (activeItem) {
+            activeItem.classList.add('active');
+        }
+        
+        // Update prev/next buttons
+        const prevBtn = document.querySelector('.nav-prev');
+        const nextBtn = document.querySelector('.nav-next');
+        
+        if (prevBtn) {
+            if (currentIndex === 0) {
+                prevBtn.disabled = true;
+            } else {
+                prevBtn.disabled = false;
+            }
+        }
+        
+        if (nextBtn) {
+            if (currentIndex === manuscripts.length - 1) {
+                nextBtn.disabled = true;
+            } else {
+                nextBtn.disabled = false;
+            }
+        }
+    }
+    
+    // Navigation functions
+    window.navigatePrev = function() {
+        if (currentIndex > 0) {
+            window.location.href = manuscripts[currentIndex - 1].path;
+        }
+    };
+    
+    window.navigateNext = function() {
+        if (currentIndex < manuscripts.length - 1) {
+            window.location.href = manuscripts[currentIndex + 1].path;
+        }
+    };
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        if (e.ctrlKey || e.metaKey) {
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                navigatePrev();
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                navigateNext();
+            }
+        }
+    });
+})();
+</script>
+
+    </main>
+
+    <!-- Component Loading Script -->
+    <script>
+        // Component loading system
+        async function loadManuscriptComponents() {
+            try {
+                // Load manifest
+                const manifest = await fetch('manifest.json').then(r => r.json());
+                
+                // Get container elements
+                const loadingDiv = document.getElementById('loading');
+                const contentDiv = document.getElementById('manuscript-content');
+                
+                // Load each section in order
+                for (const section of manifest.sections.sort((a, b) => a.order - b.order)) {
+                    try {
+                        const html = await fetch(`components/${section.file}`).then(r => r.text());
+                        
+                        // Create section container
+                        const sectionDiv = document.createElement('div');
+                        sectionDiv.id = section.id;
+                        sectionDiv.className = 'manuscript-section';
+                        sectionDiv.setAttribute('data-section', section.title);
+                        sectionDiv.innerHTML = html;
+                        
+                        // Append to content container
+                        contentDiv.appendChild(sectionDiv);
+                        
+                        console.log(`Loaded section: ${section.title}`);
+                    } catch (error) {
+                        console.error(`Failed to load section ${section.title}:`, error);
+                        
+                        // Create error placeholder
+                        const errorDiv = document.createElement('div');
+                        errorDiv.innerHTML = `<div style="background-color: #ffe6e6; border: 1px solid #ff9999; padding: 15px; margin: 20px 0; border-radius: 5px;">
+                            <h3 style="color: #cc0000; margin-top: 0;">Error Loading Section: ${section.title}</h3>
+                            <p>Failed to load <code>components/${section.file}</code></p>
+                            <p style="font-size: 12px; color: #666;">Check console for details</p>
+                        </div>`;
+                        contentDiv.appendChild(errorDiv);
+                    }
+                }
+                
+                // Hide loading, show content
+                loadingDiv.style.display = 'none';
+                contentDiv.style.display = 'block';
+                
+                // Re-initialize features that depend on content being loaded
+                initializePageFeatures();
+                
+                console.log('Manuscript loading complete');
+                
+            } catch (error) {
+                console.error('Failed to load manuscript:', error);
+                document.getElementById('loading').innerHTML = `
+                    <div style="background-color: #ffe6e6; border: 1px solid #ff9999; padding: 20px; border-radius: 5px;">
+                        <h3 style="color: #cc0000; margin-top: 0;">Error Loading Manuscript</h3>
+                        <p>Failed to load the manuscript components. Please check your network connection and try again.</p>
+                        <p style="font-size: 12px; color: #666;">Error: ${error.message}</p>
+                        <button onclick="location.reload()" style="background: #4A90C2; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Retry</button>
+                    </div>
+                `;
+            }
+        }
+        
+        // Initialize page features after content is loaded
+        function initializePageFeatures() {
+            // Re-render MathJax if present
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise().catch(err => console.warn('MathJax rendering error:', err));
+            }
+        }
+        
+        // Copy to clipboard function (for code examples)
+        function copyToClipboard(text, button) {
+            navigator.clipboard.writeText(text).then(() => {
+                button.style.color = '#2D0140';
+                button.style.opacity = '1';
+                button.style.transform = 'scale(1.1)';
+                setTimeout(() => {
+                    button.style.color = '#495773';
+                    button.style.opacity = '0.7';
+                    button.style.transform = 'scale(1)';
+                }, 800);
+            });
+        }
+        
+        // Load components when page is ready
+        document.addEventListener('DOMContentLoaded', loadManuscriptComponents);
+        
+        // Change title for PDF filename when printing
+        const originalTitle = document.title;
+        const pdfTitle = 'Smawfield_2025_TemporalSpatialCoupling_Lensing_v0.3_Tortola';
+        window.addEventListener('beforeprint', () => { document.title = pdfTitle; });
+        window.addEventListener('afterprint', () => { document.title = originalTitle; });
+    </script>
+  </body>
+</html>
