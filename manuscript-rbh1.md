@@ -4,7 +4,7 @@
 **Version:** v0.1 (Blantyre)  
 **Date:** First published: 28 December 2025 · Last updated: 28 December 2025  
 **DOI:** 10.5281/zenodo.18059251  
-**Generated:** 2026-01-03  
+**Generated:** 2026-01-07  
 **Paper Series:** TEP Series: Paper 8 (The Soliton Wake)
 
 ---
@@ -904,31 +904,6 @@ van Dokkum, P., et al. 2025, *JWST Confirmation of a Runaway Supermassive Black 
 ## A.4 Status
 
     These case studies are presented as *future directions* rather than current evidence for TEP. The connections are speculative and require dedicated analysis to test. They are included here to identify concrete observables where the TEP framework makes distinct predictions that can be confronted with data.
-
-        [← Home](/)
-        
-### TEP Research Series
-
-        - [Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed 18 Aug 2025](/tep/theory/)
-
-        - [Global Time Echoes: Distance-Structured Correlations in GNSS Clocks 17 Sep 2025](/tep/gnss-i/)
-
-        - [25-Year Temporal Evolution of Distance-Structured Correlations in GNSS 3 Nov 2025](/tep/gnss-ii/)
-
-        - [Global Time Echoes: Raw RINEX Validation 17 Dec 2025](/tep/gnss-iii/)
-
-        - [Temporal-Spatial Coupling in Gravitational Lensing 19 Dec 2025](/tep/gl/)
-
-        - [Global Time Echoes: Empirical Validation of TEP 21 Dec 2025](/tep/gte/)
-
-        - [Universal Critical Density: Unifying Atomic, Galactic, and Compact Object Scales 28 Dec 2025](/tep/ucd/)
-
-        - [The Soliton Wake: Identifying RBH-1 as a Gravitational Soliton 28 Dec 2025](/tep/rbh/)
-
-        - [Global Time Echoes: Optical Validation of TEP via Satellite Laser Ranging 30 Dec 2025](/tep/slr/)
-
-        ← Previous
-        Next →
 
 ---
 
