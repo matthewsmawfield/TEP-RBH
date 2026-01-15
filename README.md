@@ -35,66 +35,11 @@ An alternative interpretation is proposed: RBH-1 is analyzed as a gravitational 
 
 The model's geometric scale contains no free parameters. The soliton radius is fixed by the saturation density $\rho_c \approx 20$ g/cm³, independently derived from terrestrial GNSS correlations (Smawfield 2025g). Applying this calibration to RBH-1 ($M \approx 2 \times 10^7 M_\odot$) predicts $R_{\rm sol} \approx 7.8 \times 10^7$ km $\approx 1.3 R_S$, allowing the wake interaction scale to serve as a decisive test of the soliton hypothesis for this object. Specific falsification criteria are outlined; decisive discrimination awaits line-profile decomposition and X-ray flux limits.
 
-## Summary of Key Results and Findings
-
-### Primary Results Table
-
-| Parameter | Value | Notes |
-|-----------|-------|-------|
-| **Object** | RBH-1 | Runaway SMBH candidate |
-| **Redshift** | z ≈ 0.96 | JWST spectroscopy |
-| **Estimated Mass** | M ≈ 2×10⁷ M☉ | — |
-| **Velocity Discontinuity** | 650 km/s | Observed in wake |
-| **Wake Dimensions** | 62 kpc × ~1 kpc | 50:1 aspect ratio |
-
-### The Thermal Paradox
-
-| Observable | Standard Prediction | Observed | Status |
-|------------|---------------------|----------|--------|
-| **Post-Shock Temperature** | T ~ 10⁷ K | Cold gas | Paradox |
-| **Cooling Time / Dynamical Time** | ~30× | ~1× (immediate SF) | Paradox |
-| **Line Width (σ)** | ~85 km/s (thermal) | ~30 km/s (narrow) | Inconsistent |
-
-### Soliton Model Predictions
-
-| Quantity | Predicted Value | Calibration Source |
-|----------|----------------|-------------------|
-| **Soliton Radius (R_sol)** | ~7.8×10⁷ km | ρ_c ≈ 20 g/cm³ (GNSS) |
-| **R_sol / Schwarzschild Radius** | ~1.3 R_S | No free parameters |
-| **Effective Jeans Mass Reduction** | Enabled | Time dilation mechanism |
-
-### JWST Spectroscopic Evidence
-
-| Feature | Value | Interpretation |
-|---------|-------|----------------|
-| **[O III] Line Width** | σ ~ 30 km/s | Narrow (cold) |
-| **Expected (Thermal Shock)** | σ ~ 85 km/s | Hot gas |
-| **Discrepancy** | 2.8× | Supports metric shock |
-
-### Falsification Criteria
-
-| Test | Prediction | Discriminating Power |
-|------|------------|---------------------|
-| **Mass Determination** | M consistent with soliton scale | Object-specific |
-| **X-ray Flux Limit** | Low (no thermal shock) | Object-specific |
-| **Line-Profile Decomposition** | Narrow components dominant | Object-specific |
-| **Universal Scaling Calibration** | R_sol ∝ M^(1/3) | Theory-level |
-
-### Key Interpretation
-
-RBH-1 presents a thermal paradox that standard shock physics cannot resolve: a 650 km/s velocity discontinuity coexisting with cold, star-forming gas. The soliton interpretation reframes this as a metric shock (gravitational redshift gradient) rather than thermal shock, explaining how immediate star formation occurs without the ~30× cooling time bottleneck. The narrow [O III] line widths (σ ~ 30 km/s vs expected ~85 km/s for thermal shock) provide direct spectroscopic evidence against hot gas. The soliton radius prediction (R_sol ≈ 1.3 R_S) contains no free parameters—it is fixed by the universal critical density calibrated from terrestrial GNSS correlations.
-
----
-
 ## Key Findings
 
-1. **The Soliton Wake**: Resolves the "Cooling Bottleneck" paradox by reinterpreting the velocity discontinuity as a metric shock (gravitational redshift gradient) rather than a thermal shock.
-   
-2. **Line-Profile Decomposition**: JWST NIRSpec [O III] spectroscopy reveals narrow line widths (σ ~ 30 km/s) inconsistent with thermal shock heating (T ~ 10^7 K would require σ ~ 85 km/s), supporting the cold metric shock interpretation.
+RBH-1 (z ≈ 0.96) presents a thermal paradox: a 650 km/s velocity discontinuity coexists with cold, star-forming gas, yet standard shock physics predicts T ~ 10⁷ K requiring ~30× cooling time. JWST NIRSpec [O III] spectroscopy reveals narrow line widths (σ ~ 30 km/s vs expected ~85 km/s for thermal shock), supporting a cold "metric shock" interpretation rather than thermal shock. The soliton model predicts R_sol ≈ 1.3 R_S with no free parameters—the scale is fixed by the universal critical density ρ_c ≈ 20 g/cm³ calibrated from terrestrial GNSS correlations. This parameter-free prediction enables direct falsification via mass determination, X-ray flux limits, and line-profile decomposition.
 
-3. **Forward Model Validation**: The soliton wake geometry, calibrated using $\rho_c \approx 20$ g/cm³ from Paper 7 (TEP-UCD), correctly predicts the observed wake dimensions and star formation timescales.
-
-4. **Falsification Criteria**: Explicit tests are defined to distinguish the soliton hypothesis for RBH-1 from standard thermal shock models, ensuring object-specific validation without conflating model rejection with theory falsification.
+---
 
 ## Theoretical Framework
 
