@@ -60,6 +60,12 @@
       "title": "Appendix A: Future Directions",
       "file": "11_appendix_a_future.html",
       "order": 10
+    },
+    {
+      "id": "section-reproducibility",
+      "title": "Data Availability & Reproducibility",
+      "file": "11_reproducibility.html",
+      "order": 11
     }
   ]
 }
