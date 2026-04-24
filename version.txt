@@ -1,0 +1,4 @@
+v0.2 (Blantyre) – Temporal Topology Alignment
+
+- Aligned with TEP v0.7 framework: Replaced Vainshtein/screening terminology with continuous Temporal Topology nomenclature, introducing Temporal Shear as the operative field gradient describing continuous spatial profile recovery.
+- Reclassified paper numbering: Updated to Paper 7 (TEP-RBH) with corrected cross-references to TEP-UCD (Paper 6) and standardized citation formatting across the manuscript series.

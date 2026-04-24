@@ -164,7 +164,7 @@ async function buildStaticSite() {
         
         console.log('✅ Static site built successfully!');
         console.log(`📁 Output: ${outputPath}`);
-        console.log('📄 Markdown: manuscript-rbh1.md (in root)');
+        console.log('📄 Markdown: 7-TEP-RBH-v{version}-{codename}.md (in root)');
         console.log(`📊 Generated ${manifest.sections.length} sections`);
         console.log('🚀 Ready for deployment');
         

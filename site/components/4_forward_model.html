@@ -1,182 +1,314 @@
 <h2>3. Quantitative Predictions: Testing the Metric Shock</h2>
 
 <p>
-    The metric-shock hypothesis proposes that the observed velocity discontinuity Δv ~ 650 km/s arises from a spatial gradient in the conformal factor A(φ), which relates the matter metric to the gravitational metric via $\tilde{g}_{\mu\nu} = A(\phi) g_{\mu\nu}$. This section derives the required field parameters and checks for internal consistency.
+    The metric-shock hypothesis proposes that the observed velocity
+    discontinuity Δv ~ 650 km/s arises from a spatial gradient in the conformal
+    factor A(φ), which relates the matter metric to the gravitational metric via
+    $\tilde{g}_{\mu\nu} = A(\phi) g_{\mu\nu}$. This section derives the required
+    field parameters and checks for internal consistency.
 </p>
 
 <p>
-    A distinction is maintained throughout between geometry and amplitude. The soliton core radius (and associated geometric scaling) is fixed <em>a priori</em> by $\rho_c$ (Paper 7), while the magnitude of the apparent kinematic discontinuity depends on screening/transition physics through the effective coupling at $R_{\text{trans}}$ and is therefore treated here as an empirical constraint rather than an independent free fit.
+    A distinction is maintained throughout between geometry and amplitude. The
+    soliton core radius (and associated geometric scaling) is fixed
+    <em>a priori</em> by $\rho_c$ (Paper 6), while the magnitude of the apparent
+    kinematic discontinuity depends on screening/transition physics through the
+    effective coupling at $R_{\text{trans}}$ and is therefore treated here as an
+    empirical constraint rather than an independent free fit.
 </p>
 
 <h3>Table 2: Model Inputs vs. Predictions</h3>
 <table class="data-table">
-<thead>
-<tr>
-    <th>Parameter</th>
-    <th>Type</th>
-    <th>Source</th>
-    <th>Value/Role</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td><strong>Saturation Density</strong> ($\rho_c$)</td>
-    <td><strong>Fixed Input</strong></td>
-    <td>TEP-UCD (Paper 7)</td>
-    <td>$\approx 20$ g/cm³ (derived from GNSS). Sets geometric scale.</td>
-</tr>
-<tr>
-    <td><strong>Baryonic Mass</strong> ($M$)</td>
-    <td>Observation</td>
-    <td>van Dokkum et al. (2025)</td>
-    <td>$\sim 2 \times 10^7 M_\odot$. Sets scale via $R \propto (M/\rho_c)^{1/3}$.</td>
-</tr>
-<tr>
-    <td><strong>Soliton Radius</strong> ($R_{\text{sol}}$)</td>
-    <td><strong>Prediction</strong></td>
-    <td>Derived from $\rho_c, M$</td>
-    <td>$\approx 1.3 R_S$. <strong>Testable:</strong> Matches observed wake onset.</td>
-</tr>
-<tr>
-    <td><strong>Coupling Strength</strong> ($\beta_{\text{eff}}$)</td>
-    <td><strong>Constraint</strong></td>
-    <td>Fitted to Data</td>
-    <td>constrained by $\Delta v \approx 650$ km/s.</td>
-</tr>
-<tr>
-    <td><strong>Velocity Jump</strong> ($\Delta v$)</td>
-    <td>Constraint</td>
-    <td>Observation</td>
-    <td>Used to set $\beta_{\text{eff}}$; NOT a prediction.</td>
-</tr>
-<tr>
-    <td><strong>Line Width</strong> ($\sigma$)</td>
-    <td><strong>Prediction</strong></td>
-    <td>Soliton Physics</td>
-    <td>Predicted narrow ($\ll \Delta v$) due to cold metric gradient.</td>
-</tr>
-</tbody>
+    <thead>
+        <tr>
+            <th>Parameter</th>
+            <th>Type</th>
+            <th>Source</th>
+            <th>Value/Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Saturation Density</strong> ($\rho_c$)</td>
+            <td><strong>Fixed Input</strong></td>
+            <td>TEP-UCD (Paper 6)</td>
+            <td>
+                $\approx 20$ g/cm³ (derived from GNSS). Sets geometric scale.
+            </td>
+        </tr>
+        <tr>
+            <td><strong>Baryonic Mass</strong> ($M$)</td>
+            <td>Observation</td>
+            <td>van Dokkum et al. (2025)</td>
+            <td>
+                $\sim 2 \times 10^7 M_\odot$. Sets scale via $R \propto
+                (M/\rho_c)^{1/3}$.
+            </td>
+        </tr>
+        <tr>
+            <td><strong>Soliton Radius</strong> ($R_{\text{sol}}$)</td>
+            <td><strong>Prediction</strong></td>
+            <td>Derived from $\rho_c, M$</td>
+            <td>
+                $\approx 1.3 R_S$. <strong>Testable:</strong> Matches observed
+                wake onset.
+            </td>
+        </tr>
+        <tr>
+            <td><strong>Coupling Strength</strong> ($\beta_{\text{eff}}$)</td>
+            <td><strong>Constraint</strong></td>
+            <td>Fitted to Data</td>
+            <td>constrained by $\Delta v \approx 650$ km/s.</td>
+        </tr>
+        <tr>
+            <td><strong>Velocity Jump</strong> ($\Delta v$)</td>
+            <td>Constraint</td>
+            <td>Observation</td>
+            <td>Used to set $\beta_{\text{eff}}$; NOT a prediction.</td>
+        </tr>
+        <tr>
+            <td><strong>Line Width</strong> ($\sigma$)</td>
+            <td><strong>Prediction</strong></td>
+            <td>Soliton Physics</td>
+            <td>
+                Predicted narrow ($\ll \Delta v$) due to cold metric gradient.
+            </td>
+        </tr>
+    </tbody>
 </table>
 
 <div class="principle">
-    <h4>Box 3.0: Origin of the Saturation Density ($\rho_c \approx 20$ g/cm³)</h4>
+    <h4>
+        Box 3.0: Origin of the Saturation Density ($\rho_c \approx 20$ g/cm³)
+    </h4>
     <p>
-        The value $\rho_c \approx 20$ g/cm³ is not a free parameter tuned for RBH-1. It is derived in the companion paper <em>Universal Critical Density</em> (Smawfield 2025g) strictly from an analysis of terrestrial atomic clocks, independent of any astrophysical data.
+        The value $\rho_c \approx 20$ g/cm³ is not a free parameter tuned for
+        RBH-1. It is derived in the companion paper
+        <em>Universal Critical Density</em> (Smawfield 2025g) strictly from an
+        analysis of terrestrial atomic clocks, independent of any astrophysical
+        data.
     </p>
     <p>
         <em>Summary of Derivation:</em>
-        TEP posits that the "speed of light" $c$ is determined by the local gravitational potential $\Phi$. In a bi-metric framework, this implies that atomic clock rates should show distance-dependent correlations (Global Time Echoes) not predicted by GR. Analysis of 25 years of GNSS clock data reveals such correlations, with a characteristic decoherence length that maps to a universal density scale $\rho_c$.
+        TEP posits that the "speed of light" $c$ is determined by the local
+        gravitational potential $\Phi$. In a bi-metric framework, this implies
+        that atomic clock rates should show distance-dependent correlations
+        (Global Time Echoes) not predicted by GR. Analysis of 25 years of GNSS
+        clock data reveals such correlations, with a characteristic decoherence
+        length that maps to a universal density scale $\rho_c$.
     </p>
     <p>
-        This same density scale, when applied to the virial theorem, correctly predicts:
-        1. The Bohr radius (atomic scale).
-        2. The deviation of galactic rotation curves (at $\rho \ll \rho_c$).
-        3. The size of the RBH-1 wake (compact object scale).
+        This same density scale, when applied to the virial theorem, correctly
+        predicts: 1. The Bohr radius (atomic scale). 2. The deviation of
+        galactic rotation curves (at $\rho \ll \rho_c$). 3. The size of the
+        RBH-1 wake (compact object scale).
     </p>
     <p>
-        The RBH-1 analysis is thus a rigorous cross-scale test: does the density derived from Earth's GPS constellation correctly predict the geometry of a runaway black hole 7 billion light-years away?
+        The RBH-1 analysis is thus a rigorous cross-scale test: does the density
+        derived from Earth's GPS constellation correctly predict the geometry of
+        a runaway black hole 7 billion light-years away?
     </p>
     <p>
-        <em>Robustness:</em> The geometric prediction scales as $R_{\rm sol} \propto \rho_c^{-1/3}$. If $\rho_c$ were a factor of 2 higher (40 g/cm³), $R_{\rm sol}$ would shrink by ~20%; a factor of 10 higher would shrink it by ~50%. The current match to the observed wake onset ($R_{\rm sol} \approx 1.3 R_S$) tolerates $\rho_c$ variations of order unity but would fail for order-of-magnitude shifts. This sensitivity is itself a falsifiability criterion: future refinements to the GNSS-derived $\rho_c$ will either tighten or break the RBH-1 concordance.
+        <em>Robustness:</em> The geometric prediction scales as $R_{\rm sol}
+        \propto \rho_c^{-1/3}$. If $\rho_c$ were a factor of 2 higher (40
+        g/cm³), $R_{\rm sol}$ would shrink by ~20%; a factor of 10 higher would
+        shrink it by ~50%. The current match to the observed wake onset ($R_{\rm
+        sol} \approx 1.3 R_S$) tolerates $\rho_c$ variations of order unity but
+        would fail for order-of-magnitude shifts. This sensitivity is itself a
+        falsifiability criterion: future refinements to the GNSS-derived
+        $\rho_c$ will either tighten or break the RBH-1 concordance.
     </p>
 </div>
 
 <h2>Required Conformal Factor Gradient</h2>
 
 <p>
-    A redshift-like velocity offset Δv corresponds to a fractional frequency shift:
+    A redshift-like velocity offset Δv corresponds to a fractional frequency
+    shift:
 </p>
 
-<div class="equation">$$\frac{\Delta \nu}{\nu} = \frac{\Delta v}{c} \approx \frac{650 \text{ km/s}}{3 \times 10^5 \text{ km/s}} \approx 2.2 \times 10^{-3}$$</div>
+<div class="equation">
+    $$\frac{\Delta \nu}{\nu} = \frac{\Delta v}{c} \approx \frac{650 \text{
+    km/s}}{3 \times 10^5 \text{ km/s}} \approx 2.2 \times 10^{-3}$$
+</div>
 
 <p>
-    In the conformal time framework, clock rates scale as √A. A spatial gradient in A produces an apparent Doppler shift for observers using coordinate time. The required change in ln(√A) across the discontinuity is:
+    In the conformal time framework, clock rates scale as √A. A spatial gradient
+    in A produces an apparent Doppler shift for observers using coordinate time.
+    The required change in ln(√A) across the discontinuity is:
 </p>
 
-<div class="equation">$$\Delta \ln(\sqrt{A}) \approx \frac{\Delta v}{c} \approx 2.2 \times 10^{-3}$$</div>
+<div class="equation">
+    $$\Delta \ln(\sqrt{A}) \approx \frac{\Delta v}{c} \approx 2.2 \times
+    10^{-3}$$
+</div>
 
 <p>
-    If this gradient occurs over a characteristic scale L ~ 1 kpc (the observed width of the kinematic discontinuity), the implied gradient is:
+    If this gradient occurs over a characteristic scale L ~ 1 kpc (the observed
+    width of the kinematic discontinuity), the implied gradient is:
 </p>
 
-<div class="equation">$$\nabla \ln(\sqrt{A}) \sim \frac{2.2 \times 10^{-3}}{1 \text{ kpc}} \approx 7 \times 10^{-23} \text{ m}^{-1}$$</div>
+<div class="equation">
+    $$\nabla \ln(\sqrt{A}) \sim \frac{2.2 \times 10^{-3}}{1 \text{ kpc}} \approx
+    7 \times 10^{-23} \text{ m}^{-1}$$
+</div>
 
 <h2>Lensing and Clock Signatures</h2>
 
 <p>
-    A critical prediction of the conformal scalar-tensor framework is the decoupling of matter and light sectors. The scalar field $A(\phi)$ modifies the proper time for massive particles ($d\tau^2 = A dt^2$), creating the large apparent velocity and "Phantom Halo" effects. In the weak-field limit of a purely conformal coupling, null geodesics remain unaffected because the conformal factor cancels in the null condition $ds^2 = 0$. Therefore, gravitational lensing is governed primarily by the bare gravitational metric $g_{\mu\nu}$ (the baryonic mass), not the enhanced scalar potential. (Note: disformal couplings or strong-field corrections could modify this; the prediction here assumes the conformal limit.)
+    A critical prediction of the conformal scalar-tensor framework is the
+    decoupling of matter and light sectors. The scalar field $A(\phi)$ modifies
+    the proper time for massive particles ($d\tau^2 = A dt^2$), creating the
+    large apparent velocity and "Phantom Halo" effects. In the weak-field limit
+    of a purely conformal coupling, null geodesics remain unaffected because the
+    conformal factor cancels in the null condition $ds^2 = 0$. Therefore,
+    gravitational lensing is governed primarily by the bare gravitational metric
+    $g_{\mu\nu}$ (the baryonic mass), not the enhanced scalar potential. (Note:
+    disformal couplings or strong-field corrections could modify this; the
+    prediction here assumes the conformal limit.)
 </p>
 
 <p>
-    For light passing through the wake boundary ($b \sim 1$ kpc), the deflection angle depends only on the bare mass $M \approx 2 \times 10^7 M_\odot$:
+    For light passing through the wake boundary ($b \sim 1$ kpc), the deflection
+    angle depends only on the bare mass $M \approx 2 \times 10^7 M_\odot$:
 </p>
 
-<div class="equation">$$\theta_{\text{lens}} \sim \frac{4GM}{c^2 b} \sim \frac{4 \times 6.67 \times 10^{-11} \times 2 \times 10^7 \times 2 \times 10^{30}}{(3 \times 10^8)^2 \times 3 \times 10^{19}} \sim 4 \times 10^{-9} \text{ rad} \approx 0.8 \, \text{mas}$$</div>
+<div class="equation">
+    $$\theta_{\text{lens}} \sim \frac{4GM}{c^2 b} \sim \frac{4 \times 6.67
+    \times 10^{-11} \times 2 \times 10^7 \times 2 \times 10^{30}}{(3 \times
+    10^8)^2 \times 3 \times 10^{19}} \sim 4 \times 10^{-9} \text{ rad} \approx
+    0.8 \, \text{mas}$$
+</div>
 
 <p>
-    This value ($\sim 0.8$ milliarcseconds) is far below current observational limits (HST resolution $\sim 50$ mas).
+    This value ($\sim 0.8$ milliarcseconds) is far below current observational
+    limits (HST resolution $\sim 50$ mas).
 </p>
 
 <div class="principle">
     <h4>The Lensing Discriminator</h4>
     <p>
-        This provides a definitive test against "Dark Matter Particle" models. A particulate dark matter halo of $10^{11} M_\odot$ (required to explain the kinematics dynamically) would produce strong lensing ($\theta \sim 0.3$ arcsec). The TEP "Phantom Halo" predicts <strong>strong kinematics</strong> (due to scalar coupling) but <strong>weak lensing</strong> (due to conformal invariance). The lack of observed arc-like distortions in the RBH-1 field qualitatively favors the Phantom Halo interpretation.
+        This provides a definitive test against "Dark Matter Particle" models. A
+        particulate dark matter halo of $10^{11} M_\odot$ (required to explain
+        the kinematics dynamically) would produce strong lensing ($\theta \sim
+        0.3$ arcsec). The TEP "Phantom Halo" predicts
+        strong kinematics (due to scalar coupling) but
+        weak lensing (due to conformal invariance). The lack of
+        observed arc-like distortions in the RBH-1 field qualitatively favors
+        the Phantom Halo interpretation.
     </p>
 </div>
 
 <p>
-    For stars formed within the wake, the metric gradient would produce a systematic redshift offset in their absorption lines relative to stars formed outside the wake. If the wake interior has $\Delta \ln(\sqrt{A}) \sim 10^{-3}$ relative to the ambient medium, stellar spectra should show:
+    For stars formed within the wake, the metric gradient would produce a
+    systematic redshift offset in their absorption lines relative to stars
+    formed outside the wake. If the wake interior has $\Delta \ln(\sqrt{A}) \sim
+    10^{-3}$ relative to the ambient medium, stellar spectra should show:
 </p>
 
-<div class="equation">$$\Delta v_{\text{stellar}} \sim 650 \text{ km/s} \times \frac{\text{interior field strength}}{\text{apex field strength}}$$</div>
+<div class="equation">
+    $$\Delta v_{\text{stellar}} \sim 650 \text{ km/s} \times
+    \frac{\text{interior field strength}}{\text{apex field strength}}$$
+</div>
 
 <p>
-    This is a testable prediction: spatially resolved spectroscopy of individual stellar clusters along the wake should reveal systematic velocity offsets correlated with position, distinct from the Hubble flow and peculiar velocities.
+    This is a testable prediction: spatially resolved spectroscopy of individual
+    stellar clusters along the wake should reveal systematic velocity offsets
+    correlated with position, distinct from the Hubble flow and peculiar
+    velocities.
 </p>
 
 <h2>Screening and Parameter Consistency</h2>
 
 <p>
-    The above estimates assume the scalar field is in the Vainshtein-screened regime, where the effective coupling β_eff is suppressed relative to the bare coupling β₀. The phenomenological scaling ansatz (detailed in Smawfield 2025e) is adopted:
-</p>
-
-<div class="equation">$$S = \frac{\beta_0}{\beta_{\text{eff}}} \propto \left(\frac{\rho}{\rho_c}\right)^{1/3}$$</div>
-
-<p>
-    For RBH-1 at the crossover mass (M ~ 10⁷ M_☉, ρ ~ ρ_c ~ 20 g/cm³), the screening factor is S ~ 1, meaning the field is near the transition between screened and unscreened regimes. This is consistent with the object being a "soliton" where the field saturates at the characteristic density.
+    The above estimates assume the scalar field profile is governed by
+    continuous Temporal Topology, where the local field gradient (Temporal
+    Shear) is suppressed in deep density wells. The phenomenological scaling
+    ansatz (detailed in Smawfield 2025e) is adopted:
 </p>
 
 <p>
-    At higher densities (e.g., white dwarfs, neutron stars), S >> 1, and the scalar contribution is suppressed below observational limits, explaining why precision GR tests show no deviation. At lower densities (e.g., galaxies), S < 1, and the scalar field produces observable "phantom mass" effects (detailed in the companion paper, Smawfield 2025e).
+    Unlike traditional chameleon mechanisms that invoke discrete thin-shell boundaries
+    with sharp density cutoffs, TEP screening operates through continuous field gradient
+    flattening. The Temporal Shear is gradually suppressed in deep potential wells,
+    avoiding the fine-tuning problems of thin-shell approximations while maintaining
+    fifth-force suppression in dense environments.
+</p>
+
+<div class="equation">
+    $$S = \frac{\beta_0}{\beta_{\text{eff}}} \propto
+    \left(\frac{\rho}{\rho_c}\right)^{1/3}$$
+</div>
+
+<p>
+    For RBH-1 at the crossover mass (M ~ 10⁷ M_☉, ρ ~ ρ_c ~ 20 g/cm³), the
+    suppression factor is S ~ 1, meaning the Temporal Shear is near the
+    transition between strongly flattened and asymptotically recovered profiles.
+    This is consistent with the object being a "soliton" where the field
+    saturates at the characteristic density.
+</p>
+
+<p>
+    At higher densities (e.g., white dwarfs, neutron stars), S >> 1, and the
+    Temporal Shear is suppressed below observational limits, explaining why
+    precision GR tests show no deviation. At lower densities (e.g., galaxies), S
+    < 1, and the scalar field produces observable "phantom mass" effects
+    (detailed in the companion paper, Smawfield 2025e).
 </p>
 
 <div class="principle">
     <h4>Box 3.1: The Phantom Halo (Mass Deficit) Implication</h4>
     <p>
-        A critical reader will note that a Newtonian potential for $M = 2 \times 10^7 M_\odot$ at $R = 1$ kpc yields $\Phi/c^2 \sim 10^{-9}$, far smaller than the required metric shift $z_{\text{metric}} \sim 10^{-3}$.
+        A critical reader will note that a Newtonian potential for $M = 2 \times
+        10^7 M_\odot$ at $R = 1$ kpc yields $\Phi/c^2 \sim 10^{-9}$, far smaller
+        than the required metric shift $z_{\text{metric}} \sim 10^{-3}$.
     </p>
     <p>
-        This discrepancy implies that the scalar sector carries an effective "Phantom Mass" of order $M_{\text{eff}} \sim 10^{11} M_\odot$ (comparable to a galactic halo) enclosed within the transition radius. In the TEP framework, this is not "missing matter" but a "metric halo"—the scalar field profile maintains a deep potential well out to $R_{\text{trans}}$, decoupling the metric potential from the compact baryonic source.
+        This discrepancy implies that the scalar sector carries an effective
+        "Phantom Mass" of order $M_{\text{eff}} \sim 10^{11} M_\odot$
+        (comparable to a galactic halo) enclosed within the transition radius.
+        In the TEP framework, this is not "missing matter" but a "metric
+        halo"—the scalar field profile maintains a deep potential well out to
+        $R_{\text{trans}}$, decoupling the metric potential from the compact
+        baryonic source.
     </p>
     <p>
-        <strong>Crucially, this potential is bi-metric:</strong> it affects the proper-time rate (kinematics/redshift) but <strong>not</strong> the spatial curvature sensed by light (lensing). Thus, while the object generates a kinematic "kick" equivalent to a massive halo, it does not produce the strong lensing or extreme gas focusing expected from $10^{11} M_\odot$ of baryonic matter.
+        <strong>Crucially, this potential is bi-metric:</strong> it affects the
+        proper-time rate (kinematics/redshift) but not the
+        spatial curvature sensed by light (lensing). Thus, while the object
+        generates a kinematic "kick" equivalent to a massive halo, it does not
+        produce the strong lensing or extreme gas focusing expected from
+        $10^{11} M_\odot$ of baryonic matter.
     </p>
     <p>
-        <strong>Observationally:</strong> RBH-1 acts as a "naked halo"—a compact baryonic object ($2 \times 10^7 M_\odot$) clothed in a galaxy-sized metric distortion ($10^{11} M_{\text{eff}}$). This explains why it generates a wake magnitude ($\sim 600$ km/s) typical of galactic interactions despite its small physical size.
+        <strong>Observationally:</strong> RBH-1 acts as a "naked halo"—a compact
+        baryonic object ($2 \times 10^7 M_\odot$) clothed in a galaxy-sized
+        metric distortion ($10^{11} M_{\text{eff}}$). This explains why it
+        generates a wake magnitude ($\sim 600$ km/s) typical of galactic
+        interactions despite its small physical size.
     </p>
 </div>
 
 <div class="principle">
     <h4>Consistency Check</h4>
     <p>
-        The required conformal factor gradient (Δ ln √A ~ 10⁻³ over 1 kpc) produces:
+        The required conformal factor gradient (Δ ln √A ~ 10⁻³ over 1 kpc)
+        produces:
     </p>
     <ul>
         <li>Velocity offset: Δv ~ 650 km/s ✓ (matches observation)</li>
-        <li>Lensing: θ ~ 0.8 mas (far below current HST/JWST resolution, consistent with non-detection)</li>
-        <li>Stellar redshift offset: Δv_stellar ~ few hundred km/s (testable with spatially resolved spectroscopy)</li>
+        <li>
+            Lensing: θ ~ 0.8 mas (far below current HST/JWST resolution,
+            consistent with non-detection)
+        </li>
+        <li>
+            Stellar redshift offset: Δv_stellar ~ few hundred km/s (testable
+            with spatially resolved spectroscopy)
+        </li>
     </ul>
     <p>
-        These parameters are internally consistent and do not violate existing constraints. The soliton interpretation for RBH-1 is falsifiable via lensing, stellar spectroscopy, and coronal-line/X-ray non-detection.
+        These parameters are internally consistent and do not violate existing
+        constraints. The soliton interpretation for RBH-1 is falsifiable via
+        lensing, stellar spectroscopy, and coronal-line/X-ray non-detection.
     </p>
 </div>
