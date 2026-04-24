@@ -43,8 +43,12 @@ class HTMLToMarkdownConverter {
         html = html.replace(/<h3[^>]*>(.*?)<\/h3>/gi, '\n### $1\n\n');
         html = html.replace(/<h4[^>]*>(.*?)<\/h4>/gi, '\n#### $1\n\n');
         
-        // Convert paragraphs
-        html = html.replace(/<p[^>]*>(.*?)<\/p>/gi, '$1\n\n');
+        // Convert paragraphs - trim leading whitespace to prevent indentation
+        html = html.replace(/<p[^>]*>\s*(.*?)\s*<\/p>/gi, (match, content) => {
+            // Trim leading whitespace from each line within the paragraph
+            const cleaned = content.replace(/^\s+/gm, '').trim();
+            return cleaned + '\n\n';
+        });
         
         // Convert strong/bold
         html = html.replace(/<(strong|b)[^>]*>(.*?)<\/(strong|b)>/gi, '**$2**');
@@ -257,8 +261,18 @@ class HTMLToMarkdownConverter {
             // Build the complete markdown document
             const markdown = this.buildMarkdownDocument(metadata, markdownContent);
             
+            // Generate filename from version: "v0.2 (Blantyre)" -> "7-TEP-RBH-v0.2-Blantyre.md"
+            const versionMatch = metadata.version.match(/v([\d.]+)\s*\(([^)]+)\)/);
+            let filename;
+            if (versionMatch) {
+                const [, versionNum, codename] = versionMatch;
+                filename = `7-TEP-RBH-v${versionNum}-${codename}.md`;
+            } else {
+                filename = '7-TEP-RBH.md';
+            }
+            
             // Write to file
-            const outputPath = path.join(__dirname, '..', 'manuscript-rbh1.md');
+            const outputPath = path.join(__dirname, '..', filename);
             fs.writeFileSync(outputPath, markdown, 'utf8');
             
             console.log('✅ Markdown conversion complete!');
@@ -279,23 +293,24 @@ class HTMLToMarkdownConverter {
      * Build the complete markdown document with metadata
      */
     buildMarkdownDocument(metadata, content) {
-        const timestamp = new Date().toISOString().split('T')[0];
-        
         // Clean up the title to remove the author part
         const cleanTitle = metadata.title.replace(' | Matthew Lukin Smawfield', '');
         
+        // Clean up content - remove excessive indentation
+        const cleanedContent = content
+            .replace(/^\s{4,}/gm, '')  // Remove leading indentation of 4+ spaces
+            .replace(/\n{3,}/g, '\n\n'); // Collapse multiple newlines to double
+        
         return `# ${cleanTitle}
-
-**Author:** ${metadata.author}  
-**Version:** ${metadata.version}  
-**Date:** ${metadata.date}  
-**DOI:** ${metadata.doi}  
-**Generated:** ${timestamp}  
-**Paper Series:** TEP Series: Paper 8 (The Soliton Wake)
+**${metadata.author}**
+Version: ${metadata.version}
+${metadata.date}
+DOI: ${metadata.doi}
+Paper: 7 (TEP Series)
 
 ---
 
-${content}
+${cleanedContent}
 
 ---
 
@@ -303,7 +318,7 @@ ${content}
 
 *Related Work:*
 - [**TEP Theory**](https://doi.org/10.5281/zenodo.16921911) (Foundational framework)
-- [**TEP-UCD Paper 7**](https://doi.org/10.5281/zenodo.18064366) (Universal Critical Density)
+- [**TEP-UCD Paper 6**](https://doi.org/10.5281/zenodo.18064366) (Universal Critical Density)
 
 *Source code and data available at: https://github.com/matthewsmawfield/TEP-RBH*
 `;

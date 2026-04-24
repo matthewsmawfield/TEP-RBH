@@ -93,7 +93,7 @@ class DevServer {
     }
 
     async start() {
-        console.log('🎯 TEP-RBH Development Server (Paper 8)');
+        console.log('🎯 TEP-RBH Development Server (Paper 7)');
         console.log('=====================================\n');
 
         // Ensure dist directory exists and do initial build

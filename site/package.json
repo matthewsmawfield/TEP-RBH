@@ -1,8 +1,8 @@
 {
   "name": "tep-rbh-site",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "The Soliton Wake: Identifying the Runaway Object RBH-1 as a Gravitational Soliton",
-  "comment": "Package version matches manuscript version v0.1 (Blantyre)",
+  "comment": "Package version matches manuscript version v0.2 (Blantyre)",
   "main": "index.html",
   "scripts": {
     "dev": "node dev-server.js",
