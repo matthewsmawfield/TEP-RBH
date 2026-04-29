@@ -1,9 +1,9 @@
 {
   "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "ScholarlyArticle",
-  "identifier": "https://doi.org/10.5281/zenodo.18059251",
-  "name": "The Soliton Wake: Identifying the Runaway Object RBH-1 as a Gravitational Soliton",
-  "description": "The runaway supermassive black hole RBH-1 (z ~ 0.96) presents a thermal paradox: JWST spectroscopy reveals a 650 km/s velocity discontinuity coexisting with cold, star-forming gas. Higher-resolution Keck/LRIS spectroscopy yields a narrow apex dispersion (sigma ~ 31 +/- 4 km/s), far below the sigma ~ 80-85 km/s expected if the emitting gas were predominantly at T ~ 10^7 K. Standard shock physics predicts post-shock temperatures T ~ 10^7 K, yielding a cooling time that exceeds the dynamical time by a factor of ~30. Yet the wake exhibits immediate star formation and extreme collimation (50:1 aspect ratio over 62 kpc). An alternative interpretation is proposed: RBH-1 is a gravitational soliton—a coherent region of altered proper-time rate. The observed velocity discontinuity is reinterpreted as a metric shock (spatial gradient in gravitational redshift), not bulk thermalization. The effective Jeans mass is reduced behind the front via time dilation, enabling immediate star formation without heating. The soliton core radius is fixed by the saturation density rho_c ~ 20 g/cm^3, independently derived from terrestrial GNSS correlations (Smawfield 2025g). Applying this calibration to RBH-1 (M ~ 2 x 10^7 M_sun) predicts R_sol ~ 7.8 x 10^7 km ~ 1.3 R_S, providing a geometric consistency check for this object. The amplitude of the observed kinematic discontinuity depends on screening/transition physics (via beta_eff at R_trans) and is treated here as an empirical constraint rather than an independent prediction. Specific falsification criteria are outlined; decisive discrimination awaits line-profile decomposition and X-ray flux limits.",
+  "identifier": "https://doi.org/10.5281/zenodo.18059250",
+  "name": "The Soliton Wake: Exploring RBH-1 as a Temporal Topology Candidate",
+  "description": "The runaway supermassive black hole RBH-1 (z ~ 0.96) presents a thermal paradox: JWST spectroscopy reveals a 650 km/s velocity discontinuity coexisting with cold, star-forming gas. Higher-resolution Keck/LRIS spectroscopy yields a narrow apex dispersion (sigma ~ 31 +/- 4 km/s), far below the sigma ~ 80-85 km/s expected if the emitting gas were predominantly at T ~ 10^7 K. Standard shock physics predicts post-shock temperatures T ~ 10^7 K, yielding a cooling time that exceeds the dynamical time by a factor of ~30. Yet the wake exhibits immediate star formation and extreme collimation (50:1 aspect ratio over 62 kpc). RBH-1 is explored as a candidate Temporal Topology soliton/wake interpretation: a coherent region of altered proper-time rate. Under this candidate framing, the observed velocity discontinuity is reinterpreted as a metric shock (spatial gradient in gravitational redshift) rather than bulk thermalization, and the effective Jeans mass is reduced behind the front via time dilation, enabling immediate star formation without heating. The characteristic temporal scale R_T, calibrated from terrestrial GNSS correlations (Smawfield 2025g), is applied as a consistency check rather than as proof that RBH-1 is a soliton. For RBH-1 (M ~ 2 x 10^7 M_sun), the calibration yields R_T ~ 7.8 x 10^7 km ~ 1.3 R_S, comparable to the near-source transition scale, not the full 62 kpc wake length. The amplitude of the observed kinematic discontinuity depends on screening/transition physics (via beta_eff at R_trans) and is treated as an empirical constraint rather than an independent prediction. Specific falsification criteria are outlined; decisive discrimination awaits line-profile decomposition and X-ray flux limits.",
   "author": [
     {
       "@type": "Person",
@@ -13,8 +13,8 @@
     }
   ],
   "datePublished": "2025-12-28",
-  "dateModified": "2026-04-24",
-  "version": "0.2",
+  "dateModified": "2026-04-29",
+  "version": "0.3",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "codeRepository": "https://github.com/matthewsmawfield/TEP-RBH",
   "url": "https://matthewsmawfield.github.io/TEP-RBH/",
@@ -26,7 +26,7 @@
     "gravitation",
     "temporal equivalence principle",
     "magnetars",
-    "Vainshtein screening",
+    "temporal topology",
     "JWST",
     "Gaia DR3",
     "Milky Way",

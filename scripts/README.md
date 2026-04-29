@@ -1,16 +1,15 @@
 # TEP-RBH Analysis Scripts
 
-Analysis code for the TEP-RBH manuscript: "The Soliton Wake: Identifying the Runaway Object RBH-1 as a Gravitational Soliton"
+Analysis code for the TEP-RBH manuscript: "The Soliton Wake: Exploring RBH-1 as a Temporal Topology Candidate"
 
 ## Directory Structure
 
 ```
 scripts/
 ├── figures/           # Figure generation scripts (numbered sequentially)
-├── eht_analysis/      # Event Horizon Telescope polarization analysis
 ├── analysis_checks/   # Supplementary validation scripts
 ├── utils/             # Shared utilities
-└── archive/           # Deprecated/superseded scripts
+└── archive/           # Deprecated/superseded scripts (includes EHT analysis)
 ```
 
 ## Figure Generation Scripts
@@ -19,6 +18,7 @@ Located in `scripts/figures/`:
 
 | Script | Figure | Description |
 |--------|--------|-------------|
+| `01_observation_schematic.py` | Figure 1 | RBH-1 observation schematic (panoramic + zoom + kinematics) |
 | `01_wake_anatomy.py` | Figure 3 | Wake anatomy comparison (thermal vs metric shock) |
 | `02_sensitivity.py` | Figure 2 | Cooling sensitivity analysis (cooling bottleneck) |
 | `07_polarization.py` | Figure A1 | EHT polarimetry prediction |
@@ -32,9 +32,19 @@ Located in `scripts/figures/`:
 
 **Note:** Figures 7-8 (polarization/sensitivity) were removed from the manuscript and moved to archive. Scripts `07_polarization.py` and `08_sensitivity.py` remain for reference but are not part of the main figure set.
 
+## EHT Polarization Analysis
+
+Located in `scripts/archive/eht_analysis/`:
+
+- `eht_complete_analysis.py` - Full polarization analysis pipeline
+- `eht_polarization_complete.py` - Comprehensive polarization metrics
+- `eht_proper_imaging_analysis.py` - Image reconstruction analysis
+- `eht_pol_survey_2017.py` - 2017 M87* polarization survey
+- `eht_pol_rml_validate_2017.py` - RML validation
+
 ## SPARC Analysis (Reproducibility)
 
-The SPARC galaxy analysis (`scripts/figures/05_sparc_analysis.py`) implements:
+The SPARC galaxy analysis (`scripts/archive/05_sparc_analysis.py`) implements:
 
 1. **Baryonic mass calculation:** $M_{\rm bar} = M_* + 1.33 M_{\rm HI}$
 2. **Onset radius definition:** First radial bin where $V_{\rm obs}/V_{\rm bar} > 1.3$
@@ -43,7 +53,7 @@ The SPARC galaxy analysis (`scripts/figures/05_sparc_analysis.py`) implements:
 
 ### Input Data
 
-SPARC database tables are located in `data/sparc/`:
+SPARC database tables are expected in `data/sparc/`:
 - `Table1.mrt` - Galaxy properties
 - `Table2.mrt` - Rotation curve data
 
@@ -51,20 +61,10 @@ SPARC database tables are located in `data/sparc/`:
 
 ```bash
 cd scripts/figures
-python 05_sparc_analysis.py
+python ../archive/05_sparc_analysis.py
 ```
 
 Output: `site/figures/figure_5_sparc_enhanced.png`
-
-## EHT Polarization Analysis
-
-Located in `scripts/eht_analysis/`:
-
-- `eht_complete_analysis.py` - Full polarization analysis pipeline
-- `eht_polarization_complete.py` - Comprehensive polarization metrics
-- `eht_proper_imaging_analysis.py` - Image reconstruction analysis
-- `eht_pol_survey_2017.py` - 2017 M87* polarization survey
-- `eht_pol_rml_validate_2017.py` - RML validation
 
 ## Requirements
 
@@ -85,9 +85,9 @@ If you use this code, please cite:
 ```bibtex
 @article{smawfield2025rbh1,
   author = {Smawfield, Matthew Lukin},
-  title = {The Soliton Wake: Identifying the Runaway Object RBH-1 as a Gravitational Soliton},
+  title = {The Soliton Wake: Exploring RBH-1 as a Temporal Topology Candidate},
   year = {2025},
-  doi = {10.5281/zenodo.18059251}
+  doi = {10.5281/zenodo.18059250}
 }
 ```
 

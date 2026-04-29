@@ -4,14 +4,14 @@
     The metric-shock hypothesis proposes that the observed velocity
     discontinuity Δv ~ 650 km/s arises from a spatial gradient in the conformal
     factor A(φ), which relates the matter metric to the gravitational metric via
-    $\tilde{g}_{\mu\nu} = A(\phi) g_{\mu\nu}$. This section derives the required
+    $\tilde{g}_{\mu\nu} = A^2(\phi) g_{\mu\nu}$. This section derives the required
     field parameters and checks for internal consistency.
 </p>
 
 <p>
     A distinction is maintained throughout between geometry and amplitude. The
-    soliton core radius (and associated geometric scaling) is fixed
-    <em>a priori</em> by $\rho_c$ (Paper 6), while the magnitude of the apparent
+    temporal scale (and associated geometric scaling) is fixed
+    <em>a priori</em> by $\rho_T$ (Paper 6), while the magnitude of the apparent
     kinematic discontinuity depends on screening/transition physics through the
     effective coupling at $R_{\text{trans}}$ and is therefore treated here as an
     empirical constraint rather than an independent free fit.
@@ -29,11 +29,11 @@
     </thead>
     <tbody>
         <tr>
-            <td><strong>Saturation Density</strong> ($\rho_c$)</td>
+            <td><strong>Characteristic Density</strong> ($\rho_T$)</td>
             <td><strong>Fixed Input</strong></td>
             <td>TEP-UCD (Paper 6)</td>
             <td>
-                $\approx 20$ g/cm³ (derived from GNSS). Sets geometric scale.
+                $\approx 20$ g/cm³ (derived from GNSS). Sets temporal scale.
             </td>
         </tr>
         <tr>
@@ -42,16 +42,16 @@
             <td>van Dokkum et al. (2025)</td>
             <td>
                 $\sim 2 \times 10^7 M_\odot$. Sets scale via $R \propto
-                (M/\rho_c)^{1/3}$.
+                (M/\rho_T)^{1/3}$.
             </td>
         </tr>
         <tr>
-            <td><strong>Soliton Radius</strong> ($R_{\text{sol}}$)</td>
+            <td><strong>Temporal Scale</strong> ($R_T$)</td>
             <td><strong>Prediction</strong></td>
-            <td>Derived from $\rho_c, M$</td>
+            <td>Derived from $\rho_T, M$</td>
             <td>
-                $\approx 1.3 R_S$. <strong>Testable:</strong> Matches observed
-                wake onset.
+                $\approx 1.3 R_S$. <strong>Consistency Check:</strong> Matches observed
+                wake onset morphology.
             </td>
         </tr>
         <tr>
@@ -79,10 +79,10 @@
 
 <div class="principle">
     <h4>
-        Box 3.0: Origin of the Saturation Density ($\rho_c \approx 20$ g/cm³)
+        Box 3.0: Origin of the Characteristic Density ($\rho_T \approx 20$ g/cm³)
     </h4>
     <p>
-        The value $\rho_c \approx 20$ g/cm³ is not a free parameter tuned for
+        The value $\rho_T \approx 20$ g/cm³ is not a free parameter tuned for
         RBH-1. It is derived in the companion paper
         <em>Universal Critical Density</em> (Smawfield 2025g) strictly from an
         analysis of terrestrial atomic clocks, independent of any astrophysical
@@ -95,12 +95,12 @@
         that atomic clock rates should show distance-dependent correlations
         (Global Time Echoes) not predicted by GR. Analysis of 25 years of GNSS
         clock data reveals such correlations, with a characteristic decoherence
-        length that maps to a universal density scale $\rho_c$.
+        length that maps to a universal density scale $\rho_T$.
     </p>
     <p>
         This same density scale, when applied to the virial theorem, correctly
         predicts: 1. The Bohr radius (atomic scale). 2. The deviation of
-        galactic rotation curves (at $\rho \ll \rho_c$). 3. The size of the
+        galactic rotation curves (at $\rho \ll \rho_T$). 3. The size of the
         RBH-1 wake (compact object scale).
     </p>
     <p>
@@ -109,14 +109,14 @@
         a runaway black hole 7 billion light-years away?
     </p>
     <p>
-        <em>Robustness:</em> The geometric prediction scales as $R_{\rm sol}
-        \propto \rho_c^{-1/3}$. If $\rho_c$ were a factor of 2 higher (40
-        g/cm³), $R_{\rm sol}$ would shrink by ~20%; a factor of 10 higher would
+        <em>Robustness:</em> The geometric prediction scales as $R_T
+        \propto \rho_T^{-1/3}$. If $\rho_T$ were a factor of 2 higher (40
+        g/cm³), $R_T$ would shrink by ~20%; a factor of 10 higher would
         shrink it by ~50%. The current match to the observed wake onset ($R_{\rm
-        sol} \approx 1.3 R_S$) tolerates $\rho_c$ variations of order unity but
+        T} \approx 1.3 R_S$) tolerates $\rho_T$ variations of order unity but
         would fail for order-of-magnitude shifts. This sensitivity is itself a
         falsifiability criterion: future refinements to the GNSS-derived
-        $\rho_c$ will either tighten or break the RBH-1 concordance.
+        $\rho_T$ will either tighten or break the RBH-1 concordance.
     </p>
 </div>
 
@@ -133,13 +133,13 @@
 </div>
 
 <p>
-    In the conformal time framework, clock rates scale as √A. A spatial gradient
+    In the conformal time framework, clock rates scale as A. A spatial gradient
     in A produces an apparent Doppler shift for observers using coordinate time.
-    The required change in ln(√A) across the discontinuity is:
+    The required change in ln(A) across the discontinuity is:
 </p>
 
 <div class="equation">
-    $$\Delta \ln(\sqrt{A}) \approx \frac{\Delta v}{c} \approx 2.2 \times
+    $$\Delta \ln(A) \approx \frac{\Delta v}{c} \approx 2.2 \times
     10^{-3}$$
 </div>
 
@@ -149,7 +149,7 @@
 </p>
 
 <div class="equation">
-    $$\nabla \ln(\sqrt{A}) \sim \frac{2.2 \times 10^{-3}}{1 \text{ kpc}} \approx
+    $$\nabla \ln(A) \sim \frac{2.2 \times 10^{-3}}{1 \text{ kpc}} \approx
     7 \times 10^{-23} \text{ m}^{-1}$$
 </div>
 
@@ -158,7 +158,7 @@
 <p>
     A critical prediction of the conformal scalar-tensor framework is the
     decoupling of matter and light sectors. The scalar field $A(\phi)$ modifies
-    the proper time for massive particles ($d\tau^2 = A dt^2$), creating the
+    the proper time for massive particles ($d\tau = A dt$), creating the
     large apparent velocity and "Phantom Halo" effects. In the weak-field limit
     of a purely conformal coupling, null geodesics remain unaffected because the
     conformal factor cancels in the null condition $ds^2 = 0$. Therefore,
@@ -202,7 +202,7 @@
 <p>
     For stars formed within the wake, the metric gradient would produce a
     systematic redshift offset in their absorption lines relative to stars
-    formed outside the wake. If the wake interior has $\Delta \ln(\sqrt{A}) \sim
+    formed outside the wake. If the wake interior has $\Delta \ln(A) \sim
     10^{-3}$ relative to the ambient medium, stellar spectra should show:
 </p>
 
@@ -237,11 +237,11 @@
 
 <div class="equation">
     $$S = \frac{\beta_0}{\beta_{\text{eff}}} \propto
-    \left(\frac{\rho}{\rho_c}\right)^{1/3}$$
+    \left(\frac{\rho}{\rho_T}\right)^{1/3}$$
 </div>
 
 <p>
-    For RBH-1 at the crossover mass (M ~ 10⁷ M_☉, ρ ~ ρ_c ~ 20 g/cm³), the
+    For RBH-1 at the crossover mass (M ~ 10⁷ M_☉, ρ ~ ρ_T ~ 20 g/cm³), the
     suppression factor is S ~ 1, meaning the Temporal Shear is near the
     transition between strongly flattened and asymptotically recovered profiles.
     This is consistent with the object being a "soliton" where the field
@@ -292,7 +292,7 @@
 <div class="principle">
     <h4>Consistency Check</h4>
     <p>
-        The required conformal factor gradient (Δ ln √A ~ 10⁻³ over 1 kpc)
+        The required conformal factor gradient (Δ ln A ~ 10⁻³ over 1 kpc)
         produces:
     </p>
     <ul>

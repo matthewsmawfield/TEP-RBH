@@ -317,12 +317,13 @@ ${cleanedContent}
 *This document was automatically generated from the TEP-RBH research site. For the interactive version with figures and enhanced formatting, visit: https://matthewsmawfield.github.io/TEP-RBH/*
 
 *Related Work:*
-- [**TEP Theory**](https://doi.org/10.5281/zenodo.16921911) (Foundational framework)
+- [**TEP Theory**](https://doi.org/10.5281/zenodo.18059250) (Foundational framework)
 - [**TEP-UCD Paper 6**](https://doi.org/10.5281/zenodo.18064366) (Universal Critical Density)
 
 *Source code and data available at: https://github.com/matthewsmawfield/TEP-RBH*
 `;
-    }
+}
+
 }
 
 // Main execution

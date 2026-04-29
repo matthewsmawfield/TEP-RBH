@@ -120,26 +120,26 @@ In the TEP framework, the energy budget is fundamentally different:
    - Star formation (gravitational collapse, not cooling)
 
 3. MASS CONSTRAINT IS DIFFERENT
-   - The soliton mass is constrained by the metric structure, not energy loss
-   - The TEP scaling law predicts: R_sol = L_c × (M/M_Earth)^(1/3)
-   - For R_sol ~ R_0 ~ 1.2 kpc, this gives a specific mass prediction
+   - The soliton candidate mass is constrained by the metric structure, not energy loss
+   - The TEP scaling law predicts: R_T = L_c × (M/M_Earth)^(1/3)
+   - For R_T ~ R_0 ~ 1.2 kpc, this gives a specific mass prediction
 """)
 
 # TEP mass prediction from scaling law
 L_c_earth = 4200  # km (GNSS coherence length)
 M_earth = 5.972e24 / M_sun  # Earth mass in solar masses
 
-# If R_sol ~ R_0 = 1.2 kpc = 1.2 × 3.086e16 km
-R_sol_km = R_0 * 3.086e16  # km
+# If R_T ~ R_0 = 1.2 kpc = 1.2 × 3.086e16 km
+R_T_km = R_0 * 3.086e16  # km
 
-# R_sol = L_c × (M/M_Earth)^(1/3)
-# M = M_Earth × (R_sol / L_c)^3
-M_tep_Msun = M_earth * (R_sol_km / L_c_earth)**3
+# R_T = L_c × (M/M_Earth)^(1/3)
+# M = M_Earth × (R_T / L_c)^3
+M_tep_Msun = M_earth * (R_T_km / L_c_earth)**3
 
 print(f"TEP Mass Prediction from Scaling Law:")
-print(f"  R_sol = L_c × (M/M_Earth)^(1/3)")
-print(f"  For R_sol = R_0 = {R_0} kpc = {R_sol_km:.2e} km")
-print(f"  M_TEP = M_Earth × (R_sol / L_c)^3")
+print(f"  R_T = L_c × (M/M_Earth)^(1/3)")
+print(f"  For R_T = R_0 = {R_0} kpc = {R_T_km:.2e} km")
+print(f"  M_TEP = M_Earth × (R_T / L_c)^3")
 print(f"  M_TEP = {M_tep_Msun:.2e} M_sun")
 
 # Compare to van Dokkum's estimate
@@ -147,11 +147,11 @@ print(f"\nComparison:")
 print(f"  Thermal shock lower limit: M_BH ≥ {M_bh_min_Msun:.2e} M_sun")
 print(f"  TEP scaling prediction:    M_TEP ~ {M_tep_Msun:.2e} M_sun")
 
-# The TEP prediction is much larger because the soliton radius is huge
-# But this is the FIELD radius, not the mass concentration
+# The TEP prediction is much larger because the temporal topology scale is huge
+# But this is the FIELD scale, not the mass concentration
 
 print(f"\nInterpretation:")
-print(f"  The TEP scaling gives the SOLITON FIELD radius, not the mass concentration.")
+print(f"  The TEP scaling gives the TEMPORAL TOPOLOGY FIELD scale, not the mass concentration.")
 print(f"  The stand-off distance R_0 is set by momentum balance, not soliton size.")
 print(f"  The actual soliton core (where mass is concentrated) is much smaller.")
 

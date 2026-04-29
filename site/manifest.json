@@ -1,5 +1,7 @@
 {
-  "title": "The Soliton Wake: Identifying the Runaway Object RBH-1 as a Gravitational Soliton",
+  "title": "The Soliton Wake: Exploring RBH-1 as a Temporal Topology Candidate",
+  "version": "v0.3 (Blantyre)",
+  "last_updated": "29 April 2026",
   "sections": [
     {
       "id": "section-abstract",
@@ -15,7 +17,7 @@
     },
     {
       "id": "section-theory",
-      "title": "2. Theoretical Framework: Gravitational Soliton Phenomenology",
+      "title": "2. Theoretical Framework: The Soliton/Wake Interpretation",
       "file": "3_theoretical_framework.html",
       "order": 3
     },

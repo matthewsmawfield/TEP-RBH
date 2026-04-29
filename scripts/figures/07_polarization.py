@@ -40,7 +40,7 @@ V_BH = np.sin(Psi_BH)
 U_BH[mask_shadow] = 0
 V_BH[mask_shadow] = 0
 
-# --- Model 2: Gravitational Soliton ---
+# --- Model 2: Temporal Topology Candidate ---
 # Photon ring at R=1 (similar to BH)
 I_Sol = np.exp(-(R - 1.0)**2 / (2 * width**2))
 # Luminous core (translucent) - Exponential core
@@ -106,7 +106,7 @@ Uq_Sol, Vq_Sol = U_Sol[::step, ::step], V_Sol[::step, ::step]
 ax2.quiver(Xq[mask_quiver_sol], Yq[mask_quiver_sol], Uq_Sol[mask_quiver_sol], Vq_Sol[mask_quiver_sol], 
            color='white', alpha=0.8, scale=25, headaxislength=0, headlength=0, pivot='mid', width=0.005)
 
-ax2.set_title(r"$\bf{b)}$ Gravitational Soliton (Translucent)", loc='left', color='black')
+ax2.set_title(r"$\bf{b)}$ Temporal Topology Candidate (Translucent)", loc='left', color='black')
 ax2.text(0, 0, "Polarized Core", color='white', ha='center', va='center', fontsize=10, fontweight='bold', alpha=0.9)
 ax2.set_xlabel(r"x ($R_s$)")
 ax2.set_yticks([])
