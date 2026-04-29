@@ -1,4 +1,5 @@
-v0.2 (Blantyre) – Temporal Topology Alignment
+v0.3 (Blantyre) – Temporal Topology Alignment
 
 - Aligned with TEP v0.7 framework: Replaced Vainshtein/screening terminology with continuous Temporal Topology nomenclature, introducing Temporal Shear as the operative field gradient describing continuous spatial profile recovery.
 - Reclassified paper numbering: Updated to Paper 7 (TEP-RBH) with corrected cross-references to TEP-UCD (Paper 6) and standardized citation formatting across the manuscript series.
+- Clarified soliton scale interpretation: R_T ~ 1.3 R_S represents the near-source transition scale, not the full 62 kpc wake length.

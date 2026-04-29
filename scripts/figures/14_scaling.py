@@ -2,8 +2,8 @@
 """
 Universal Scaling Law (Figure 10)
 
-Plots the mass-radius scaling law for solitons:
-R_s = L_c * (M / M_Earth)^(1/3)
+Plots the mass-radius scaling law for temporal topology:
+R_T = L_c * (M / M_Earth)^(1/3)
 """
 
 import matplotlib
@@ -30,8 +30,8 @@ M_vals_Msun = np.logspace(-6, 12, 100)
 M_vals_kg = M_vals_Msun * M_sun
 M_vals_Mearth = M_vals_kg / M_earth
 
-# Scaling Law
-R_sol_km = L_c * (M_vals_Mearth)**(1/3)
+# Scaling Law (Temporal Scale)
+R_T_km = L_c * (M_vals_Mearth)**(1/3)
 
 # Schwarzschild Radius
 R_sch_km = 2.95 * M_vals_Msun # 2GM/c^2 ~ 3 km per solar mass
@@ -44,7 +44,7 @@ c_soliton = COLORS['model_metric']
 c_bh = COLORS['bh']
 c_obs = COLORS['observation']
 
-ax.loglog(M_vals_Msun, R_sol_km, color=c_soliton, linewidth=3, label=r'Soliton Radius ($R \propto M^{1/3}$)')
+ax.loglog(M_vals_Msun, R_T_km, color=c_soliton, linewidth=3, label=r'Temporal Scale ($R_T \propto M^{1/3}$)')
 ax.loglog(M_vals_Msun, R_sch_km, color=c_bh, linewidth=2, linestyle='--', label=r'Schwarzschild Radius ($R_S \propto M$)')
 
 # Points of interest
@@ -55,16 +55,16 @@ ax.annotate('Earth\n(GNSS Clocks)', xy=(M_earth/M_sun, L_c), xytext=(1e-4, 1e4),
 
 # 2. RBH-1
 M_rbh1 = 2.0e7 # M_sun
-R_rbh1 = L_c * (M_rbh1 * M_sun / M_earth)**(1/3)
-ax.plot(M_rbh1, R_rbh1, '*', color=c_obs, markersize=15, markeredgecolor='black')
-ax.annotate('RBH-1\n(Crossover Point)', xy=(M_rbh1, R_rbh1), xytext=(1e4, 1e9),
+R_rbh1_T = L_c * (M_rbh1 * M_sun / M_earth)**(1/3)
+ax.plot(M_rbh1, R_rbh1_T, '*', color=c_obs, markersize=15, markeredgecolor='black')
+ax.annotate('RBH-1\n(Crossover Point)', xy=(M_rbh1, R_rbh1_T), xytext=(1e4, 1e9),
             arrowprops=dict(arrowstyle='->', color='black'), fontsize=9, fontweight='bold')
 
 # 3. Magnetar (SGR 1935+2154)
 M_mag = 1.4
-R_mag = L_c * (M_mag * M_sun / M_earth)**(1/3) # ~ 5e5 km ~ light cylinder
-ax.plot(M_mag, R_mag, 's', color=COLORS['shock'], markersize=8)
-ax.annotate('Magnetars\n(FRB Source)', xy=(M_mag, R_mag), xytext=(1e-2, 1e7),
+R_mag_T = L_c * (M_mag * M_sun / M_earth)**(1/3) # ~ 5e5 km ~ light cylinder
+ax.plot(M_mag, R_mag_T, 's', color=COLORS['shock'], markersize=8)
+ax.annotate('Magnetars\n(FRB Source)', xy=(M_mag, R_mag_T), xytext=(1e-2, 1e7),
             arrowprops=dict(arrowstyle='->', color='black'), fontsize=9)
 
 # 4. Proton
@@ -74,12 +74,12 @@ R_proton = L_c * (M_proton * M_sun / M_earth)**(1/3) # ~ 10^-11 km ~ Bohr radius
 
 # Shaded regions
 # Black Hole Dominated
-ax.fill_between(M_vals_Msun, R_sch_km, 1e-10, where=(R_sch_km > R_sol_km), color='gray', alpha=0.3)
+ax.fill_between(M_vals_Msun, R_sch_km, 1e-10, where=(R_sch_km > R_T_km), color='gray', alpha=0.3)
 ax.text(1e10, 1e5, 'Black Hole\nDominated', color='black', ha='center', fontsize=12)
 
-# Soliton Dominated
-ax.fill_between(M_vals_Msun, R_sch_km, 1e-10, where=(R_sch_km < R_sol_km), color=c_soliton, alpha=0.1)
-ax.text(1e-3, 1e2, 'Soliton\nDominated', color=c_soliton, ha='center', fontsize=12)
+# TEP Temporal Topology Dominated
+ax.fill_between(M_vals_Msun, R_sch_km, 1e-10, where=(R_sch_km < R_T_km), color=c_soliton, alpha=0.1)
+ax.text(1e-3, 1e2, 'TEP Scale\nDominated', color=c_soliton, ha='center', fontsize=12)
 
 ax.set_xlabel(r'Mass $M$ [$M_{\odot}$]')
 ax.set_ylabel(r'Radius $R$ [km]')
