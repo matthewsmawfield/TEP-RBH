@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://matthewsmawfield.github.io/TEP-RBH/sitemap.xml
