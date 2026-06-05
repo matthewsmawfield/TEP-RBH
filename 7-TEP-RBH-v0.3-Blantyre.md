@@ -1,4 +1,4 @@
-# The Soliton Wake: Exploring RBH-1 as a Temporal Topology Candidate
+# The Soliton Wake: Exploring RBH-1 as Temporal Topology
 **Matthew Lukin Smawfield**
 Version: v0.3 (Blantyre)
 First published: 28 December 2025 · Last updated: 29 April 2026
@@ -196,7 +196,7 @@ The magnitude of the effect depends on the depth of the potential well. The rele
 - **Core Zone ($R \sim 10^8$ km):** The potential is deep ($\gamma \sim 2$–$3$), yielding massive Jeans-mass reduction ($M_J' \sim 0.1 M_J$). While the transit time is short ($\sim$ days), this region may act as a catalytic "crusher," triggering collapse in high-impact-parameter gas that then evolves in the wake.
 The primary observational claim relies on the Transition Zone kinematics (the metric shock); the core-induced collapse enhancement is a secondary hypothesis for the star-formation efficiency.
 
-The key point is that the Jeans-mass reduction is a derived consequence of the conformal coupling, not an ad hoc assumption. The magnitude depends on the depth of the potential well, which is constrained by the observed velocity discontinuity and the saturation density.
+The key point is that the Jeans-mass reduction is a derived consequence of the conformal coupling, not an ad hoc assumption. The magnitude depends on the depth of the potential well, which is constrained by the observed velocity discontinuity and the saturation proximity scale.
 
 Crucially, this reinterprets the measured $\sim 600$ km/s velocity jump. It is not a bulk flow of hot plasma, but a *differential proper-time lag* across the soliton boundary. Furthermore, the observed speed of the object ($\sim 1000$ km/s $\approx 10^{-3}c$) is interpreted not as a ballistic trajectory, but as the characteristic group velocity of the scalar wave packet, set by the gradient of the local cosmic potential. In scalar-tensor theories with density-dependent gradient suppression, the group velocity scales as $v_g \sim c \sqrt{|\Phi|/c^2}$ where $\Phi$ is the ambient gravitational potential; for CGM environments with $|\Phi|/c^2 \sim 10^{-6}$, this yields $v_g \sim 10^{-3}c \sim 300$–$1000$ km/s—consistent with the observed proper motion.
 The Discriminator: How can these models be distinguished? The primary discriminant is the line profile.
