@@ -2,6 +2,13 @@
 
 const fs = require('fs');
 const path = require('path');
+function processIncludes(html) {
+    return html.replace(/<!--\s*include:\s*([^\s]+)\s*-->/g, (_, relPath) => {
+        const fullPath = path.join(__dirname, '..', 'core', relPath);
+        return fs.existsSync(fullPath) ? fs.readFileSync(fullPath, 'utf8').trim() : '';
+    });
+}
+
 
 async function buildStaticSite() {
     console.log('🔨 Building static site...');
@@ -34,7 +41,7 @@ async function buildStaticSite() {
             const componentPath = path.join(__dirname, 'components', section.file);
             
             if (fs.existsSync(componentPath)) {
-                const componentHtml = fs.readFileSync(componentPath, 'utf8');
+                const componentHtml = processIncludes(fs.readFileSync(componentPath, 'utf8'));
                 
                 // Wrap component in section container (matching the dynamic loader)
                 componentsHtml += `
@@ -116,7 +123,7 @@ async function buildStaticSite() {
         }
 
         // Copy robots.txt and sitemap.xml to dist root
-        const rootFiles = ['404.html', 'robots.txt', 'sitemap.xml', 'CNAME', '29c6507763d2303d801cc8ed89d39f88.txt'];
+        const rootFiles = ['404.html', 'robots.txt', 'sitemap.xml', 'CNAME',];
         for (const file of rootFiles) {
             const src = path.join(__dirname, 'public', file);
             const dest = path.join(distDir, file);

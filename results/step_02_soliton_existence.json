@@ -1,0 +1,185 @@
+{
+  "provenance": {
+    "purpose": "issue 7-8: existence of the required field configuration under the corpus's canonical action",
+    "required_class": "matter-sourced temporal well bound to the compact object (forced BVP); NOT a self-sustained free soliton -- Derrick's theorem applies only to source-free real-scalar localized solutions",
+    "canonical_action": "P(X,phi) = X - V + X|X|/Lambda^4 ; V = lambda phi^4/4 (matter-hosting branch); Lambda^4 = M_Pl^2 H0^2 ; beta_A = -1",
+    "inputs": {
+      "M_bary_msun": 20000000.0,
+      "rho_T_g_cm3": 20.0,
+      "delta_v_km_s": 650.0,
+      "v_pattern_km_s": 954.0,
+      "R_trans_band_kpc": [
+        0.1,
+        1.0
+      ],
+      "H0_km_s_Mpc": 70.0,
+      "lambda_ref": 7.526e-71
+    }
+  },
+  "required_ledger": {
+    "delta_ln_A_eta1": 2.350473243413269e-06,
+    "delta_ln_A_eta194": 4.549069754175219e-06,
+    "corrects_audited_value": "the 2026-09-27 audit quoted the retired endpoint amplitude 2.17e-3; the dynamical requirement is 2.35e-6 eta, ~430-920x shallower",
+    "ratio_to_galactic_ambient_2p8e-7": {
+      "1.0": 8.39454729790453,
+      "1.9353846153846155": 16.246677693482926
+    },
+    "within_landscape_contrast_band_1e-3_1e-2": true
+  },
+  "shear_sector_PX": {
+    "equation": "s(1 + s^2/Sigma_bg^2) = 2 beta_A^2 GM/(c^2 r^2)",
+    "g_t_m_s2": 3.400464161563069e-10,
+    "Sigma_bg_m_inv": 7.567053279942939e-27,
+    "R_shear_m": 2.793883418808615e+18,
+    "R_shear_pc": 90.54359520796976,
+    "r_star_pc": 64.0239901645652,
+    "deep_halo_depth_delta_ln_A": 7.820428626723807e-08,
+    "profile_table": {
+      "R_T_surface": {
+        "r_pc": 2.528092339919246e-06,
+        "shear_m_inv": 8.2218366204553615e-22,
+        "a_phi_m_s2": 7.389418241362271e-05,
+        "g_N_m_s2": 436182.0673701648,
+        "shear_over_unscreened": 8.470566300346388e-11,
+        "delta_ln_A_from_ambient": 7.820428626723807e-08
+      },
+      "1_pc": {
+        "r_pc": 1.0,
+        "shear_m_inv": 1.524552597832728e-25,
+        "a_phi_m_s2": 1.370199542558833e-08,
+        "g_N_m_s2": 2.787749021552681e-06,
+        "shear_over_unscreened": 0.0024575374826885936,
+        "delta_ln_A_from_ambient": 6.408218896515786e-08
+      },
+      "10_pc": {
+        "r_pc": 10.0,
+        "shear_m_inv": 3.2291870776775675e-26,
+        "a_phi_m_s2": 2.902248609172724e-09,
+        "g_N_m_s2": 2.7877490215526815e-08,
+        "shear_over_unscreened": 0.052053620801851636,
+        "delta_ln_A_from_ambient": 4.788165445244509e-08
+      },
+      "r_star": {
+        "r_pc": 64.0239901645652,
+        "shear_m_inv": 7.567053279942939e-27,
+        "a_phi_m_s2": 6.800928323126137e-10,
+        "g_N_m_s2": 6.800928323126138e-10,
+        "shear_over_unscreened": 0.5000000000000001,
+        "delta_ln_A_from_ambient": 2.4057158852241292e-08
+      },
+      "R_shear": {
+        "r_pc": 90.54359520796976,
+        "shear_m_inv": 5.163210845953075e-27,
+        "a_phi_m_s2": 4.6404624867104316e-10,
+        "g_N_m_s2": 3.4004641615630687e-10,
+        "shear_over_unscreened": 0.6823278038280194,
+        "delta_ln_A_from_ambient": 1.8934593438331662e-08
+      },
+      "100_pc": {
+        "r_pc": 100.0,
+        "shear_m_inv": 4.554086308952754e-27,
+        "a_phi_m_s2": 4.0930086545857265e-10,
+        "g_N_m_s2": 2.7877490215526807e-10,
+        "shear_over_unscreened": 0.7341063745232814,
+        "delta_ln_A_from_ambient": 1.751922870062136e-08
+      },
+      "500_pc": {
+        "r_pc": 500.0,
+        "shear_m_inv": 2.47877144189911e-28,
+        "a_phi_m_s2": 2.2278086703117537e-11,
+        "g_N_m_s2": 1.1150996086210723e-11,
+        "shear_over_unscreened": 0.9989281016189455,
+        "delta_ln_A_from_ambient": 3.636204104696337e-09
+      },
+      "1_kpc": {
+        "r_pc": 1000.0,
+        "shear_m_inv": 6.203161354578195e-29,
+        "a_phi_m_s2": 5.575123391967245e-12,
+        "g_N_m_s2": 2.7877490215526807e-12,
+        "shear_over_unscreened": 0.9999328040050915,
+        "delta_ln_A_from_ambient": 1.7227760710506544e-09
+      },
+      "10_kpc": {
+        "r_pc": 10000.0,
+        "shear_m_inv": 6.203578168494055e-31,
+        "a_phi_m_s2": 5.575498005632694e-14,
+        "g_N_m_s2": 2.7877490215526806e-14,
+        "shear_over_unscreened": 0.9999999932790457,
+        "delta_ln_A_from_ambient": -4.0655769885042653e-26
+      }
+    },
+    "existence_checks": {
+      "positive_unique_root_all_radii": true,
+      "localized_decay_to_ambient": "s ~ r^-2 tail, depth finite",
+      "sign_convention": "phi > 0 in well, phi -> 0 ambient (corpus rule 4)"
+    }
+  },
+  "onset_scale_consistency": {
+    "R_trans_band_kpc": [
+      0.1,
+      1.0
+    ],
+    "R_shear_baryonic_pc": 90.54359520796976,
+    "M_eff_for_band_msun": [
+      24395769.74306767,
+      2439576974.3067665
+    ],
+    "R_shear_phantom_equivalent_kpc": {
+      "1.0": 4.486978465057355,
+      "1.9353846153846155": 6.242199253508664
+    },
+    "wake_gas_cosourced_msun": 4813621.446963045,
+    "R_shear_with_envelope_pc": 100.85276591845499,
+    "deep_halo_depth_with_envelope": 8.7084243318696e-08,
+    "note": "the observed onset band sits between the canonical shear radius of the baryonic mass and that of the phantom-equivalent mass; a gathered envelope of order the swept CGM mass moves R_shear into the band"
+  },
+  "amplitude_sector_quartic": {
+    "lambda_ref": 7.526e-71,
+    "varphi_min_interior_rhoT": 3.1938908787708e-07,
+    "varphi_ambient_cgm": 1.3967200946600484e-16,
+    "interior_vs_halo_ceiling": 4.084035583237346,
+    "lambda_conditioned_for_required_depth": {
+      "1.0": 1.888241850347357e-73,
+      "1.9353846153846155": 2.6046826112891518e-74
+    },
+    "lambda_status": "corpus-open parameter (issue 0-29); the interior channel is not the operative one for the wake gas, which samples the exterior halo"
+  },
+  "transit_coherence": {
+    "t_field_Rshear_over_c_yr": 295.31371038482496,
+    "t_gas_transit_1kpc_yr": 1504295.7256627523,
+    "t_pattern_1kpc_yr": 1024939.4357240975,
+    "adiabatic_ratio": 5093.890573866333,
+    "conclusion": "the sourced halo relaxes ~4 orders faster than the transit; the moving object adiabatically carries its well -- no metastability required"
+  },
+  "residual_ledger": {
+    "required_over_baryonic_halo": {
+      "1.0": 30.055555208077475,
+      "1.9353846153846155": 58.1690591565561
+    },
+    "required_over_envelope_halo": {
+      "1.0": 26.99079826429001,
+      "1.9353846153846155": 52.237575717656675
+    },
+    "required_over_halo_at_radius": {
+      "100_pc": {
+        "1.0": 134.16533818808495,
+        "1.9353846153846155": 259.6615314470937
+      },
+      "500_pc": {
+        "1.0": 646.4085006607623,
+        "1.9353846153846155": 1251.0490674326757
+      },
+      "1000_pc": {
+        "1.0": 1364.352154009085,
+        "1.9353846153846155": 2640.5461688360447
+      }
+    },
+    "disclosed_alpha_RBH_eff": {
+      "1.0": 2455.7972026973043,
+      "1.9353846153846155": 4752.912124604937
+    },
+    "halo_depth_over_point_newtonian_at_1kpc": 81.70859548910629,
+    "interpretation": "the canonical sourced halo of the baryonic mass alone supplies ~7.8e-8 of the required 2.35e-6 eta at its interior plateau and ~1.7e-9 at the 1 kpc tail; at the resolved 1 kpc scale the residual reproduces the disclosed alpha_RBH,eff ~ 2.5e3 eta (the tail is canonical there, so the point-Newtonian read is already correct), while evaluated against the halo's interior ceiling the open factor narrows to ~30-58. The residual is the same open response-depth normalization tracked corpus-wide; it is not an existence defect"
+  },
+  "existence_verdict": "DEMONSTRATED as a matter-sourced configuration under the canonical action: the forced spherical BVP returns a localized, positive, monotonic profile in both sectors (saturating interior + flux-conserving shear halo). The self-sustained Q-ball reading is not required and is retired as ontology (retained only as morphology language). The configuration's extent is delivered by the canonical shear radius R_s = sqrt(GM/g_t); its depth normalization remains the disclosed corpus-open item alpha_RBH,eff. Open residuals: (i) depth normalization, (ii) non-spherical translating extension, (iii) uniqueness within the wider K(X) class."
+}

@@ -1,6 +1,6 @@
 {
   "name": "tep-rbh-site",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "The Soliton Wake: Exploring RBH-1 as a Temporal Topology Candidate",
   "comment": "Package version matches manuscript version v0.3 (Blantyre)",
   "main": "index.html",

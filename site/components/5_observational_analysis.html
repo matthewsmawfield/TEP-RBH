@@ -6,19 +6,19 @@
     <h2>4.1 The Line Width Test</h2>
 
     <p>
-        In a single-phase thermal shock where the [O III]-emitting gas resides predominantly at $T \sim 10^7$ K, thermal Doppler motion would broaden spectral lines to $\sigma_{\text{th}} \approx 80\text{--}85$ km/s. In practice, [O III] emission in shock-heated environments often arises from cooler recombination/cooling zones rather than the hottest post-shock plasma; however, if a substantial hot-phase component contributes to the line flux, it should produce detectable broad wings. In contrast, a metric shock produces a coherent redshift gradient without thermalization; the gas remains cold, and line widths stay narrow (see Figure 4).
+        In a single-phase thermal shock where the [O III]-emitting gas resides predominantly at $T \sim 10^7$ K, thermal Doppler motion would broaden spectral lines to $\sigma_{\text{th}} \approx 80\text{--}85$ km/s. In practice, [O III] emission in shock-heated environments often arises from cooler recombination/cooling zones rather than the hottest post-shock plasma; however, if a substantial hot-phase component contributes to the line flux, it should produce detectable broad wings. In the dynamical metric-shock model, Temporal Shear produces an ordered bulk-velocity field, so a large resolved centroid span can coexist with a narrow local line where differential acceleration inside the emitting element is small.
     </p>
 
     <p>
         Higher-resolution Keck/LRIS spectroscopy of the [O III] λ5007 knot at the tip of the wake yields (van Dokkum et al. 2025, Appendix C):
     </p>
 
-    <div class="equation">$$\sigma_{\text{obs}} = 36 \pm 4 \text{ km/s} \quad \xrightarrow{\text{instr. corr.}} \quad \sigma = 31 \pm 4 \text{ km/s}$$</div>
+    <div class="equation">\begin{equation} \label{eq:line_width_obs} \sigma_{\text{obs}} = 36 \pm 4 \text{ km/s} \quad \xrightarrow{\text{instr. corr.}} \quad \sigma = 31 \pm 4 \text{ km/s} \end{equation}</div>
 
     <p>where the instrumental resolution $\sigma_{\text{instr}} = 18$ km/s has been subtracted in quadrature. The key inequality:</p>
 
     <div class="result-box">
-    $$\sigma_{\text{obs}} \approx 31 \text{ km/s} \ll \sigma_{\text{thermal}}(10^7 \text{ K}) \approx 85 \text{ km/s}$$
+    \begin{equation} \label{eq:line_width_inequality} \sigma_{\text{obs}} \approx 31 \text{ km/s} \ll \sigma_{\text{thermal}}(10^7 \text{ K}) \approx 85 \text{ km/s} \end{equation}
     </div>
 
     <p>This observed dispersion is 3× smaller than expected if the [O III]-emitting gas were predominantly at $T \sim 10^7$ K, and 10× larger than pure thermal broadening at $T \sim 10^4$ K ($\sigma_{\text{th}} \approx 2$–$3$ km/s). The intermediate value ($\sigma \approx 31$ km/s) is consistent with cold gas experiencing bulk/turbulent motions or a coherent velocity gradient across the beam.</p>
@@ -26,7 +26,7 @@
     <figure style="margin: 30px 0;">
         <img src="figures/figure_04_line_width.png" alt="Line Width Test: Thermal vs Metric Shock" style="width: 100%; height: auto; border-radius: 4px;">
         <figcaption style="margin-top: 10px; font-size: 13px; color: #495773; font-style: italic; line-height: 1.4;">
-            Figure 4: The Line Width Test. (A) Thermal broadening of [O III] emission as a function of gas temperature. The observed dispersion (σ = 31 km/s) is 3× smaller than expected for a simple $10^7$ K post-shock phase, placing that picture under tension. (B) Illustration of how a coherent redshift-gradient (metric-shock) interpretation can accommodate a large centroid shift with comparatively narrow line width.
+            Figure 4: The Line Width Test. (A) Thermal broadening of [O III] emission as a function of gas temperature. The observed dispersion (σ = 31 km/s) is 3× smaller than expected for a simple $10^7$ K post-shock phase, placing that picture under tension. (B) Schematic illustration of how a coherent body-force velocity field can accommodate a large spatial centroid span with comparatively narrow local lines.
         </figcaption>
     </figure>
 
@@ -53,23 +53,6 @@
         If a statistically significant broad component is required, a thermal-shock contribution is supported. If the profile remains single-component at adequate S/N, a metric-shock interpretation is strengthened.
     </p>
     
-    <div class="principle">
-        <h4>Box 4.0: Sensitivity Analysis (Detectability of Hidden Hot Gas)</h4>
-        <p>
-            To quantify the strength of the line-width constraint, synthetic injection tests were performed using the <code>analyze_line_profiles.py</code> workflow (available in the reproducibility repository). Broad Gaussian wings ($\sigma = 90$ km/s, representing $T \sim 10^7$ K gas) were injected into a narrow ($\sigma = 31$ km/s) profile with noise levels matching the published Keck/LRIS data (S/N $\approx$ 50).
-        </p>
-        <p>
-            <em>Results:</em>
-        </p>
-        <ul>
-            <li><strong>Hot Fraction &gt; 15%:</strong> Strongly detected ($\Delta \text{BIC} &lt; -10$). A thermal component contributing just 15% of the line flux would be statistically undeniable.</li>
-            <li><strong>Hot Fraction &lt; 10%:</strong> Marginal detection.</li>
-        </ul>
-        <p>
-            <em>Implication:</em> The observed single-component profile rules out any scenario where the hot phase contributes more than ~15% of the total [O III] emission. For a standard thermal shock where <em>most</em> gas is heated, this is a prohibitive constraint. The thermal model can only survive if the hot gas is radiatively silent (e.g., extremely diffuse) while a separate mechanism generates the observed bright cold gas.
-        </p>
-    </div>
-
     <h4>Data Availability Assessment</h4>
     <p>
         JWST NIRSpec IFU data (Program 3149) are publicly available via MAST but have insufficient spectral resolution for a robust decomposition between a σ ≈ 30 km/s narrow component and a σ ≈ 80–90 km/s broad component. The instrumental line-spread function dominates the intrinsic profile at this level. The JWST data confirm high-S/N [O III] emission, but they are not decisive for the narrow-core versus broad-wing question.
@@ -79,7 +62,7 @@
     </p>
 
     <div class="finding">
-    <p>The narrow line width is in tension with a single-phase thermal shock in which the emitting gas is predominantly at $T \sim 10^7$ K. It is naturally accommodated by a coherent redshift-gradient (metric-shock) hypothesis. Multiphase or rapid-cooling scenarios remain possible under a thermal interpretation. The principal observational discriminant is whether a statistically supported broad wing is present in the high-resolution line profile.</p>
+    <p>The narrow near-tip line width is in tension with a single-phase thermal shock in which the emitting [O III] gas is predominantly at $T \sim 10^7$ K. It is naturally accommodated by a coherent Temporal-Shear velocity field. The 31 km s$^{-1}$ dispersion is not the unresolved width of the full 650 km s$^{-1}$ spatial span; establishing their co-spatial relation requires the reduced LRIS profile and resolved JWST velocity field. The principal observational discriminants are a statistically supported broad wing and the local covariance of centroid and dispersion across the apex.</p>
     </div>
 
     <h2>4.2 The Wake Collimation Test</h2>
@@ -92,14 +75,14 @@
         Instead, HST WFC3/UVIS imaging reveals (van Dokkum et al. 2025, Section 6.2.1):
     </p>
 
-    <div class="equation">$$R_{\text{wake}} \approx 0.7 \text{ kpc} \quad \text{over} \quad L_{\text{wake}} = 62 \text{ kpc} \quad \Rightarrow \quad \text{Aspect Ratio: } 50:1$$</div>
+    <div class="equation">\begin{equation} \label{eq:aspect_ratio} R_{\text{wake}} \approx 0.7 \text{ kpc} \quad \text{over} \quad L_{\text{wake}} = 62 \text{ kpc} \quad \Rightarrow \quad \text{Aspect Ratio: } 50:1 \end{equation}</div>
 
     <p>
         This is described by the authors as "strikingly narrow." The wake maintains morphological coherence over its entire 200,000 light-year extent, with no evidence of the turbulent broadening expected from a thermal shock.
     </p>
 
     <p>
-        In the metric shock interpretation, the apex discontinuity is attributed to a coherent redshift boundary rather than collisional thermalization. In that picture, the effective shear-driven mixing that seeds Kelvin-Helmholtz growth is expected to be suppressed relative to a turbulent bow-shock layer, and the wake can remain collimated without requiring fine-tuned magnetic draping.
+        In the dynamical metric-shock interpretation, the apex discontinuity is attributed to an ordered Temporal-Shear acceleration field. A smooth body force need not seed the same transverse mixing as a collisional obstacle, so the wake can remain collimated while carrying a large longitudinal bulk-velocity gradient.
     </p>
 
     <figure style="margin: 30px 0;">
@@ -141,7 +124,7 @@
     </p>
 
         <p>
-        In the TEP framework, the "preshock ionization" may admit a non-thermal contribution: the soliton boundary corresponds to a steep gravitational redshift gradient, which implies an effective acceleration on massive particles. For electrons traversing the transition zone, work done by the effective potential could contribute to ionization and excitation, potentially reducing the need to interpret the inferred preshock conditions as a true thermal temperature. However, a quantitative forward model mapping a specific field profile to detailed ionization diagnostics has not yet been developed.
+        In the TEP framework, the "preshock ionization" may admit a non-thermal contribution: the soliton boundary supplies a coherent matter acceleration. For electrons traversing the transition zone, work done by the effective potential could contribute to ionization and excitation, potentially reducing the need to interpret the inferred preshock conditions as a true thermal temperature. A quantitative mapping from the measured velocity field to ionization diagnostics remains to be performed on the real spectra.
     </p>
 
     <figure style="margin: 30px 0;">
@@ -180,7 +163,7 @@
     </p>
 
     <p>
-        In the metric shock model, heating is not the primary driver; instead, the apparent discontinuity is interpreted as a coherent redshift gradient. This reinterpretation relieves the mass-budget tension in two ways: (1) the reduced effective Jeans mass allows collapse of lower-density gas that would otherwise remain stable, effectively increasing the available reservoir of star-forming material; and (2) the absence of thermal pressure support allows this reservoir to convert to stars with higher efficiency than a turbulent, hot shock would permit. A standard SFE of ~30% acting on this effectively larger cold reservoir can reproduce the observed stellar mass without requiring unphysical 100% conversion of the nominal entrained gas.
+        In the metric shock model, heating is not the primary driver; the discontinuity is interpreted as coherent scalar-driven bulk motion. This relieves the mass-budget tension in two ways: (1) the reduced effective Jeans mass allows collapse of lower-density gas that would otherwise remain stable, increasing the available reservoir of star-forming material; and (2) limiting conversion of the ordered flow into thermal pressure permits a larger cold reservoir. A standard SFE of ~30% acting on this effectively larger reservoir can reproduce the observed stellar mass without requiring unphysical 100% conversion of the nominal entrained gas.
     </p>
 
     <figure style="margin: 30px 0;">
@@ -282,7 +265,7 @@
         <li>Non-equilibrium ionization and/or shock precursors to reconcile ionization diagnostics with fiducial CGM temperatures.</li>
     </ol>
     <p>
-        In the metric-shock interpretation, the apparent velocity discontinuity is attributed to a coherent redshift gradient rather than bulk thermalization. The same observational elements then align naturally: narrow line widths, minimal hot-phase requirements, and preserved collimation.
+        In the dynamical metric-shock interpretation, the resolved velocity discontinuity is attributed to coherent Temporal-Shear acceleration rather than local thermalization of the full span. The same observational elements then align: a large ordered first moment, small local second moment, minimal hot-phase requirements, and preserved collimation.
     </p>
     </div>
     
@@ -294,7 +277,7 @@
     <h3>Mechanism-by-Mechanism Assessment</h3>
     <ul>
         <li><strong>Turbulent Mixing Layers:</strong> Shear-driven entrainment of cold ambient gas into the hot wake (Gronke &amp; Oh 2018, 2020) is a robust prediction of supersonic cloud–wind interactions. <em>What it explains:</em> rapid appearance of $10^4$ K gas downstream of a hot shock front; multiphase coexistence. <em>What remains in tension:</em> mixing-layer models generically produce broad, asymmetric line profiles with extended wings from the velocity shear; the observed [O III] profile is narrow and single-peaked. <em>Discriminant:</em> high-S/N line-profile decomposition searching for faint broad wings or secondary components.</li>
-        <li><strong>Magnetic Draping:</strong> Ordered magnetic fields swept up ahead of the perturber can suppress Kelvin-Helmholtz instabilities and maintain wake coherence (Dursi &amp; Pfrommer 2008; Pfrommer &amp; Dursi 2010). Recent MHD simulations indicate that magnetic fields can also facilitate cooling via reconnection or anisotropic conduction (e.g., Banda-Barragán et al. 2024). <em>What it explains:</em> the extreme 50:1 aspect ratio, morphological coherence, and potentially accelerated cooling. <em>What remains in tension:</em> while draping aids collimation, the simultaneous requirement for the specific $\sigma \approx 31$ km/s dispersion at the apex remains a tight constraint. A dominant hot phase ($T \sim 10^7$ K) constrained by magnetic pressure would still imprint a thermal wing on the line profile unless the hot gas is radiatively dark (faint). <em>Discriminant:</em> Faraday rotation or synchrotron polarimetry to map the field geometry; comparison with MHD bow-shock simulations that include radiative cooling.</li>
+        <li><strong>Magnetic Draping:</strong> Ordered magnetic fields swept up ahead of the perturber can suppress Kelvin-Helmholtz instabilities and maintain wake coherence (Dursi &amp; Pfrommer 2008; Pfrommer &amp; Dursi 2010). Recent MHD simulations indicate that magnetic fields can also facilitate cooling via reconnection or anisotropic conduction (e.g., Banda-Barragán et al. 2024). <em>What it explains:</em> the extreme 50:1 aspect ratio, morphological coherence, and potentially accelerated cooling. <em>What remains in tension:</em> while draping aids collimation, the near-tip $\sigma \approx 31$ km/s dispersion remains a tight constraint on any hot component sampled by that spectrum. <em>Discriminant:</em> Faraday rotation or synchrotron polarimetry to map the field geometry; comparison with MHD bow-shock simulations that include radiative cooling.</li>
         <li><strong>Non-Equilibrium Ionization (NEI):</strong> Rapid cooling through the $10^5$–$10^6$ K range can produce ionization states that lag behind the instantaneous temperature (Sutherland &amp; Dopita 2017). <em>What it explains:</em> anomalously high ionization (e.g., the $T_{\text{pre}} \sim 10^{5.6}$ K inferred from Mappings V) even if the gas has already cooled. <em>What remains in tension:</em> NEI affects ionization diagnostics but does not widen or narrow the thermal velocity dispersion; the line-width constraint is independent. <em>Discriminant:</em> time-dependent photoionization modeling with realistic cooling trajectories; comparison of multiple ionization-sensitive line ratios (e.g., [O III]/[O II], [N II]/Hα) to NEI grids.</li>
         <li><strong>Beam Smearing:</strong> Instrumental resolution effects could, in principle, artificially narrow observed line widths if the emission is spatially unresolved and dominated by a single cold clump. <em>What it explains:</em> apparent single-component profile. <em>What remains in tension:</em> the Keck/LRIS measurement already corrects for instrumental broadening ($\sigma_{\text{instr}} = 18$ km/s); the JWST/NIRSpec IFU spatially resolves the tip, and the narrow dispersion persists across multiple spaxels. <em>Discriminant:</em> spatially resolved line-width maps from the IFU data.</li>
     </ul>

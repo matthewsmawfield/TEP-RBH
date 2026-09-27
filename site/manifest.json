@@ -1,7 +1,7 @@
 {
   "title": "The Soliton Wake: Exploring RBH-1 as a Temporal Topology Candidate",
-  "version": "v0.3 (Blantyre)",
-  "last_updated": "29 April 2026",
+  "version": "v0.4 (Blantyre)",
+  "last_updated": "13 September 2026",
   "sections": [
     {
       "id": "section-abstract",
@@ -69,5 +69,21 @@
       "file": "11_reproducibility.html",
       "order": 11
     }
-  ]
+  ],
+  "icons": [
+    {
+      "src": "public/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "public/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#220126"
 }

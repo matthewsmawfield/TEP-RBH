@@ -130,10 +130,10 @@ print(f"  - Observed σ = 31 km/s >> 2-3 km/s thermal")
 print(f"  - van Dokkum attributes excess to 'turbulence' and 'velocity gradient'")
 
 print(f"\nMetric Shock Model (TEP) Prediction:")
-print(f"  Gas is NEVER heated; velocity jump is coherent redshift gradient")
-print(f"  - Line centroid shifts by Δv ~ 600 km/s ✓")
+print(f"  The resolved span is coherent bulk acceleration, not endpoint redshift")
+print(f"  - Ordered centroid field spans Δv ~ 650 km/s")
 print(f"  - Line width remains narrow (thermal + mild turbulence)")
-print(f"  - Expected: σ ~ 10-40 km/s (consistent with σ_obs = 31 km/s) ✓")
+print(f"  - The published near-tip component has σ_obs = 31 km/s")
 
 # Quantitative test
 ratio_hot = sigma_obs / sigma_hot

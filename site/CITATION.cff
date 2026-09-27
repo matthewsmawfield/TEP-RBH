@@ -13,7 +13,7 @@ abstract: >
 
   The characteristic temporal scale R_T, calibrated from terrestrial GNSS correlations (Smawfield 2025g), is applied as a consistency check rather than as proof that RBH-1 is a soliton. For RBH-1 (M ~ 2 x 10^7 M_sun), the calibration yields R_T ~ 7.8 x 10^7 km ~ 1.3 R_S, comparable to the near-source transition scale, not the full 62 kpc wake length. The amplitude of the observed kinematic discontinuity depends on screening/transition physics (via beta_eff at R_trans) and is treated as an empirical constraint rather than an independent prediction. Specific falsification criteria are outlined; decisive discrimination awaits line-profile decomposition and X-ray flux limits.
 license: CC-BY-4.0
-version: 0.3
+version: v0.4 (Blantyre)
 date-released: 2025-12-28
 keywords:
   - physics
@@ -40,7 +40,7 @@ doi: 10.5281/zenodo.18059250
 
 preferred-citation:
   type: article
-  title: "The Soliton Wake: Exploring RBH-1 as a Temporal Topology Candidate (Blantyre v0.3)"
+  title: "The Soliton Wake: Exploring RBH-1 as a Temporal Topology Candidate (Blantyre v0.4)"
   authors:
     - family-names: Smawfield
       given-names: Matthew Lukin

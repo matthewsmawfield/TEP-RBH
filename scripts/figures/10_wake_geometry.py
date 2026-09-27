@@ -207,9 +207,9 @@ This is ANOMALOUS for a thermal shock model:
 - The 90:1 aspect ratio is "striking" even to the authors
 
 TEP Interpretation:
-- The wake is collimated because there is NO thermalization
-- The velocity gradient is a coherent redshift gradient, not turbulent mixing
-- The "entrainment" model is an ad hoc explanation for cold gas that was never heated
+- The wake is collimated because the dominant response is ordered bulk acceleration
+- The velocity gradient is a coherent matter flow, not an endpoint redshift
+- Local dissipation is constrained by the observed narrow near-tip component
 """)
 
 # =============================================================================

@@ -1,0 +1,70 @@
+{
+  "provenance": {
+    "source": "van Dokkum et al. 2026, ApJL, arXiv:2512.04166v2",
+    "position_velocity_endpoints_km_s": [
+      -600.0,
+      50.0
+    ],
+    "position_velocity_span_km_s": 650.0,
+    "projected_span_kpc": 1.0,
+    "near_tip_oiii_dispersion_km_s": 31.0,
+    "near_tip_oiii_dispersion_error_km_s": 4.0,
+    "co_spatiality_note": "The resolved velocity span and the averaged near-tip [O III] dispersion are separate observables; the dispersion is not treated as an unresolved width of the full 650 km/s span."
+  },
+  "matter_metric_limit": {
+    "equation": "a_phi = -c^2 grad(ln A)",
+    "work_integral": "Delta(u^2/2) = -c^2 Delta(ln A) in the profile frame",
+    "baryonic_potential_abs_over_c2": 9.57112110410276e-10
+  },
+  "endpoint_clock_assignment": {
+    "abs_delta_ln_A": 0.0021658195375078328,
+    "gradient_abs_m_inv": 7.018943101829358e-23,
+    "matter_acceleration_m_s2": 6.308311462028197e-06,
+    "newtonian_equivalent_mass_msun": 45257384457907.06,
+    "canonical_scalar_shell_mass_msun": 24504831868.859615,
+    "canonical_surface_density_msun_pc2": 1950.032560782408,
+    "kinematic_to_scalar_mass_ratio": 1846.875942675595,
+    "matter_speed_from_rest_km_s": 19730.89722006855,
+    "linear_response_over_baryonic_potential": 2262869.2228953536
+  },
+  "coherent_dynamical_assignment": {
+    "abs_delta_ln_A": 2.350473243413269e-06,
+    "gradient_abs_m_inv": 7.617365007646846e-26,
+    "matter_acceleration_m_s2": 6.846146248951221e-09,
+    "newtonian_equivalent_mass_msun": 49115944053.94608,
+    "canonical_scalar_shell_mass_msun": 28861.42808094583,
+    "canonical_surface_density_msun_pc2": 0.002296719471886882,
+    "kinematic_to_scalar_mass_ratio": 1701784.9538211932,
+    "matter_speed_from_rest_km_s": 650.0,
+    "constant_acceleration_crossing_time_myr": 3.008591451325505,
+    "linear_response_over_baryonic_potential": 2455.7972026973043
+  },
+  "collinear_pattern_frame_benchmark": {
+    "abs_delta_ln_A": 4.549069754175219e-06,
+    "gradient_abs_m_inv": 1.474253104556882e-25,
+    "matter_acceleration_m_s2": 1.3249926124893287e-08,
+    "newtonian_equivalent_mass_msun": 95058242492.09874,
+    "canonical_scalar_shell_mass_msun": 108106.643951465,
+    "canonical_surface_density_msun_pc2": 0.008602853382975601,
+    "kinematic_to_scalar_mass_ratio": 879300.6518154019,
+    "host_frame_pattern_speed_km_s": 954.0,
+    "profile_frame_entry_speed_km_s": 954.0,
+    "profile_frame_exit_speed_km_s": 304.0,
+    "flow_frame_factor_eta": 1.9353846153846155,
+    "linear_response_over_baryonic_potential": 4752.912124604937
+  },
+  "comparison": {
+    "endpoint_to_dynamical_depth_ratio": 921.4397754057013,
+    "endpoint_to_pattern_benchmark_depth_ratio": 476.10163276129236,
+    "endpoint_speed_to_observed_span_ratio": 30.355226492413152,
+    "canonical_scalar_energy_reduction_factor": 849051.2596997091,
+    "canonical_scalar_energy_reduction_factor_pattern_benchmark": 226672.76471796847,
+    "local_dispersion_to_span_ratio": 0.047692307692307694,
+    "conditional_rms_depth_nonuniformity_limit": 0.09538461538461539,
+    "conditional_rms_depth_nonuniformity_limit_1sigma_range": [
+      0.08307692307692308,
+      0.1076923076923077
+    ],
+    "interpretation": "The endpoint assignment is incompatible with universal matter coupling because the same profile accelerates traversing gas to approximately 2e4 km/s.  Assigning the measured span to coherent matter motion instead fixes |Delta ln A| by the work integral in the profile frame. The rest-entry normalization is 2.35e-6; a collinear benchmark using the published 954 km/s pattern speed is 4.55e-6. Both are hundreds of times shallower than the endpoint assignment. The line dispersion constrains profile non-uniformity only if measured on the same flow component."
+  }
+}

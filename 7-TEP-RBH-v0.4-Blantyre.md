@@ -1,16 +1,16 @@
-# The Soliton Wake: Exploring RBH-1 as Temporal Topology
+# The Soliton Wake: Exploring RBH-1 as a Temporal Topology Candidate
 **Matthew Lukin Smawfield**
-Version: v0.3 (Blantyre)
-First published: 28 December 2025 · Last updated: 29 April 2026
+Version: v0.4 (Blantyre)
+First published: 28 December 2025 · Last updated: 13 September 2026
 DOI: 10.5281/zenodo.18059250
 Paper: 7 (TEP Series)
 
 ---
 
 ## Abstract
-The runaway supermassive black hole RBH-1 ($z \approx 0.96$) presents a thermal paradox: JWST spectroscopy reveals a 650 km/s velocity discontinuity coexisting with cold, star-forming gas. Higher-resolution Keck/LRIS spectroscopy yields a narrow apex dispersion ($\sigma \approx 31 \pm 4$ km/s), far below the $\sigma \sim 80$–85 km/s expected if the emitting gas were predominantly at $T \sim 10^7$ K. Standard shock physics predicts post-shock temperatures $T \sim 10^7$ K, yielding a cooling time that exceeds the dynamical time by a factor of ~30. Yet the wake exhibits immediate star formation and extreme collimation (50:1 aspect ratio over 62 kpc).
-RBH-1 is explored as a candidate Temporal Topology soliton/wake interpretation: a coherent region of altered proper-time rate. Under this candidate framing, the observed velocity discontinuity is reinterpreted as a metric shock (spatial gradient in gravitational redshift) rather than bulk thermalization, and the effective Jeans mass is reduced behind the front via time dilation, enabling immediate star formation without heating.
-The characteristic temporal scale $R_T$, calibrated from terrestrial GNSS correlations (Smawfield 2025g), is applied as a consistency check rather than as proof that RBH-1 is a soliton. For RBH-1 ($M \approx 2 \times 10^7 M_\odot$), the calibration yields $R_T \approx 7.8 \times 10^7$ km $\approx 1.3 R_S$, comparable to the near-source transition scale, not the full 62 kpc wake length. The amplitude of the observed kinematic discontinuity depends on screening/transition physics (via $\beta_{\rm eff}$ at $R_{\rm trans}$) and is treated as an empirical constraint rather than an independent prediction. Specific falsification criteria are outlined; decisive discrimination awaits line-profile decomposition and X-ray flux limits.
+The runaway supermassive black hole RBH-1 ($z \approx 0.96$) presents a thermal paradox: JWST spectroscopy resolves a 650 km/s position–velocity span across approximately 1 kpc in a cold, star-forming system. Higher-resolution Keck/LRIS spectroscopy of the near-tip [O III] knot yields a narrow intrinsic dispersion ($\sigma \approx 31 \pm 4$ km/s), far below the $\sigma \sim 80$–85 km/s expected if that emitting component were predominantly at $T \sim 10^7$ K. Standard shock physics predicts post-shock temperatures $T \sim 10^7$ K, yielding a cooling time that exceeds the dynamical time by a factor of ~30. Yet the wake exhibits immediate star formation and extreme collimation (50:1 aspect ratio over 62 kpc).
+RBH-1 is explored as a candidate Temporal Topology soliton/wake interpretation: a coherent region of altered proper-time rate whose Temporal Shear supplies a conservative body force. The corpus-wide endpoint theorem excludes the former assignment of the full velocity span to an apparent conformal redshift: $|\Delta\ln A| \simeq \Delta v/c \simeq 2.2\times10^{-3}$ would accelerate universally coupled gas to approximately $1.97\times10^4$ km/s. The dynamically consistent assignment instead treats the resolved span as coherent matter motion and applies the work integral in the profile frame. It requires a depth of order $10^{-6}$: $2.35\times10^{-6}$ for the stated rest-entry normalization and $4.55\times10^{-6}$ for a collinear benchmark using the published 954 km/s pattern speed. Either value is hundreds of times shallower than the excluded endpoint assignment and permits a small local dispersion when the shear is spatially coherent. The same scalar sector enhances the effective gravitational coupling behind the front, reducing the effective Jeans mass without identifying the resolved bulk velocity span with microscopic thermal motion.
+The characteristic temporal scale $R_T$, calibrated from terrestrial GNSS correlations (Smawfield 2025g), is applied as a consistency check rather than as proof that RBH-1 is a soliton. For RBH-1 ($M \approx 2 \times 10^7 M_\odot$), the calibration yields $R_T \approx 7.8 \times 10^7$ km $\approx 1.3 R_S$ — a crossover-mass coincidence internal to the theory, since $R_T$ lies $\sim 8.6$ orders of magnitude below the resolved scale; the observed $\sim$kpc kinematic onset is carried separately by the transition-radius parametrization $R_{\rm trans} = \xi R_T$ with measured $\xi \approx 4\times10^{8}$. The amplitude of the observed kinematic discontinuity depends on screening/transition physics (via $\alpha_{\rm RBH,eff}$ at $R_{\rm trans}$) and is treated as an empirical constraint rather than an independent prediction. Specific falsification criteria are outlined; decisive discrimination awaits line-profile decomposition and X-ray flux limits.
 *Keywords:* black holes: individual (RBH-1) – dark matter – gravitation – scalar fields – temporal equivalence principle
 
 ## 1. Introduction: The RBH-1 Anomaly
@@ -55,7 +55,7 @@ Taken together, the kinematics and thermodynamic diagnostics suggest a large per
 ## The Cooling Bottleneck
 
 A bow shock at $v_s \sim 10^3$ km/s corresponds to Mach numbers $\mathcal{M} \gg 1$ in typical circumgalactic conditions. Standard Rankine–Hugoniot jump conditions mandate substantial conversion of bulk kinetic energy into thermal energy. For $v_s \approx 1000$ km/s, the characteristic post-shock temperature is:
-$ T_s \approx \frac{3}{16k_B} \mu m_p v_s^2 \approx 1.4 \times 10^7 \text{ K} $
+\begin{equation} \label{eq:shock_temp} T_s \approx \frac{3}{16k_B} \mu m_p v_s^2 \approx 1.4 \times 10^7 \text{ K} \end{equation}
 
 At this temperature, thermal pressure strongly suppresses gravitational collapse. Since the Jeans mass scales as $M_J \propto T^{3/2}$, raising the temperature from $100$ K to $10^7$ K increases the characteristic collapse mass scale by a factor of $10^{7.5}$ ($\sim 3\times 10^7$), making in-situ star formation in recently shocked gas difficult without highly efficient cooling.
 
@@ -66,24 +66,24 @@ The standard resolution invokes rapid radiative cooling, potentially aided by tu
 #### Bremsstrahlung Cooling Time
 
 The thermal energy density of a fully ionized plasma is $E = (3/2) n k_B T$, and the radiative cooling rate per volume is $\dot{E} = n^2 \Lambda(T)$, where $\Lambda(T)$ is the cooling function. At $T \sim 10^7$ K, cooling is dominated by free-free (Bremsstrahlung) emission with contributions from metal-line cooling, yielding $\Lambda(T) \approx 2.5 \times 10^{-23}$ erg cm$^3$ s$^{-1}$ for solar metallicity (Sutherland & Dopita 1993). The cooling time is:
-$ t_{\mathrm{cool}} = \frac{E}{\dot{E}} = \frac{3 k_B T}{2 n \Lambda(T)} $
+\begin{equation} \label{eq:cooling_time} t_{\mathrm{cool}} = \frac{E}{\dot{E}} = \frac{3 k_B T}{2 n \Lambda(T)} \end{equation}
 
 Substituting the post-shock temperature $T = 1.4 \times 10^7$ K and a post-shock density $n = 0.1$ cm$^{-3}$ (this high value is adopted as a conservative upper bound for a compressed/clumpy phase, distinct from the ambient CGM mean $n_{\rm CGM} \sim 10^{-3}$ cm$^{-3}$; note that since $t_{\rm cool} \propto 1/n$, lower densities would yield even longer cooling times):
-$ t_{\mathrm{cool}} = \frac{3 \times (1.38 \times 10^{-16}\,\mathrm{erg\,K^{-1}}) \times (1.4 \times 10^7\,\mathrm{K})}{2 \times (0.1\,\mathrm{cm^{-3}}) \times (2.5 \times 10^{-23}\,\mathrm{erg\,cm^3\,s^{-1}})} \approx 36\,\mathrm{Myr} $
+\begin{equation} \label{eq:cooling_time_value} t_{\mathrm{cool}} = \frac{3 \times (1.38 \times 10^{-16}\,\mathrm{erg\,K^{-1}}) \times (1.4 \times 10^7\,\mathrm{K})}{2 \times (0.1\,\mathrm{cm^{-3}}) \times (2.5 \times 10^{-23}\,\mathrm{erg\,cm^3\,s^{-1}})} \approx 36\,\mathrm{Myr} \end{equation}
 
 #### Dynamical Timescale
 
 The relevant comparison timescale is the sound-crossing time of the wake. The post-shock sound speed for a fully ionized plasma ($\gamma = 5/3$, mean molecular weight $\mu = 0.6$) at $T = 1.4 \times 10^7$ K is:
-$ c_s = \sqrt{\frac{\gamma k_B T}{\mu m_p}} \approx 560\,\mathrm{km\,s^{-1}} $
+\begin{equation} \label{eq:sound_speed} c_s = \sqrt{\frac{\gamma k_B T}{\mu m_p}} \approx 560\,\mathrm{km\,s^{-1}} \end{equation}
 
 For the observed wake radius $w \approx 0.7$ kpc (van Dokkum et al. 2025), the dynamical timescale is:
-$ t_{\mathrm{dyn}} = \frac{w}{c_s} \approx 1.2\,\mathrm{Myr} $
+\begin{equation} \label{eq:dyn_time} t_{\mathrm{dyn}} = \frac{w}{c_s} \approx 1.2\,\mathrm{Myr} \end{equation}
 
 #### The Critical Inequality
 
 Comparing these timescales yields the fundamental constraint:
-$ \frac{t_{\mathrm{cool}}}{t_{\mathrm{dyn}}} = \frac{36\,\mathrm{Myr}}{1.2\,\mathrm{Myr}} \approx 30 $
-$ t_{\mathrm{cool}} \gg t_{\mathrm{dyn}} \quad (\text{by a factor of } \sim 30) $
+\begin{equation} \label{eq:cool_dyn_ratio} \frac{t_{\mathrm{cool}}}{t_{\mathrm{dyn}}} = \frac{36\,\mathrm{Myr}}{1.2\,\mathrm{Myr}} \approx 30 \end{equation}
+\begin{equation} \label{eq:cooling_inequality} t_{\mathrm{cool}} \gg t_{\mathrm{dyn}} \quad (\text{by a factor of } \sim 30) \end{equation}
 This inequality is robust across the plausible parameter space. Sensitivity analysis shows that only at densities $n \gtrsim 1$ cm$^{-3}$ (an order of magnitude higher than typical circumgalactic values) does the ratio approach unity. While dust-gas collisional cooling can shorten timescales in some environments, high-velocity shocks ($v \sim 1000$ km/s) efficiently destroy dust grains via sputtering (Draine & Salpeter 1979), reducing the efficacy of this pathway in the immediate post-shock region. For fiducial parameters, shock-heated gas at $10^7$ K would expand and rarefy long before radiating sufficient energy to reach star-forming temperatures ($T \lesssim 10^4$ K).
 
 ![Cooling Sensitivity Analysis](site/figures/figure_02_sensitivity.png)
@@ -97,7 +97,7 @@ Yet the RBH-1 wake exhibits active star formation immediately behind the apex. T
 
 Standard hydrodynamic resolutions require invoking multiple mechanisms simultaneously: magnetic draping to suppress turbulence (explaining the 50:1 aspect ratio), turbulent mixing to bypass the cooling bottleneck (explaining the cold wake), and non-equilibrium ionization to reconcile line ratios (explaining anomalous preshock temperatures). Critically, these mechanisms are dynamically antagonistic—magnetic draping creates the laminar sheath that suppresses the turbulent mixing required to solve the cooling problem.
 
-This motivates considering a non-thermal driver. It is proposed that the observed velocity discontinuity ($\sim 650$ km/s) may reflect a coherent redshift gradient—a metric shock—in which the velocity jump is an apparent effect of differential proper time rather than bulk thermalization.
+This motivates considering a non-thermal driver. It is proposed that the observed velocity discontinuity ($\sim 650$ km/s) may reflect coherent acceleration by a proper-time gradient—a metric shock in the dynamical, rather than endpoint-redshift, sense. The resolved centroid span is then real bulk motion organized by Temporal Shear, while the much smaller local line dispersion measures random and unresolved differential motion. A conservative scalar body force can separate those first and second moments without identifying the full centroid span with thermal energy.
 
 ## The Geometry Problem
 
@@ -111,112 +111,141 @@ Section 2 establishes the theoretical framework for the candidate soliton/wake i
 
 ## 2. Theoretical Framework: The Soliton/Wake Interpretation
 
-The driver of the RBH-1 wake may not be a ballistic projectile, but rather a propagating structure in spacetime itself — explored here as a candidate Temporal Topology soliton/wake.† This *would be* a coherent region of deep gravitational potential moving through the cosmos (consistent with non-topological soliton solutions; see Kusenko 1997). Under this candidate framing, as the structure traverses a gas cloud it does not push atoms kinetically; instead, it alters the local flow of time.
+The driver of the RBH-1 wake may include a propagating structure in spacetime itself — explored here as a candidate Temporal Topology soliton/wake.<sup>†</sup> This *would be* a coherent region of altered proper-time rate moving with the compact object (consistent with non-topological soliton solutions; see Kusenko 1997). Universal coupling makes the associated Temporal Shear dynamically active: as the structure traverses a gas cloud, matter experiences the conservative acceleration $\mathbf a_\phi=-c^2\boldsymbol\nabla\ln A$. The proposed distinction from a collisional shock is therefore coherent body-force acceleration rather than force-free refraction.
 
-† *Terminology note:* Here, "soliton" refers specifically to a non-topological defect in a scalar field (a Q-ball or oscillon analog) that saturates at a finite density $\rho_T$, distinct from the vacuum singularity solutions of pure General Relativity. While Schwarzschild and Kerr black holes are sometimes called "gravitational solitons" in the mathematical sense of stationary, localized solutions, the objects considered here have no event horizon and are characterized by a finite core density rather than a central singularity.
+<sup>†</sup> *Terminology note:* Here, "soliton" refers specifically to a non-topological defect in a scalar field (a Q-ball or oscillon analog) that saturates at a finite density $\rho_T$, distinct from the vacuum singularity solutions of pure General Relativity. While Schwarzschild and Kerr black holes are sometimes called "gravitational solitons" in the mathematical sense of stationary, localized solutions, the objects considered here have no event horizon and are characterized by a finite core density rather than a central singularity. Two distinct existence questions should not be conflated: the configuration invoked here is *matter-sourced* — bound to the compact object as its temporal well — so its existence reduces to a forced boundary-value problem, to which self-binding (Derrick-type) obstructions for free field lumps do not apply; the Q-ball/oscillon language is morphological analogy only. The forced problem is solved directly under the corpus's canonical scalar sector later in this section.
 
 #### Box 2.0: Phenomenological vs. Microphysical Reading
 This section can be read at two levels:
-- *Phenomenological (model-agnostic):* A compact object with the properties described below—a coherent region of extreme time dilation, characterized by a characteristic density $\rho_T \approx 20$ g/cm³—would produce a "cold shock" wake without thermal heating. The observational predictions (narrow line widths, immediate star formation, extreme collimation) follow from the phenomenology alone, regardless of the underlying microphysics.
-- *Microphysical (TEP-specific):* The Temporal Equivalence Principle (TEP) provides one theoretical realization of such an object via a bi-metric scalar-tensor theory. Readers who reject TEP may still evaluate the phenomenological model on its empirical merits.
-**Crucial Concept: Permeability.** Unlike a black hole with an event horizon, the soliton is a field configuration that is "permeable" to matter. Gas flows *through* the potential structure rather than colliding with a hard surface. The interaction is refractive (metric-gradient driven) rather than collisional (surface-impact driven), allowing the object to process the ambient medium without generating a standard bow shock.
+- *Phenomenological (model-agnostic):* A compact object carrying a coherent proper-time gradient, characterized by a characteristic density $\rho_T \approx 20$ g/cm³, can organize a large bulk-velocity gradient without assigning the full velocity span to random thermal motion. The observational consequences—locally narrow lines, prompt collapse, and extreme collimation—follow from the coherence and work integral of the body-force profile.
+- *Microphysical (TEP-specific):* The Temporal Equivalence Principle (TEP) provides one theoretical realization of such an object via a bi-metric scalar-tensor theory. Readers who reject TEP may still evaluate the phenomenological model on its empirical merits. Within the TEP reading, the required configuration is the compact object's matter-sourced temporal well — a forced solution of the field equation, not a self-bound free soliton — whose existence under the canonical scalar sector is demonstrated numerically in this section.
+**Crucial Concept: Permeability.** Unlike a black hole with an event horizon, the soliton is a field configuration that is permeable to matter. Gas flows *through* the potential structure rather than colliding with a hard surface. The interaction is metric-gradient driven rather than surface-impact driven: momentum is transferred coherently by the universal scalar force, with heating controlled by unresolved differential motion and streamline crossing rather than by the bulk centroid span itself.
 The key empirical claim—that a characteristic density $\rho_T \approx 20$ g/cm³ governs compact-object structure across 15 orders of magnitude in mass—is testable independently of the theoretical framework used to motivate it.
 
 ## Phenomenology of the Time Lens
 
-In this framework, RBH-1 acts as a moving "time lens." Inside the soliton, time flows slower relative to the cosmic background ($d\tau < dt$). This creates a refractive effect: just as glass bends light because light moves slower within it, a region of time dilation bends the trajectories of matter. To an external observer, gas entering this region appears to redshift and change velocity—not because it has been physically pushed, but because the local clock rate has changed.
+In this framework, RBH-1 acts as a moving proper-time potential. Inside the candidate profile, time flows more slowly relative to the ambient background ($d\tau < dt$). The spatial variation of that rate is physical: in the weak-field matter metric it accelerates gas according to $\mathbf a_\phi=-c^2\boldsymbol\nabla\ln A$. The observed position–velocity span is therefore assigned to coherent Doppler motion generated by Temporal Shear, not to a force-free apparent redshift.
 
-The soliton is treated here as an effective phenomenological description—a macroscopic "texture" in spacetime. One theoretical realization arises from the bi-metric scalar-tensor structure of TEP (Smawfield 2025a, 2025g), where the gravitational metric $g_{\mu\nu}$ governs curvature while an effective matter metric $\tilde{g}_{\mu\nu}$ encodes the local proper-time rate. This implies a decoupling where kinematics (driven by $\tilde{g}_{\mu\nu}$) can be strong while lensing (driven by the conformal-invariant null geodesics of $g_{\mu\nu}$) remains weak. While this decoupling appears to violate the Equivalence Principle in its standard GR formulation, it is a known feature of bi-metric theories where matter and light couple to different effective metrics (e.g., Disformal Gravity models). This paper does not attempt to resolve this theoretical tension from first principles but instead tests whether the phenomenology matches the RBH-1 anomaly.
+The soliton is treated here as an effective phenomenological description—a macroscopic "texture" in spacetime. One theoretical realization arises from the bi-metric scalar-tensor structure of TEP (Smawfield 2025a, 2025g), where the gravitational metric $g_{\mu\nu}$ governs curvature while an effective matter metric $\tilde{g}_{\mu\nu}$ encodes the local proper-time rate. This implies a decoupling where kinematics (driven by $\tilde{g}_{\mu\nu}$) can be strong while lensing — sourced only by the scalar's distributed stress-energy in $g_{\mu\nu}$, suppressed by $\Delta\ln A/4$ relative to the apparent kinematic mass (§4) — remains weak. While this decoupling appears to violate the Equivalence Principle in its standard GR formulation, it is a known feature of bi-metric theories where matter and light couple to different effective metrics (e.g., Disformal Gravity models). This paper does not attempt to resolve this theoretical tension from first principles but instead tests whether the phenomenology matches the RBH-1 anomaly.
 
 ![Anatomy of the Temporal Soliton Wake](site/figures/figure_03_wake_anatomy.png)
-Figure 3: The Anatomy of the Wake. *Left (turbulent/hot):* A standard hydrodynamic model, where a physical projectile generates turbulence and post-shock heating ($T \gtrsim 10^7$ K). Kelvin-Helmholtz instabilities disrupt the wake boundary, and the Jeans length exceeds 100 kpc, suppressing sub-kpc fragmentation. *Right (laminar/cold):* A metric-shock model, where a propagating region of time dilation produces a coherent disturbance without bulk thermalization. Gas remains near $T \sim 10^4$ K, the wake boundary stays sharp (aspect ratio 50:1), and fragmentation into star-forming clumps is permitted. This left–right contrast provides a qualitative discriminant between models.
+Figure 3: The Anatomy of the Wake. *Left (turbulent/hot):* A standard hydrodynamic model, where a physical projectile generates turbulence and post-shock heating ($T \gtrsim 10^7$ K). Kelvin-Helmholtz instabilities disrupt the wake boundary, and the Jeans length exceeds 100 kpc, suppressing sub-kpc fragmentation. *Right (coherent-shear):* a metric-gradient model in which a propagating proper-time profile supplies an ordered body force. A large resolved bulk-velocity span can coexist with small local random dispersion when the shear is coherent; gas can remain near $T \sim 10^4$ K, the wake boundary can stay sharp, and fragmentation into star-forming clumps is permitted.
 
-The characteristic density $\rho_T \approx 20$ g/cm³, which governs the temporal scale, is not a free parameter in this analysis. It is an external input derived from terrestrial constraints in the companion "Universal Critical Density" paper (Smawfield 2025g). This analysis tests whether this specific value, calibrated on Earth, correctly predicts the wake properties of a distant supermassive black hole.
+The characteristic density $\rho_T \approx 20$ g/cm³, which governs the temporal scale, is not a free parameter in this analysis. It is an external input derived from terrestrial constraints in the companion "Temporal Topology Saturation Scale" paper (Smawfield 2025g). This analysis tests whether this specific value, calibrated on Earth, correctly predicts the wake properties of a distant supermassive black hole.
 
 #### Box 2.1: Model Scope
 Detailed field equations and Lagrangian derivations are provided in Smawfield (2025a, *TEP-GTE*) and Smawfield (2025g, *TEP-UCD*). This paper focuses strictly on the Astrophysical Forward Model: given a characteristic density $\rho_T \approx 20$ g/cm³, what are the observable kinematic and thermodynamic signatures of a $10^7 M_\odot$ soliton traversing the circumgalactic medium?
 
-## Forward Model: From Field Gradient to Velocity Shift
+The characteristic temporal scale $R_T$, while calibrated from terrestrial geodetics, operates here as the astrophysical geometric realization of the abstract environmental operator $\mathcal{S}_\Sigma(\mathcal{E})$. Modeling the RBH-1 wake as a candidate Temporal Topology soliton uses this geometric saturation profile to trace the continuous un-screening of the temporal shear field behind the metric shock, distinguishing it fundamentally from standard bulk thermalization models.
+
+## Forward Model: From Field Gradient to Coherent Velocity Flow
 
 To move beyond qualitative description, the explicit mapping between the scalar field profile and the observed kinematic signatures is defined below. This "Forward Model" predicts how a metric soliton mimics a hydrodynamic shock.
 
-### The Metric Redshift Relation
+### Endpoint Transport and Matter Dynamics
 In the TEP framework, the effective matter metric $\tilde{g}_{\mu\nu}$ is conformally related to the gravitational metric $g_{\mu\nu}$ by a scalar function $A(\phi)$. The proper time interval $d\tau$ for a comoving observer is related to the coordinate time $dt$ by:
-$ d\tau = A(\phi) dt $
-An emitter located within the soliton (where the field value is $\phi$) emits photons with a proper frequency $\nu_0$. To an external observer at infinity (where $A(\phi_\infty) \to 1$), the received frequency $\nu_{\text{obs}}$ is redshifted solely by the change in the local clock rate:
-$ 1 + z_{\text{metric}} = \frac{\nu_0}{\nu_{\text{obs}}} = \frac{1}{A(\phi)} $
-This produces an *apparent* Doppler shift. Even if the gas is static ($v_{\text{pec}} = 0$), an observer interprets the frequency shift as a line-of-sight velocity $v_{\text{app}}$:
-$ v_{\text{app}} \approx c \cdot z_{\text{metric}} \approx c \left( \frac{1}{A(\phi)} - 1 \right) $
+\begin{equation} \label{eq:proper_time} d\tau = A(\phi) dt \end{equation}
+An emitter resident on a different conformal plateau from the observer has the endpoint clock ratio
+\begin{equation} \label{eq:metric_redshift} 1 + z_{\text{metric}} = \frac{\nu_0}{\nu_{\text{obs}}} = \frac{1}{A(\phi)} \end{equation}
+A conformal profile encountered only in the middle of the photon path contributes no additional open-path shift beyond this endpoint ratio. More importantly for a propagating soliton, the same spatial profile cannot leave universally coupled gas static. Expanding the matter geodesic in the nonrelativistic limit gives
+\begin{equation} \label{eq:matter_acceleration} \mathbf a_\phi=-c^2\boldsymbol\nabla\ln A, \qquad \Delta\!\left(\frac{u^2}{2}\right)=-c^2\Delta\ln A , \end{equation}
+where $u$ is the gas speed in the rest frame of a quasi-steady field profile.
+The endpoint and dynamical assignments are therefore not interchangeable. Assigning $\Delta v=650$ km s$^{-1}$ to $|\Delta\ln A|\simeq\Delta v/c$ predicts a traversing-matter speed $c\sqrt{2|\Delta\ln A|}\simeq1.97\times10^4$ km s$^{-1}$ and is excluded internally. The consistent branch assigns the measured span to coherent matter motion:
+\begin{equation} \label{eq:dynamical_depth} |\Delta\ln A|_{\rm dyn}=\frac{|u_{\rm out}^2-u_{\rm in}^2|}{2c^2}=\frac{\bar u\,|\Delta u|}{c^2}\equiv\eta\frac{\Delta v^2}{2c^2}. \end{equation}
+Here $\eta\equiv2\bar u/\Delta v$ records the explicitly chosen flow frame. The rest-entry normalization has $\eta=1$ and $|\Delta\ln A|=2.35\times10^{-6}$. As a translating-profile benchmark, ambient gas initially at rest in the host frame and accelerated collinearly with the published $v_\bullet=954$ km s$^{-1}$ pattern has profile-frame speeds 954 and 304 km s$^{-1}$, giving $\eta=1.94$ and $|\Delta\ln A|=4.55\times10^{-6}$. The measured two-dimensional velocity field will determine $\eta$ rather than leaving the frame implicit.
 
 ### Predicting the Velocity Discontinuity
 
-A critical distinction must be made between the core radius and the transition radius. The *temporal scale* $R_T \sim 7.8 \times 10^7$ km is the fundamental geometric scale where the field saturates (derived from $\rho_T$). However, because the Temporal Topology is flattened in the deep density well of the compact object, the local Temporal Shear (field gradient) is strongly suppressed in the core region. The observable kinematic effects therefore manifest at the *transition radius* $R_{\rm trans} \sim 0.1$–$1$ kpc, where the Temporal Shear recovers continuously from its suppressed value.
+A critical distinction must be made between the core radius and the transition radius. The *temporal scale* $R_T \sim 7.8 \times 10^7$ km ($\approx 2.5\times10^{-9}$ kpc) is the fundamental geometric scale where the field saturates (derived from $\rho_T$). However, because the Temporal Topology is flattened in the deep density well of the compact object, the local Temporal Shear (field gradient) is strongly suppressed in the core region. The observable kinematic effects therefore manifest at the *transition radius* $R_{\rm trans} \sim 0.1$–$1$ kpc, where the Temporal Shear recovers continuously from its suppressed value.
 
-The connection is that $R_{\rm trans}$ is not arbitrary; it scales with the core mass. In the TEP framework, the continuous spatial profile of the chameleon field (Temporal Topology) governs the transition scale. While the exact prefactor depends on the coupling strength, the *existence* of a transition zone at $\sim$kpc scales for a $10^7 M_\odot$ object is a consequence of the underlying temporal topology geometry. The "shock" observed at the RBH-1 tip corresponds to the gradient of $A(\phi)$ at this transition boundary, where Temporal Shear has recovered sufficiently to produce an observable metric effect.
+The separation between these scales is parametrized explicitly as $R_{\rm trans} = \xi\,R_T$, and the data fix the prefactor: the observed $\sim 1$ kpc onset requires $\xi \approx 4\times10^{8}$ (range $4\times10^7$–$4\times10^8$ over the quoted 0.1–1 kpc interval). For comparison, the constant-density screening ansatz of Paper 6 — shear recovery where the enclosed mean density of the dynamically equivalent halo ($M_{\rm eff} \sim 4.9\times10^{10}\eta M_\odot$, Box 3.1) falls to $\rho_T$ — would place the transition at $\xi_\rho \approx 13.5\eta^{1/3}$, i.e. $\sim 7\eta^{1/3}$ AU. The measured onset therefore sits $\sim 3\times10^{7}\eta^{-1/3}$ times beyond the naive recovery radius: the shear-recovery profile is far broader than a constant-density reading, and the transfer function relating the saturation scale to the resolved onset is quantified rather than assumed. Equivalently, a recovery length $\ell \sim R_{\rm trans} \sim 1$ kpc corresponds to an effective field mass $m_{\rm eff}c^2 = \hbar c/\ell \approx 6.4\times10^{-27}$ eV — the scale the field solution must supply. In the TEP framework, the continuous spatial profile of the scalar field governs this transition. The observed position–velocity structure constrains the work integral of $A(\phi)$ across that boundary.
 
-For a weak-field conformal coupling, $A(\phi) \approx 1 + 2\beta_{\text{eff}}\Phi/c^2$ where $\Phi = -GM/r$ is the Newtonian potential and $\beta_{\text{eff}}$ is the effective coupling strength (scalar charge) at the transition boundary where Temporal Shear has recovered. Substituting into the apparent velocity formula:
+Existence of the required configuration under the canonical scalar sector is not a free-soliton question. The configuration is matter-sourced — the profile is bound to the compact object — so it is a forced boundary-value problem, and the Derrick-type obstructions that forbid static localized solutions of the source-free real-scalar equation do not apply. Solving the corpus's kinetic completion $P(X,\phi)=X-V+X|X|/\Lambda^{4}$ on the static spherical branch gives the flux-conserving profile $s\,[1+(s/\Sigma_{\rm bg})^{2}]=2\beta_A^{2}GM/(c^{2}r^{2})$ for the observable shear $s=|\nabla\ln A|$, with the shear floor $\Sigma_{\rm bg}=H_0/c$ and threshold $g_t=cH_0/(2\beta_A^{2})$ fixed cosmologically rather than fitted (Paper 0, master-action closure). For the baryonic mass alone this returns a localized, positive, monotonic halo with canonical $r^{-2}$ tail, a stiff $r^{-2/3}$ interior branch, and a shear-recovery radius $R_s=\sqrt{GM/g_t}\approx90$ pc — within an order unity factor of the resolved onset band, and moving into it ($R_s\propto\sqrt M$) for a sourcing strength above the baryonic mass. The interior amplitude sector independently saturates at the corpus quartic equilibrium, $\varphi_{\min}(\rho_T)\simeq3.2\times10^{-7}$ at the reference coupling. Because the halo relaxes on its light-crossing time $R_s/c\approx300$ yr — four orders of magnitude faster than the $\sim$Myr gas transit — the moving object adiabatically carries its well, and no metastability timescale is required of the configuration. The halo depth delivered by the bare baryonic charge, $7.8\times10^{-8}$ at its interior ceiling, falls short of the required $2.35\times10^{-6}\eta$ by the same open response-depth normalization already carried as $\alpha_{\rm RBH,eff}$ (Box 2.2): the existence of the configuration class is thereby established under the canonical action, with the depth normalization remaining a disclosed open item rather than an additional defect. (Existence audit: Reproducibility, step 02.)
 
-$ v_{\text{app}} \approx c \left( \frac{1}{1 - 2\beta_{\text{eff}}GM/(R_{\text{trans}} c^2)} - 1 \right) \approx \beta_{\text{eff}} \frac{GM}{R_{\text{trans}} c} $
+For bookkeeping against the baryonic potential, define the operational response $\alpha_{\text{RBH,eff}}$ by $|\Delta\ln A|=\alpha_{\text{RBH,eff}}GM/(R_{\rm trans}c^2)$. In the rest-entry normalization the work integral gives
+
+\begin{equation} \label{eq:velocity_discontinuity} \Delta v \approx \left(\frac{2\alpha_{\text{RBH,eff}}GM}{R_{\text{trans}}}\right)^{1/2}. \end{equation}
 
 #### Box 2.2: The Temporal Shear Constraint
-A naive application of the full field gradient at the core radius ($R \sim 1.3 R_S$) would imply a relativistic redshift $z \sim 0.25$ ($v \sim 75,000$ km/s), drastically exceeding the observed $\sim 650$ km/s. This discrepancy is physically instructive: it indicates that the Temporal Shear must be strongly suppressed near the compact object. In the deep density well of the core, the Temporal Topology is flattened, driving the local field gradient toward zero and ensuring that the scalar contribution to the metric remains negligible in the interior.
+The field amplitude and its gradient must be separated. A uniform conformal plateau can generate an endpoint clock ratio but no local force; a propagating spatial transition necessarily accelerates matter. The observed 650 km s$^{-1}$ span therefore fixes the integrated gradient dynamically, not linearly as a redshift.
 The observed velocity discontinuity ($v \approx 650$ km/s) combined with the transition scale ($R_{\text{trans}} \sim 1$ kpc) constrains the effective coupling product at the radius where Temporal Shear has recovered:
-$\beta_{\text{eff}} \frac{GM}{R_{\text{trans}} c^2} \sim \frac{v}{c} \sim 2 \times 10^{-3}$
-This implies that while the *geometric* structure of the soliton candidate is governed by the characteristic density $\rho_T$, the *amplitude* of the metric shock reflects the recovered Temporal Shear at the transition radius, consistent with the scalar field being a sub-dominant component of the total potential.
+\begin{equation} \label{eq:coupling_constraint} \alpha_{\text{RBH,eff}} \frac{GM}{R_{\text{trans}} c^2} \sim \eta\frac{1}{2}\left(\frac{\Delta v}{c}\right)^2 = 2.35\times10^{-6}\eta . \end{equation}
+For $M = 2\times 10^7 M_\odot$ at $R_{\rm trans} \sim 1$ kpc, $GM/(R_{\rm trans}c^2)=9.57\times10^{-10}$, giving $\alpha_{\rm RBH,eff}=2.46\times10^3\eta$ or a Newtonian-equivalent mass $M_{\rm eff}=4.91\times10^{10}\eta M_\odot$. The rest-entry value is smaller by a factor of 921 than the obsolete endpoint-redshift assignment; the collinear pattern-speed benchmark is smaller by a factor of 476. Under the soliton reading this is the configuration's integrated dynamical depth; under a linear-response reading it is a constraint on the open screening-transfer normalization. No independent force suppression is introduced: the observed bulk motion is the response to the same universal gradient.
 
 ### Predicting Line Widths (The Discriminator)
 
 The key distinction lies in the second moment of the line distribution (line width).
 - **Thermal Shock:** The velocity jump comes from chaotic thermalization. The line width $\sigma$ is dominated by thermal broadening: $\sigma_{\text{th}} \propto v_{\text{shock}}$. For $v \sim 1000$ km/s, $\sigma \sim 100$ km/s.
 **Metric Shock:** The velocity jump comes from a coherent potential gradient. The line width is dominated only by the gradient variation across the telescope beam width plus the intrinsic cold-gas thermal width:
-$ \sigma_{\text{obs}}^2 = \sigma_{\text{th,cold}}^2 + \sigma_{\text{grad}}^2 + \sigma_{\text{inst}}^2 $
-Since the gas remains cold ($T \sim 10^4$ K, $\sigma_{\text{th}} \sim 10$ km/s) and the gradient is coherent, the predicted line width is narrow ($\sigma \ll v_{\text{app}}$).
+\begin{equation} \label{eq:line_width} \sigma_{\text{obs}}^2 = \sigma_{\text{th,cold}}^2 + \sigma_{\text{grad}}^2 + \sigma_{\text{inst}}^2 \end{equation}
+Since the gas can remain cold ($T \sim 10^4$ K, $\sigma_{\text{th}} \sim 10$ km/s) while sharing an ordered velocity field, the predicted local line width is narrow ($\sigma \ll \Delta v$). The published 31 km s$^{-1}$ dispersion and the 650 km s$^{-1}$ resolved span are distinct observables; their ratio constrains field non-uniformity only where the emitting components are shown to be co-spatial.
 
-Prediction: the metric shock model predicts a large centroid shift ($\sim 600$ km/s) with a narrow line width ($\sim 30$ km/s). This constitutes a specific discriminant between coherent redshift gradients and thermalized shocks.
+Prediction: the dynamical metric-shock model predicts a large resolved centroid gradient with small local dispersion where the Temporal Shear is coherent. If the 31 km s$^{-1}$ component samples the same flow, $\sigma/\Delta v=0.048$ and the corresponding rms depth non-uniformity is bounded at approximately $2\sigma/\Delta v\simeq0.095$.
 
 ## Thermodynamics of a Metric Shock
 
-This shift from "kinetic push" to "metric distortion" solves the temperature problem. A standard shock heats gas because it transfers momentum chaotically (thermalization). A metric shock is orderly. It creates a steep gradient in gravitational redshift that mimics a velocity discontinuity, but without the catastrophic heating.
-- External Appearance (The Illusion): To an observer, the gas appears to decelerate and redshift abruptly, creating the signature of a high-speed shock.
-- Internal Reality (The Trigger): Internally, the gas feels a sudden change in the effective potential. This lowers the threshold for gravitational collapse, as derived below.
+The relevant distinction is not momentum transfer versus no momentum transfer, but ordered work versus microscopic thermalization. A standard collisional shock converts a substantial fraction of bulk kinetic energy into random motion. Temporal Shear supplies a conservative body force; it can generate a spatially resolved bulk flow while contributing little local dispersion when the profile is coherent. Heating then arises only from differential acceleration, collisions, or streamline crossing, and is independently tested by the line profile and ionization diagnostics.
+- Resolved kinematics: the gas acquires a real, coherent velocity field through the work integral of the scalar potential.
+- Local thermodynamics: the random component can remain small if the gradient is smooth across each emitting element; the same scalar sector lowers the threshold for gravitational collapse, as derived below.
 
 #### Box 2.3: Derivation of the Modified Jeans Mass
 
 The standard Jeans mass is derived from the balance between thermal pressure and gravitational collapse in a uniform medium. The collapse timescale is $t_{\rm ff} \sim (G\rho)^{-1/2}$, while the sound-crossing timescale is $t_{\rm sound} \sim \lambda_J / c_s$. Setting these equal yields the Jeans length $\lambda_J \sim c_s / \sqrt{G\rho}$ and Jeans mass $M_J \sim \rho \lambda_J^3 \sim c_s^3 / (G^{3/2} \rho^{1/2})$.
 
-In the TEP framework, the matter metric $\tilde{g}_{\mu\nu} = A^2(\phi) g_{\mu\nu}$ rescales proper time: $d\tau = A(\phi) dt$. Define $\gamma \equiv dt/d\tau = 1/A(\phi) > 1$ inside the soliton (where $A < 1$). This affects the collapse criterion in two ways:
-- **Timescale rescaling:** The free-fall time measured by local clocks is $\tilde{t}_{\rm ff} = t_{\rm ff} / \gamma$. Collapse proceeds faster in proper time.
-- **Effective gravity:** In the Jordan frame (where matter couples to $\tilde{g}_{\mu\nu}$), the effective gravitational constant is $\tilde{G} = G / A(\phi) = \gamma^2 G$. Gravity is enhanced.
+In the TEP framework, the matter metric $\tilde{g}_{\mu\nu} = A^2(\phi) g_{\mu\nu} + B(\phi)\nabla_\mu\phi\nabla_\nu\phi$ rescales proper time in the conformal sector: $d\tau = A(\phi) dt$. Define $\gamma \equiv dt/d\tau = 1/A(\phi) > 1$ inside the soliton (where $A < 1$). A uniform conformal rescaling cannot by itself alter a local instability criterion: under the corpus axiom that matter-frame physics is locally standard (Rules 2 and 21), the free-fall and sound-crossing times rescale together and their ratio is invariant. The collapse criterion is modified only through a change in the effective inter-particle force:
+- **Scalar fifth force:** In the Jordan frame (where matter couples to $\tilde{g}_{\mu\nu}$), the scalar field mediates an additional attractive interaction between matter elements, so the effective gravitational coupling is $\tilde{G} = G(1 + \alpha_{\rm eff}^2)$, where the scalar-charge normalization $\alpha_0^2 = 2\beta_A^2$ follows the corpus-wide DEF convention $\alpha_0 = \sqrt{2}\,\beta_A$ (Paper 0) and $\alpha_{\rm eff}$ is the environment-dependent screened charge. In the unscreened regime ($\beta_A = -1$, $\alpha_{\rm eff} \to \alpha_0 = -\sqrt{2}$) this gives $\tilde{G} = 3G$; in the screened regime the fifth force vanishes and $\tilde{G} \to G$. Gravity is enhanced where the scalar charge is unscreened.
+- **Frame bookkeeping:** Conformal factors of $A(\phi)$ that appear when the gravitational action is written in Jordan-frame variables are unit-conversion effects; they cancel between the gravitational coupling and the local standards that define $c_s$ and $\rho$, and therefore carry no independent factor into the local criterion. The physical content of the temporal field for collapse dynamics is the screened scalar charge $\alpha_{\rm eff}(\phi, \nabla\phi)$ — which is environment-dependent through the same field configuration that produces the metric shock.
 
 The modified Jeans mass in the matter frame is:
-$\tilde{M}_J \sim \frac{c_s^3}{\tilde{G}^{3/2} \rho^{1/2}} = \frac{c_s^3}{(\gamma^2 G)^{3/2} \rho^{1/2}} = \frac{M_J}{\gamma^3}$
-**Caveat on Timescales:** This derivation assumes the sound speed $c_s$ is unchanged, which holds if the gas temperature is set by external radiation (CMB floor) rather than local thermodynamics.
-The magnitude of the effect depends on the depth of the potential well. The relevant $\gamma$ has two regimes:
-- **Transition Zone ($R \sim 1$ kpc):** The gradient is shallow ($z_{\rm metric} \sim 10^{-3}$), producing the kinematic "kick" (metric shock) that mimics the velocity discontinuity. The transit time is $\sim 1$ Myr, comparable to the dynamical time.
-- **Core Zone ($R \sim 10^8$ km):** The potential is deep ($\gamma \sim 2$–$3$), yielding massive Jeans-mass reduction ($M_J' \sim 0.1 M_J$). While the transit time is short ($\sim$ days), this region may act as a catalytic "crusher," triggering collapse in high-impact-parameter gas that then evolves in the wake.
-The primary observational claim relies on the Transition Zone kinematics (the metric shock); the core-induced collapse enhancement is a secondary hypothesis for the star-formation efficiency.
+\begin{equation} \label{eq:jeans_mass} \tilde{M}_J \sim \frac{c_s^3}{\tilde{G}^{3/2} \rho^{1/2}} = \frac{c_s^3}{[(1+\alpha_{\rm eff}^2)\, G]^{3/2} \rho^{1/2}} = \frac{M_J}{(1+\alpha_{\rm eff}^2)^{3/2}} \end{equation}
+At the bare coupling $\alpha_{\rm eff}^2 = \alpha_0^2 = 2$ this gives $\tilde{M}_J = M_J / 3^{3/2} \approx 0.19\, M_J$ — a factor of five reduction without invoking any timescale rescaling. In the deep-field regime, where the effective charge can exceed the bare value, the reduction is correspondingly deeper.
+The quantitative bookkeeping is worth stating plainly. For unperturbed circumgalactic gas ($T\sim10^{4}$ K, $n\sim10^{-3}$ cm$^{-3}$, $c_s\simeq15$ km s$^{-1}$) the Newtonian Jeans mass is $M_J\sim10^{9}\,M_\odot$ (Jeans length $\sim50$ kpc, far exceeding the $\sim1$ kpc wake width — ambient gas is stable by roughly two orders of magnitude in size). The bare-coupling factor alone therefore does not collapse diffuse ambient gas; it reduces the threshold to $\sim2\times10^{8}\,M_\odot$ ($\lambda_J\sim30$ kpc). The operative statement is instead the reclassification of denser condensations: at fixed clump mass the critical density for instability falls by $(1+\alpha_{\rm eff}^{2})^{3}=3^{3}=27$ at the bare coupling (equivalently, the Jeans length at fixed density falls by $\sqrt{3}$), so gas at a few percent of the usual threshold density is already unstable. Evaluated at the compressed densities of condensing $10^{4}$ K gas ($n\sim1$–$10^{2}$ cm$^{-3}$), the reduced criterion reaches the $10^{6}$–$10^{7}\,M_\odot$ regime of the stellar clumps that actually populate the wake — at bare coupling alone. A still deeper reduction demanded of near-ambient gas would depend on the open environmental-charge transfer map; it is not used to cancel the real acceleration derived above.
+**Caveat on the sound speed:** This derivation assumes $c_s$ is unchanged, which holds if the gas temperature is set by external radiation (CMB floor) rather than local thermodynamics.
+**Caveat on regime of validity:** The estimate above is a quasi-static, weak-field linearization. Inside the deep core ($\gamma \sim 2$–$3$) and at the large effective couplings required to produce the observed shock amplitude, the collapse criterion must be evaluated within the full nonlinear field configuration; the linearized value is an estimate of direction and scale, not the nonlinear answer.
+The timescale structure of the field configuration fixes where the reduced criterion can act:
+- **Transition zone and trailing wake ($R \sim 1$ kpc):** The work-integral depth is $2.35\times10^{-6}\eta$; the rest-entry traversal time over 1 kpc is approximately 3.0 Myr. Because this remains far shorter than the ambient free-fall time, passage can reclassify or precondition marginal condensations, but collapse must complete in denser gas or after passage.
+- **Core zone ($R \sim 10^8$ km):** The potential is deepest here and the local mass reduction is largest, but the core-diameter transit is only $\sim$ days — orders of magnitude shorter than the free-fall time, so collapse cannot complete, or even substantially advance, during core passage. The core's role is a seeding impulse: a brief interval of strongly enhanced effective gravity that pre-compresses gas which then resides inside the trailing wake disturbance, where the reduced criterion applies for the $\sim$ Myr wake-crossing time rather than the $\sim$ day core transit.
+The primary observational claim relies on the transition-zone kinematics (the metric shock); the wake-resident collapse enhancement is a secondary mechanism for the star-formation efficiency.
 
-The key point is that the Jeans-mass reduction is a derived consequence of the conformal coupling, not an ad hoc assumption. The magnitude depends on the depth of the potential well, which is constrained by the observed velocity discontinuity and the saturation proximity scale.
+The key point is that the Jeans-mass reduction is a derived consequence of the scalar fifth force, not an ad hoc assumption. Its magnitude is set by the environment-dependent scalar charge $\alpha_{\rm eff}$, which is tied to the same field configuration constrained by the observed velocity discontinuity and the saturation scale.
 
-Crucially, this reinterprets the measured $\sim 600$ km/s velocity jump. It is not a bulk flow of hot plasma, but a *differential proper-time lag* across the soliton boundary. Furthermore, the observed speed of the object ($\sim 1000$ km/s $\approx 10^{-3}c$) is interpreted not as a ballistic trajectory, but as the characteristic group velocity of the scalar wave packet, set by the gradient of the local cosmic potential. In scalar-tensor theories with density-dependent gradient suppression, the group velocity scales as $v_g \sim c \sqrt{|\Phi|/c^2}$ where $\Phi$ is the ambient gravitational potential; for CGM environments with $|\Phi|/c^2 \sim 10^{-6}$, this yields $v_g \sim 10^{-3}c \sim 300$–$1000$ km/s—consistent with the observed proper motion.
+The measured $\sim 600$–650 km s$^{-1}$ span is therefore retained as bulk flow, but its energy source is reassigned to the Temporal-Shear work integral rather than to an endpoint clock offset. The translational speed $v_{\bullet} = 954$ km s$^{-1}$ remains a measured boundary condition, not a field-theoretic output; it sets the wake age $t_{\rm wake} \sim L/v_{\bullet} \sim 70$ Myr and encounter geometry. The two velocities remain distinct: $v_{\bullet}$ describes the compact object's ballistic motion, while $\Delta v$ constrains the scalar profile's integrated dynamical depth.
 The Discriminator: How can these models be distinguished? The primary discriminant is the line profile.
 In a thermal shock where the emitting gas is predominantly hot, a large velocity change ($v$) implies a high temperature ($T \propto v^2$), which broadens spectral lines via thermal Doppler motion ($\sigma_v \propto \sqrt{T}$). Even in multiphase scenarios where [O III] arises from cooler zones, a substantial hot-phase contribution should produce detectable broad wings.
-In a metric shock, the "velocity change" is a coherent redshift gradient. The centroid of the emission line shifts, but the line width remains narrow because the gas stays cold throughout.
+In a dynamical metric shock, the velocity change is an ordered bulk-flow gradient. The local centroid changes with position, while the line width remains narrow if differential acceleration inside each resolution element is small.
 
 ## The Solution to the Paradox
-This mechanism explains the cold wake primarily by avoiding the heating bottleneck. Star formation occurs because the gas is not hot ($t_{\rm cool} \ll t_{\rm dyn}$ is never violated because $T$ never spikes), rather than because gravity is massively enhanced. The "shock" is a refractive boundary, not a collision. This is quantitatively supported by the cooling analysis (Section 1), which demonstrates that under fiducial CGM conditions and standard optically thin cooling, $t_{\mathrm{cool}} \gg t_{\mathrm{dyn}}$ by a factor of $\sim 30$. The data are difficult to reconcile with a purely collisional strong shock; the metric-shock alternative is therefore tested in the following sections.
+This mechanism separates coherent kinetic energy from random thermal energy. Star formation can proceed in the cold component because the scalar profile organizes the bulk flow and lowers the Jeans threshold; it does not require the full 650 km s$^{-1}$ span to thermalize locally. The cooling analysis (Section 1) shows that a single-phase $10^7$ K interpretation has $t_{\mathrm{cool}}/t_{\mathrm{dyn}}\sim30$. The dynamical metric-shock alternative is therefore tested by the joint spatial velocity field, local line widths, broad-wing limits, and gas–star kinematic relation.
 
 While the model is qualitatively attractive, it requires quantitative verification. If RBH-1 is a soliton, it must have a specific size. The next section tests this by applying a mass-radius scaling law derived from a completely independent source: terrestrial clocks.
 
-## 3. Quantitative Predictions: Testing the Metric Shock
-The metric-shock hypothesis proposes that the observed velocity
-discontinuity Δv ~ 650 km/s arises from a spatial gradient in the conformal
+## 3. Quantitative Predictions: Testing the Dynamical Metric Shock
+The metric-shock hypothesis proposes that the observed resolved velocity
+span Δv ~ 650 km/s is coherent matter motion generated by a spatial gradient in the conformal
 factor A(φ), which relates the matter metric to the gravitational metric via
-$\tilde{g}_{\mu\nu} = A^2(\phi) g_{\mu\nu}$. This section derives the required
+$\tilde{g}_{\mu\nu} = A^2(\phi) g_{\mu\nu} + B(\phi)\nabla_\mu\phi\nabla_\nu\phi$
+(conformal limit for this analysis). This section derives the required
 field parameters and checks for internal consistency.
+
+Screening in TEP is represented at the theory level by the environmental operator
+*S*<sub>&Sigma;</sub>(*&Epsilon;*).
+Quantities such as
+&rho;<sub>T</sub>,
+*R*<sub>T</sub>(*M*),
+*S*<sub>&oplus;</sub>(*r*),
+compactness &Phi;/*c*<sup>2</sup>,
+local stellar density,
+geometric coherence length,
+and channel-specific response coefficients
+are domain-specific projections of *&Epsilon;*,
+not independent screening mechanisms
+and not interchangeable universal thresholds.
+Each is an observational transfer model
+that parameterizes the same underlying operator
+in a regime-appropriate form.
 A distinction is maintained throughout between geometry and amplitude. The
 temporal scale (and associated geometric scaling) is fixed
-*a priori* by $\rho_T$ (Paper 6), while the magnitude of the apparent
+*a priori* by $\rho_T$ (Paper 6), while the magnitude of the coherent
 kinematic discontinuity depends on screening/transition physics through the
 effective coupling at $R_{\text{trans}}$ and is therefore treated here as an
 empirical constraint rather than an independent free fit.
@@ -228,94 +257,127 @@ empirical constraint rather than an independent free fit.
 | **Characteristic Density** ($\rho_T$) | **Fixed Input** | TEP-UCD (Paper 6) | $\approx 20$ g/cm³ (derived from GNSS). Sets temporal scale. |
 | **Baryonic Mass** ($M$) | Observation | van Dokkum et al. (2025) | $\sim 2 \times 10^7 M_\odot$. Sets scale via $R \propto
 (M/\rho_T)^{1/3}$. |
-| **Temporal Scale** ($R_T$) | **Prediction** | Derived from $\rho_T, M$ | $\approx 1.3 R_S$. **Consistency Check:** Matches observed
-wake onset morphology. |
-| **Coupling Strength** ($\beta_{\text{eff}}$) | **Constraint** | Fitted to Data | constrained by $\Delta v \approx 650$ km/s. |
-| **Velocity Jump** ($\Delta v$) | Constraint | Observation | Used to set $\beta_{\text{eff}}$; NOT a prediction. |
-| **Line Width** ($\sigma$) | **Prediction** | Soliton Physics | Predicted narrow ($\ll \Delta v$) due to cold metric gradient. |
+| **Temporal Scale** ($R_T$) | **Prediction** | Derived from $\rho_T, M$ | $\approx 1.3 R_S$. **Consistency Check:** Crossover-mass
+coincidence internal to the theory ($R_T$ is $\sim 8.6$ orders
+below the resolved scale); the observed onset is carried by
+$R_{\rm trans} = \xi R_T$, $\xi \approx 4\times10^{8}$. |
+| **Coupling Strength** ($\alpha_{\text{RBH,eff}}$) | **Constraint** | Fitted to Data | constrained by $|u_{\rm out}^2-u_{\rm in}^2|/(2c^2)$ through the profile-frame work integral. |
+| **Velocity Jump** ($\Delta v$) | Constraint | Observation | Used to set $\alpha_{\text{RBH,eff}}$; NOT a prediction. |
+| **Line Width** ($\sigma$) | **Prediction** | Soliton Physics | Predicted locally narrow ($\ll \Delta v$) where Temporal Shear is coherent; the published near-tip width is not an unresolved width of the full spatial span. |
 Box 3.0: Origin of the Characteristic Density ($\rho_T \approx 20$ g/cm³)
 The value $\rho_T \approx 20$ g/cm³ is not a free parameter tuned for
 RBH-1. It is derived in the companion paper
-*Universal Critical Density* (Smawfield 2025g) strictly from an
+*Temporal Topology Saturation Scale* (Smawfield 2025g) strictly from an
 analysis of terrestrial atomic clocks, independent of any astrophysical
 data.
 *Summary of Derivation:*
-TEP posits that the "speed of light" $c$ is determined by the local
-gravitational potential $\Phi$. In a bi-metric framework, this implies
+TEP posits that the local speed of light is invariant, while the
+rate of matter clocks is set by the temporal field through the
+conformal factor $A(\phi)$ &mdash; deeper in a potential well,
+clocks run slower relative to the ambient. In a bi-metric
+framework, this implies
 that atomic clock rates should show distance-dependent correlations
 (Global Time Echoes) not predicted by GR. Analysis of 25 years of GNSS
 clock data reveals such correlations, with a characteristic decoherence
 length that maps to a universal density scale $\rho_T$.
 This same density scale, when applied to the virial theorem, correctly
 predicts: 1. The Bohr radius (atomic scale). 2. The deviation of
-galactic rotation curves (at $\rho \ll \rho_T$). 3. The size of the
-RBH-1 wake (compact object scale).
+galactic rotation curves (at $\rho \ll \rho_T$). 3. The crossover-mass
+coincidence of the RBH-1 soliton candidate ($R_T \approx 1.3\,R_S$ at
+the nominal anchor).
 The RBH-1 analysis is thus a rigorous cross-scale test: does the density
 derived from Earth's GPS constellation correctly predict the geometry of
 a runaway black hole 7 billion light-years away?
 *Robustness:* The geometric prediction scales as $R_T
-\propto \rho_T^{-1/3}$. If $\rho_T$ were a factor of 2 higher (40
-g/cm³), $R_T$ would shrink by ~20%; a factor of 10 higher would
-shrink it by ~50%. The current match to the observed wake onset ($R_{\rm
-T} \approx 1.3 R_S$) tolerates $\rho_T$ variations of order unity but
-would fail for order-of-magnitude shifts. This sensitivity is itself a
-falsifiability criterion: future refinements to the GNSS-derived
-$\rho_T$ will either tighten or break the RBH-1 concordance.
+\propto \rho_T^{-1/3}$. Propagating the measured product-level
+calibration ensemble ($\lambda_T \approx 1{,}400$–$4{,}500$ km across
+the CODE/IGS/ESA pooled, Paper 14, Paper 33, and held-out MGEX
+products) returns $\rho_T \approx 15$–$524$ g/cm³ and
+$R_T/R_S \in [0.44, 1.45]$ for RBH-1: the crossover coincidence is
+uncalibrated at its own falsification boundary, with the pooled
+calibrations placing the object outside the horizon scale and the
+finest-scale products inside it. This sensitivity is itself a
+falsifiability criterion: the GNSS transfer-map resolution tracked in
+Papers 1, 14, and 33 will either tighten or break the RBH-1
+concordance.
 
-## Required Conformal Factor Gradient
-A redshift-like velocity offset Δv corresponds to a fractional frequency
-shift:
-$\frac{\Delta \nu}{\nu} = \frac{\Delta v}{c} \approx \frac{650 \text{
-km/s}}{3 \times 10^5 \text{ km/s}} \approx 2.2 \times 10^{-3}$
-In the conformal time framework, clock rates scale as A. A spatial gradient
-in A produces an apparent Doppler shift for observers using coordinate time.
-The required change in ln(A) across the discontinuity is:
-$\Delta \ln(A) \approx \frac{\Delta v}{c} \approx 2.2 \times
-10^{-3}$
-If this gradient occurs over a characteristic scale L ~ 1 kpc (the observed
-width of the kinematic discontinuity), the implied gradient is:
-$\nabla \ln(A) \sim \frac{2.2 \times 10^{-3}}{1 \text{ kpc}} \approx
-7 \times 10^{-23} \text{ m}^{-1}$
+## Transport-Consistent Conformal Factor Gradient
+The resolved position–velocity structure runs from approximately $-600$ to
+$+50$ km s$^{-1}$ across 1 kpc, giving $\Delta v=650$ km s$^{-1}$. The
+former endpoint assignment converted this linearly to
+$|\Delta\ln A|\simeq\Delta v/c$. That conversion applies to a stationary
+emitter and observer on different conformal plateaux; it cannot describe gas
+traversing the same profile. Universal matter coupling instead gives
+\begin{equation} \label{eq:matter_work} \mathbf a_\phi=-c^2\boldsymbol\nabla\ln A,\qquad
+\Delta\!\left(\frac{u^2}{2}\right)=-c^2\Delta\ln A , \end{equation}
+The endpoint depth $\ln(1+\Delta v/c)=2.166\times10^{-3}$ would therefore
+accelerate matter from rest to $1.973\times10^4$ km s$^{-1}$, 30.4 times
+the observed span. In the rest frame of a quasi-steady profile, let $u$
+denote the gas speed and define $\eta=2\bar u/\Delta v$. The dynamically
+consistent depth is then
+\begin{equation} \label{eq:log_a} |\Delta\ln A|_{\rm dyn}=\frac{|u_{\rm out}^2-u_{\rm in}^2|}{2c^2}
+=\eta\frac{\Delta v^2}{2c^2}=2.350\times10^{-6}\eta . \end{equation}
+Rest entry gives $\eta=1$. A collinear translating-profile benchmark using
+the published 954 km s$^{-1}$ pattern speed gives profile-frame entry and
+exit speeds 954 and 304 km s$^{-1}$, hence $\eta=1.94$ and
+$|\Delta\ln A|=4.55\times10^{-6}$. Across 1 kpc the rest-entry normalization
+gives $|\nabla\ln A|=7.62\times10^{-26}$ m$^{-1}$ and
+$|a_\phi|=6.85\times10^{-9}$ m s$^{-2}$. A Newtonian fit reads the same
+acceleration as $M_{\rm app}=4.91\times10^{10}\eta M_\odot$ at 1 kpc. On the
+canonical kinetic branch, the shell ledger gives
+$E_{\rm scalar}=(|\Delta\ln A|/4)M_{\rm app}=2.89\times10^4\eta^2M_\odot$ and
+$M_{\rm app}/E_{\rm scalar}=1.70\times10^6/\eta$. Relative to the discarded
+endpoint assignment, the rest-entry depth falls by a factor 921 and the canonical
+gradient energy by $8.49\times10^5$; the pattern-speed benchmark gives
+factors 476 and $2.27\times10^5$, respectively. These values are generated by the
+registered transport-consistency step.
 
-## Lensing and Clock Signatures
+## Lensing and Kinematic Signatures
 A critical prediction of the conformal scalar-tensor framework is the
-decoupling of matter and light sectors. The scalar field $A(\phi)$ modifies
-the proper time for massive particles ($d\tau = A dt$), creating the
-large apparent velocity and "Phantom Halo" effects. In the weak-field limit
-of a purely conformal coupling, null geodesics remain unaffected because the
-conformal factor cancels in the null condition $ds^2 = 0$. Therefore,
-gravitational lensing is governed primarily by the bare gravitational metric
-$g_{\mu\nu}$ (the baryonic mass), not the enhanced scalar potential. (Note:
-disformal couplings or strong-field corrections could modify this; the
-prediction here assumes the conformal limit.)
-For light passing through the wake boundary ($b \sim 1$ kpc), the deflection
-angle depends only on the bare mass $M \approx 2 \times 10^7 M_\odot$:
-$\theta_{\text{lens}} \sim \frac{4GM}{c^2 b} \sim \frac{4 \times 6.67
+quantitative asymmetry between matter response and scalar stress-energy.
+The scalar field $A(\phi)$ generates coherent matter acceleration through
+the matter metric. Light follows
+the gravity metric $g_{\mu\nu}$, which is sourced by the total
+stress-energy — the baryonic mass plus the scalar contribution
+evaluated above. At the dynamical depth its projected canonical surface
+density is $\Sigma_{\rm scalar}=2.30\times10^{-3}\eta^2
+M_\odot\,{\rm pc^{-2}}$ for the stated shell geometry, far below a
+cosmological strong-lensing critical density. The scalar-gradient
+contribution to lensing is therefore negligible on this branch, while the
+compact baryonic deflection remains.
+For light passing through the wake boundary ($b \sim 1$ kpc), the
+compact deflection angle depends only on the baryonic mass
+$M \approx 2 \times 10^7 M_\odot$:
+\begin{equation} \label{eq:lensing_angle} \theta_{\text{lens}} \sim \frac{4GM}{c^2 b} \sim \frac{4 \times 6.67
 \times 10^{-11} \times 2 \times 10^7 \times 2 \times 10^{30}}{(3 \times
 10^8)^2 \times 3 \times 10^{19}} \sim 4 \times 10^{-9} \text{ rad} \approx
-0.8 \, \text{mas}$
+0.8 \, \text{mas} \end{equation}
 This value ($\sim 0.8$ milliarcseconds) is far below current observational
 limits (HST resolution $\sim 50$ mas).
 
 #### The Lensing Discriminator
-This provides a definitive test against "Dark Matter Particle" models. A
-particulate dark matter halo of $10^{11} M_\odot$ (required to explain
-the kinematics dynamically) would produce strong lensing ($\theta \sim
-0.3$ arcsec). The TEP "Phantom Halo" predicts
-strong kinematics (due to scalar coupling) but
-weak lensing (due to conformal invariance). The lack of
-observed arc-like distortions in the RBH-1 field qualitatively favors
-the Phantom Halo interpretation.
-For stars formed within the wake, the metric gradient would produce a
-systematic redshift offset in their absorption lines relative to stars
-formed outside the wake. If the wake interior has $\Delta \ln(A) \sim
-10^{-3}$ relative to the ambient medium, stellar spectra should show:
-$\Delta v_{\text{stellar}} \sim 650 \text{ km/s} \times
-\frac{\text{interior field strength}}{\text{apex field strength}}$
-This is a testable prediction: spatially resolved spectroscopy of individual
-stellar clusters along the wake should reveal systematic velocity offsets
-correlated with position, distinct from the Hubble flow and peculiar
-velocities.
+This provides a sharp test against a particulate halo interpretation.
+A particulate mass $M_{\rm app}\simeq4.9\times10^{10}\eta M_\odot$ inside
+1 kpc would produce order-arcsecond strong lensing, whereas the canonical
+scalar configuration carrying the same matter acceleration contains only
+$2.9\times10^4\eta^2M_\odot$ in gradient energy. The predicted
+kinematic-to-scalar-lensing mass ratio is $1.70\times10^6/\eta$, versus unity
+for a particulate model. Deep imaging or weak-shear mapping therefore
+tests the dynamical Temporal-Shear assignment without relying on an
+endpoint-redshift channel.
+Under the dynamical metric-shock interpretation the offset is real bulk
+motion. Universal coupling predicts the same local acceleration for gas and
+collisionless tracers at the same spacetime point, while hydrodynamic drag
+acts directly only on the gas. Newly formed stars should therefore inherit
+the local gas centroid at formation:
+\begin{equation} \label{eq:stellar_velocity} \Delta v_\star(x_{\rm form}) \simeq
+\Delta v_{\rm gas}(x_{\rm form}),\qquad
+\Delta\!\left(\frac{v^2}{2}\right)=-c^2\Delta\ln A . \end{equation}
+The decisive observable is the gas–star velocity relation along the wake:
+a universal metric force predicts a composition-independent acceleration
+law and a formation-epoch imprint in the stars, whereas ram pressure and
+turbulent entrainment permit systematic gas–star slip. Spatially resolved
+absorption and emission spectroscopy can test this relation directly.
 
 ## Screening and Parameter Consistency
 The above estimates assume the scalar field profile is governed by
@@ -326,14 +388,32 @@ Unlike traditional chameleon mechanisms that invoke discrete thin-shell boundari
 with sharp density cutoffs, TEP screening operates through continuous field gradient
 flattening. The Temporal Shear is gradually suppressed in deep potential wells,
 avoiding the fine-tuning problems of thin-shell approximations while maintaining
-fifth-force suppression in dense environments.
-$S = \frac{\beta_0}{\beta_{\text{eff}}} \propto
-\left(\frac{\rho}{\rho_T}\right)^{1/3}$
+Temporal Shear suppression in dense environments.
+\begin{equation} \label{eq:screening_factor} S = \frac{\beta_0}{\alpha_{\text{RBH,eff}}} \propto
+\left(\frac{\rho}{\rho_T}\right)^{1/3} \end{equation}
+This $S$ is a coupling ratio&mdash;the bare coupling $\beta_0$ divided
+by the screened effective coupling $\alpha_{\text{RBH,eff}}
+mdash;and
+should not be conflated with the clock-amplitude response factor of
+Paper 6, $S_A = (\bar{\rho}/\rho_T)^{1/3}$, a radius ratio evaluated at
+a body's mean density. The two share the $(\rho/\rho_T)^{1/3}$
+saturation scaling but are distinct quantities.
 For RBH-1 at the crossover mass (M ~ 10⁷ M_☉, ρ ~ ρ_T ~ 20 g/cm³), the
 suppression factor is S ~ 1, meaning the Temporal Shear is near the
 transition between strongly flattened and asymptotically recovered profiles.
 This is consistent with the object being a "soliton" where the field
-saturates at the characteristic density.
+saturates at the characteristic density. Two distinct uses of
+$\alpha_{\rm eff}$ must be kept separate: in the screening ansatz the
+effective charge is the response channel's screened coupling, and S ~ 1 at
+the crossover asserts that the shear profile transitions there — a statement
+about where the field flattens, not about its amplitude. In the
+velocity-discontinuity constraint (Box 2.2), $\alpha_{\rm RBH,eff} =
+2.46\times 10^{3}\eta$ is the linear-response equivalent of the observed dynamical depth;
+read literally as a coupling ratio, S = $\beta_0/\alpha_{\rm eff}$ at S ~ 1
+would require the bare response $\beta_0$ itself to carry the same $\sim
+10^{3}$ amplification — the corpus's open response-normalization question
+(shared with $\kappa_{\rm Cep}$, $\kappa_{\rm MSP}$ and $\beta_{A,\rm eff}$),
+stated here explicitly rather than absorbed into the ansatz.
 At higher densities (e.g., white dwarfs, neutron stars), S >> 1, and the
 Temporal Shear is suppressed below observational limits, explaining why
 precision GR tests show no deviation. At lower densities (e.g., galaxies), S
@@ -343,34 +423,44 @@ precision GR tests show no deviation. At lower densities (e.g., galaxies), S
 #### Box 3.1: The Phantom Halo (Mass Deficit) Implication
 A critical reader will note that a Newtonian potential for $M = 2 \times
 10^7 M_\odot$ at $R = 1$ kpc yields $\Phi/c^2 \sim 10^{-9}$, far smaller
-than the required metric shift $z_{\text{metric}} \sim 10^{-3}$.
+than the required dynamical depth $|\Delta\ln A|_{\rm dyn}=2.35\times10^{-6}\eta$.
 This discrepancy implies that the scalar sector carries an effective
-"Phantom Mass" of order $M_{\text{eff}} \sim 10^{11} M_\odot$
-(comparable to a galactic halo) enclosed within the transition radius.
-In the TEP framework, this is not "missing matter" but a "metric
+"Phantom Mass" of order $M_{\text{eff}} = 4.91 \times 10^{10}\eta M_\odot$
+in Newtonian-equivalent terms — the enclosed mass that produces the
+required coherent acceleration at $R_{\rm trans} \sim 1$ kpc — comparable to
+a galactic halo. In the TEP
+framework, this is not "missing matter" but a "metric
 halo"—the scalar field profile maintains a deep potential well out to
 $R_{\text{trans}}$, decoupling the metric potential from the compact
-baryonic source.
+baryonic source. Stated as a linear response, the same amplitude
+corresponds to an effective response $\alpha_{\rm RBH,eff} =
+2.46\times 10^{3}\eta$ (Box 2.2); under the soliton reading it is the field
+configuration's internal depth rather than a response coefficient.
 **Crucially, this potential is bi-metric:** it affects the
-proper-time rate (kinematics/redshift) but not the
-spatial curvature sensed by light (lensing). Thus, while the object
-generates a kinematic "kick" equivalent to a massive halo, it does not
-produce the strong lensing or extreme gas focusing expected from
-$10^{11} M_\odot$ of baryonic matter.
+matter motion far more strongly than the
+spatial curvature sensed by light. The scalar's own stress-energy is
+only $|\Delta\ln A|/4$ of the apparent kinematic mass and is distributed
+through the transition volume, so the object generates a kinematic
+"kick" equivalent to a massive halo while producing at most marginal,
+extended lensing — not the strong arcs or extreme gas focusing
+expected from $\sim 5\times 10^{10}\eta M_\odot$ of particulate matter.
 **Observationally:** RBH-1 acts as a "naked halo"—a compact
-baryonic object ($2 \times 10^7 M_\odot$) clothed in a galaxy-sized
-metric distortion ($10^{11} M_{\text{eff}}$). This explains why it
+baryonic object ($2 \times 10^7 M_\odot$) clothed in a metric
+distortion whose Newtonian-equivalent mass is $\sim 5 \times 10^{10}\eta
+M_\odot$. This explains how it
 generates a wake magnitude ($\sim 600$ km/s) typical of galactic
 interactions despite its small physical size.
 
 #### Consistency Check
-The required conformal factor gradient (Δ ln A ~ 10⁻³ over 1 kpc)
+The transport-consistent conformal gradient ($|\Delta\ln A|=2.35\times10^{-6}\eta$ over 1 kpc)
 produces:
-- Velocity offset: Δv ~ 650 km/s ✓ (matches observation)
-Lensing: θ ~ 0.8 mas (far below current HST/JWST resolution,
-consistent with non-detection)
-Stellar redshift offset: Δv_stellar ~ few hundred km/s (testable
-with spatially resolved spectroscopy)
+- Coherent velocity span: $\Delta v=650$ km/s by the profile-frame work integral, with $\eta$ fixed by the resolved flow geometry
+Lensing: θ ~ 0.8 mas compact deflection (baryonic; far below
+current HST/JWST resolution, consistent with non-detection);
+the scalar sector adds only negligible extended shear,
+$\Sigma_{\rm scalar}=2.30\times10^{-3}\eta^2M_\odot\,{\rm pc^{-2}}$
+Gas–star comoving relation at formation, with subsequent gas–star
+slip directly testing hydrodynamic rather than universal-metric forcing
 These parameters are internally consistent and do not violate existing
 constraints. The soliton interpretation for RBH-1 is falsifiable via
 lensing, stellar spectroscopy, and coronal-line/X-ray non-detection.
@@ -379,15 +469,15 @@ lensing, stellar spectroscopy, and coronal-line/X-ray non-detection.
 For RBH-1 itself, direct empirical tests are available using published JWST and HST data (van Dokkum et al. 2025). Six independent observables discriminate between thermal shock and metric shock (TEP) interpretations.
 
 ## 4.1 The Line Width Test
-In a single-phase thermal shock where the [O III]-emitting gas resides predominantly at $T \sim 10^7$ K, thermal Doppler motion would broaden spectral lines to $\sigma_{\text{th}} \approx 80\text{--}85$ km/s. In practice, [O III] emission in shock-heated environments often arises from cooler recombination/cooling zones rather than the hottest post-shock plasma; however, if a substantial hot-phase component contributes to the line flux, it should produce detectable broad wings. In contrast, a metric shock produces a coherent redshift gradient without thermalization; the gas remains cold, and line widths stay narrow (see Figure 4).
+In a single-phase thermal shock where the [O III]-emitting gas resides predominantly at $T \sim 10^7$ K, thermal Doppler motion would broaden spectral lines to $\sigma_{\text{th}} \approx 80\text{--}85$ km/s. In practice, [O III] emission in shock-heated environments often arises from cooler recombination/cooling zones rather than the hottest post-shock plasma; however, if a substantial hot-phase component contributes to the line flux, it should produce detectable broad wings. In the dynamical metric-shock model, Temporal Shear produces an ordered bulk-velocity field, so a large resolved centroid span can coexist with a narrow local line where differential acceleration inside the emitting element is small.
 Higher-resolution Keck/LRIS spectroscopy of the [O III] λ5007 knot at the tip of the wake yields (van Dokkum et al. 2025, Appendix C):
-$\sigma_{\text{obs}} = 36 \pm 4 \text{ km/s} \quad \xrightarrow{\text{instr. corr.}} \quad \sigma = 31 \pm 4 \text{ km/s}$
+\begin{equation} \label{eq:line_width_obs} \sigma_{\text{obs}} = 36 \pm 4 \text{ km/s} \quad \xrightarrow{\text{instr. corr.}} \quad \sigma = 31 \pm 4 \text{ km/s} \end{equation}
 where the instrumental resolution $\sigma_{\text{instr}} = 18$ km/s has been subtracted in quadrature. The key inequality:
-$\sigma_{\text{obs}} \approx 31 \text{ km/s} \ll \sigma_{\text{thermal}}(10^7 \text{ K}) \approx 85 \text{ km/s}$
+\begin{equation} \label{eq:line_width_inequality} \sigma_{\text{obs}} \approx 31 \text{ km/s} \ll \sigma_{\text{thermal}}(10^7 \text{ K}) \approx 85 \text{ km/s} \end{equation}
 This observed dispersion is 3× smaller than expected if the [O III]-emitting gas were predominantly at $T \sim 10^7$ K, and 10× larger than pure thermal broadening at $T \sim 10^4$ K ($\sigma_{\text{th}} \approx 2$–$3$ km/s). The intermediate value ($\sigma \approx 31$ km/s) is consistent with cold gas experiencing bulk/turbulent motions or a coherent velocity gradient across the beam.
 
 ![Line Width Test: Thermal vs Metric Shock](site/figures/figure_04_line_width.png)
-Figure 4: The Line Width Test. (A) Thermal broadening of [O III] emission as a function of gas temperature. The observed dispersion (σ = 31 km/s) is 3× smaller than expected for a simple $10^7$ K post-shock phase, placing that picture under tension. (B) Illustration of how a coherent redshift-gradient (metric-shock) interpretation can accommodate a large centroid shift with comparatively narrow line width.
+Figure 4: The Line Width Test. (A) Thermal broadening of [O III] emission as a function of gas temperature. The observed dispersion (σ = 31 km/s) is 3× smaller than expected for a simple $10^7$ K post-shock phase, placing that picture under tension. (B) Schematic illustration of how a coherent body-force velocity field can accommodate a large spatial centroid span with comparatively narrow local lines.
 
 ### Critical Next Step: Line-Profile Decomposition
 The bulk line-width measurement ($\sigma = 31$ km/s) is necessary but not sufficient to rule out thermal heating. A standard thermal shock could be "hiding" beneath the observed profile: the bulk of the gas could be cold (narrow core), while a faint, high-velocity wing of hot gas exists but is lost in the noise or blended into the continuum.
@@ -400,24 +490,17 @@ The definitive test requires rigorous line-profile decomposition:
 - *Model selection.* Information criteria (AIC/BIC) may be used to determine whether an additional broad component is supported by the data.
 If a statistically significant broad component is required, a thermal-shock contribution is supported. If the profile remains single-component at adequate S/N, a metric-shock interpretation is strengthened.
 
-#### Box 4.0: Sensitivity Analysis (Detectability of Hidden Hot Gas)
-To quantify the strength of the line-width constraint, synthetic injection tests were performed using the `analyze_line_profiles.py` workflow (available in the reproducibility repository). Broad Gaussian wings ($\sigma = 90$ km/s, representing $T \sim 10^7$ K gas) were injected into a narrow ($\sigma = 31$ km/s) profile with noise levels matching the published Keck/LRIS data (S/N $\approx$ 50).
-*Results:*
-- **Hot Fraction > 15%:** Strongly detected ($\Delta \text{BIC} < -10$). A thermal component contributing just 15% of the line flux would be statistically undeniable.
-- **Hot Fraction < 10%:** Marginal detection.
-*Implication:* The observed single-component profile rules out any scenario where the hot phase contributes more than ~15% of the total [O III] emission. For a standard thermal shock where *most* gas is heated, this is a prohibitive constraint. The thermal model can only survive if the hot gas is radiatively silent (e.g., extremely diffuse) while a separate mechanism generates the observed bright cold gas.
-
 #### Data Availability Assessment
 JWST NIRSpec IFU data (Program 3149) are publicly available via MAST but have insufficient spectral resolution for a robust decomposition between a σ ≈ 30 km/s narrow component and a σ ≈ 80–90 km/s broad component. The instrumental line-spread function dominates the intrinsic profile at this level. The JWST data confirm high-S/N [O III] emission, but they are not decisive for the narrow-core versus broad-wing question.
-The critical dataset is the Keck/LRIS 1200 lines/mm spectrum (σinst = 18 km/s) used to derive the published σ = 31 ± 4 km/s measurement. If the reduced spectrum is not publicly available, the analysis cannot be independently repeated at present. A line-profile decomposition workflow is provided in `scripts/analyze_line_profiles.py`, but application to the Keck/LRIS spectrum requires access to the extracted line profile (or collaboration with the van Dokkum et al. team).
-The narrow line width is in tension with a single-phase thermal shock in which the emitting gas is predominantly at $T \sim 10^7$ K. It is naturally accommodated by a coherent redshift-gradient (metric-shock) hypothesis. Multiphase or rapid-cooling scenarios remain possible under a thermal interpretation. The principal observational discriminant is whether a statistically supported broad wing is present in the high-resolution line profile.
+The critical dataset is the Keck/LRIS 1200 lines/mm spectrum (σ<sub>inst</sub> = 18 km/s) used to derive the published σ = 31 ± 4 km/s measurement. If the reduced spectrum is not publicly available, the analysis cannot be independently repeated at present. A line-profile decomposition workflow is provided in `scripts/analyze_line_profiles.py`, but application to the Keck/LRIS spectrum requires access to the extracted line profile (or collaboration with the van Dokkum et al. team).
+The narrow near-tip line width is in tension with a single-phase thermal shock in which the emitting [O III] gas is predominantly at $T \sim 10^7$ K. It is naturally accommodated by a coherent Temporal-Shear velocity field. The 31 km s$^{-1}$ dispersion is not the unresolved width of the full 650 km s$^{-1}$ spatial span; establishing their co-spatial relation requires the reduced LRIS profile and resolved JWST velocity field. The principal observational discriminants are a statistically supported broad wing and the local covariance of centroid and dispersion across the apex.
 
 ## 4.2 The Wake Collimation Test
 Thermal shocks generate turbulence via Kelvin-Helmholtz instabilities at the shear layer between the wake and the ambient medium. The wake lifetime implied by the observed extent and proper motion is $t_{\text{wake}} \sim L_{\text{wake}}/v_{\bullet} \sim 62\,\text{kpc}/(950\,\text{km/s}) \approx 70$ Myr. Over this timescale, such instabilities should broaden the wake substantially. The characteristic K-H growth timescale is $\tau_{\text{KH}} \sim \lambda / v_{\text{shear}} \approx 3$ Myr for $\lambda \sim 1$ kpc and $v_{\text{shear}} \sim 300$ km/s. Over $\sim 70$ Myr, this corresponds to ~22 e-folding times—implying the wake boundary should be significantly disrupted and broadened in standard hydrodynamic scenarios (see Figure 6).
 Instead, HST WFC3/UVIS imaging reveals (van Dokkum et al. 2025, Section 6.2.1):
-$R_{\text{wake}} \approx 0.7 \text{ kpc} \quad \text{over} \quad L_{\text{wake}} = 62 \text{ kpc} \quad \Rightarrow \quad \text{Aspect Ratio: } 50:1$
+\begin{equation} \label{eq:aspect_ratio} R_{\text{wake}} \approx 0.7 \text{ kpc} \quad \text{over} \quad L_{\text{wake}} = 62 \text{ kpc} \quad \Rightarrow \quad \text{Aspect Ratio: } 50:1 \end{equation}
 This is described by the authors as "strikingly narrow." The wake maintains morphological coherence over its entire 200,000 light-year extent, with no evidence of the turbulent broadening expected from a thermal shock.
-In the metric shock interpretation, the apex discontinuity is attributed to a coherent redshift boundary rather than collisional thermalization. In that picture, the effective shear-driven mixing that seeds Kelvin-Helmholtz growth is expected to be suppressed relative to a turbulent bow-shock layer, and the wake can remain collimated without requiring fine-tuned magnetic draping.
+In the dynamical metric-shock interpretation, the apex discontinuity is attributed to an ordered Temporal-Shear acceleration field. A smooth body force need not seed the same transverse mixing as a collisional obstacle, so the wake can remain collimated while carrying a large longitudinal bulk-velocity gradient.
 
 ![Wake Geometry Analysis](site/figures/figure_06_wake_geometry.png)
 Figure 6: Wake Geometry Analysis. (A) Wake width vs. distance from galaxy. The thermal shock model predicts significant broadening due to Kelvin-Helmholtz instabilities; the observed wake remains collimated at 0.7 kpc. (B) Schematic comparison of wake morphologies. The 50:1 aspect ratio is inconsistent with thermal turbulence.
@@ -433,7 +516,7 @@ The observed age gradient qualitatively disfavors a long cooling-delay zone; qua
 
 ## 4.4 The Preshock Temperature Anomaly
 The Mappings V shock models used to fit the emission line ratios require a preshock temperature of $T_{\text{pre}} \sim 10^{5.6}$ K (van Dokkum et al. 2025, Section 5.2). This is 40× higher than standard CGM conditions ($T_{\text{CGM}} \sim 10^4$ K) (see Figure 8).
-In the TEP framework, the "preshock ionization" may admit a non-thermal contribution: the soliton boundary corresponds to a steep gravitational redshift gradient, which implies an effective acceleration on massive particles. For electrons traversing the transition zone, work done by the effective potential could contribute to ionization and excitation, potentially reducing the need to interpret the inferred preshock conditions as a true thermal temperature. However, a quantitative forward model mapping a specific field profile to detailed ionization diagnostics has not yet been developed.
+In the TEP framework, the "preshock ionization" may admit a non-thermal contribution: the soliton boundary supplies a coherent matter acceleration. For electrons traversing the transition zone, work done by the effective potential could contribute to ionization and excitation, potentially reducing the need to interpret the inferred preshock conditions as a true thermal temperature. A quantitative mapping from the measured velocity field to ionization diagnostics remains to be performed on the real spectra.
 
 ![Line Ratio Analysis](site/figures/figure_08_line_ratios.png)
 Figure 8: Line Ratio Analysis. Standard shock models require anomalously high preshock temperatures ($T \sim 10^{5.6}$ K) to reproduce the observed ionization. In the metric-shock framing, the soliton boundary may contribute non-thermally to ionization and excitation, but a quantitative mapping from field profile to line ratios remains future work.
@@ -449,7 +532,7 @@ $T_{\text{eff}} \approx \epsilon \times T_{\text{virial}} \approx 0.01 \times (1
 
 ## 4.5 The Star Formation Efficiency Problem
 The thermal shock model faces a mass budget problem (van Dokkum et al. 2025, Section 6.2.2). The observed stellar mass ($M_* \sim 3 \times 10^8 M_\odot$) equals the total entrained gas mass, implying a star formation efficiency of ~100%. The maximum realistic efficiency is ~30% (see Figure 9).
-In the metric shock model, heating is not the primary driver; instead, the apparent discontinuity is interpreted as a coherent redshift gradient. This reinterpretation relieves the mass-budget tension in two ways: (1) the reduced effective Jeans mass allows collapse of lower-density gas that would otherwise remain stable, effectively increasing the available reservoir of star-forming material; and (2) the absence of thermal pressure support allows this reservoir to convert to stars with higher efficiency than a turbulent, hot shock would permit. A standard SFE of ~30% acting on this effectively larger cold reservoir can reproduce the observed stellar mass without requiring unphysical 100% conversion of the nominal entrained gas.
+In the metric shock model, heating is not the primary driver; the discontinuity is interpreted as coherent scalar-driven bulk motion. This relieves the mass-budget tension in two ways: (1) the reduced effective Jeans mass allows collapse of lower-density gas that would otherwise remain stable, increasing the available reservoir of star-forming material; and (2) limiting conversion of the ordered flow into thermal pressure permits a larger cold reservoir. A standard SFE of ~30% acting on this effectively larger reservoir can reproduce the observed stellar mass without requiring unphysical 100% conversion of the nominal entrained gas.
 
 ![Star Formation Efficiency](site/figures/figure_09_efficiency.png)
 Figure 9: Star Formation Efficiency. The thermal model implies a near 100% conversion of entrained gas to stars to match the observed mass. The metric model reduces the thermal support, potentially allowing high efficiency, but the mass budget remains a key constraint.
@@ -482,14 +565,14 @@ Reproducing the joint RBH-1 dataset under a thermal interpretation typically inv
 - Magnetic draping to suppress Kelvin–Helmholtz growth and maintain a high aspect ratio.
 - Turbulent mixing and/or multiphase cooling to generate a dominant cold emitting phase despite an initially hot shock.
 - Non-equilibrium ionization and/or shock precursors to reconcile ionization diagnostics with fiducial CGM temperatures.
-In the metric-shock interpretation, the apparent velocity discontinuity is attributed to a coherent redshift gradient rather than bulk thermalization. The same observational elements then align naturally: narrow line widths, minimal hot-phase requirements, and preserved collimation.
+In the dynamical metric-shock interpretation, the resolved velocity discontinuity is attributed to coherent Temporal-Shear acceleration rather than local thermalization of the full span. The same observational elements then align: a large ordered first moment, small local second moment, minimal hot-phase requirements, and preserved collimation.
 
 ## 4.7 Alternative Explanations: Composite Thermal-Shock Models
 Several well-motivated astrophysical mechanisms could, in principle, reconcile a thermal shock with the cold, star-forming wake observed in RBH-1. Each deserves careful consideration:
 
 ### Mechanism-by-Mechanism Assessment
 - **Turbulent Mixing Layers:** Shear-driven entrainment of cold ambient gas into the hot wake (Gronke & Oh 2018, 2020) is a robust prediction of supersonic cloud–wind interactions. *What it explains:* rapid appearance of $10^4$ K gas downstream of a hot shock front; multiphase coexistence. *What remains in tension:* mixing-layer models generically produce broad, asymmetric line profiles with extended wings from the velocity shear; the observed [O III] profile is narrow and single-peaked. *Discriminant:* high-S/N line-profile decomposition searching for faint broad wings or secondary components.
-- **Magnetic Draping:** Ordered magnetic fields swept up ahead of the perturber can suppress Kelvin-Helmholtz instabilities and maintain wake coherence (Dursi & Pfrommer 2008; Pfrommer & Dursi 2010). Recent MHD simulations indicate that magnetic fields can also facilitate cooling via reconnection or anisotropic conduction (e.g., Banda-Barragán et al. 2024). *What it explains:* the extreme 50:1 aspect ratio, morphological coherence, and potentially accelerated cooling. *What remains in tension:* while draping aids collimation, the simultaneous requirement for the specific $\sigma \approx 31$ km/s dispersion at the apex remains a tight constraint. A dominant hot phase ($T \sim 10^7$ K) constrained by magnetic pressure would still imprint a thermal wing on the line profile unless the hot gas is radiatively dark (faint). *Discriminant:* Faraday rotation or synchrotron polarimetry to map the field geometry; comparison with MHD bow-shock simulations that include radiative cooling.
+- **Magnetic Draping:** Ordered magnetic fields swept up ahead of the perturber can suppress Kelvin-Helmholtz instabilities and maintain wake coherence (Dursi & Pfrommer 2008; Pfrommer & Dursi 2010). Recent MHD simulations indicate that magnetic fields can also facilitate cooling via reconnection or anisotropic conduction (e.g., Banda-Barragán et al. 2024). *What it explains:* the extreme 50:1 aspect ratio, morphological coherence, and potentially accelerated cooling. *What remains in tension:* while draping aids collimation, the near-tip $\sigma \approx 31$ km/s dispersion remains a tight constraint on any hot component sampled by that spectrum. *Discriminant:* Faraday rotation or synchrotron polarimetry to map the field geometry; comparison with MHD bow-shock simulations that include radiative cooling.
 - **Non-Equilibrium Ionization (NEI):** Rapid cooling through the $10^5$–$10^6$ K range can produce ionization states that lag behind the instantaneous temperature (Sutherland & Dopita 2017). *What it explains:* anomalously high ionization (e.g., the $T_{\text{pre}} \sim 10^{5.6}$ K inferred from Mappings V) even if the gas has already cooled. *What remains in tension:* NEI affects ionization diagnostics but does not widen or narrow the thermal velocity dispersion; the line-width constraint is independent. *Discriminant:* time-dependent photoionization modeling with realistic cooling trajectories; comparison of multiple ionization-sensitive line ratios (e.g., [O III]/[O II], [N II]/Hα) to NEI grids.
 - **Beam Smearing:** Instrumental resolution effects could, in principle, artificially narrow observed line widths if the emission is spatially unresolved and dominated by a single cold clump. *What it explains:* apparent single-component profile. *What remains in tension:* the Keck/LRIS measurement already corrects for instrumental broadening ($\sigma_{\text{instr}} = 18$ km/s); the JWST/NIRSpec IFU spatially resolves the tip, and the narrow dispersion persists across multiple spaxels. *Discriminant:* spatially resolved line-width maps from the IFU data.
 Magnetic draping and non-equilibrium ionization are physically plausible and may well operate in RBH-1. Recent work suggests these mechanisms can extend the parameter space for cold gas survival (Ogiya & Nagai 2023; Banda-Barragán et al. 2024). However, each addresses only a subset of the six anomalies. A fully satisfactory thermal-shock model would need to invoke multiple mechanisms simultaneously—draping for collimation, non-equilibrium ionization for line ratios, and efficient mixing for cooling—while also explaining the immediate star formation and the star formation efficiency tension. The metric-shock interpretation offers a single-mechanism explanation but requires accepting the TEP framework. Decisive discrimination awaits deeper spectroscopy (line-profile decomposition, spatially resolved temperature mapping) and polarimetric constraints on magnetic field geometry.
@@ -499,41 +582,50 @@ Under the stated assumptions, the combined set of observables places the simples
 
 ## 5. Falsification Criteria
 
-This paper treats the characteristic density $\rho_T \approx 20$ g/cm³ as a fixed input derived in Paper 6. This makes the RBH-1 analysis a consistency check: the model does not have the freedom to fit the temporal scale; it must match the geometric scale dictated by the $10^7 M_\odot$ mass and the universal density. Note that $R_T$ itself is not directly observable at $z \sim 1$; the testable prediction is that the transition-zone phenomenology (at $R_{\rm trans} \sim$ kpc scales) should be consistent with this temporal topology scale.
+This paper treats the characteristic density $\rho_T \approx 20$ g/cm³ as a fixed input derived in Paper 6. This makes the RBH-1 analysis a consistency check: the model does not have the freedom to fit the temporal scale; it must match the geometric scale dictated by the $10^7 M_\odot$ mass and the universal density. Two bookkeeping facts delimit what the check establishes. First, $R_T \approx 2.5 \times 10^{-9}$ kpc lies $\sim 8.6$ orders of magnitude below the resolved scale at $z \approx 0.96$ ($\sim 1$ kpc per $0.1''$): the comparison $R_T \approx 1.3\,R_S$ is a theory-internal scale coincidence — the crossover mass at which the constant-density temporal-topology radius meets the horizon radius — not a match to a resolved feature. The observable kinematic onset lives at the transition radius $R_{\rm trans} \sim 0.1$–$1$ kpc, parametrized explicitly in Section 2 as $R_{\rm trans} = \xi\,R_T$. Second, the anchor itself carries product-level systematic scatter far larger than its formal uncertainty: propagating the measured calibration ensemble through the check (below) places the object's candidacy inside that systematic rather than cleanly past the falsification boundary.
 
 ## The Soliton Size Prediction
 
 ![Universal Scaling Law](site/figures/figure_10_scaling.png)
-Figure 10: Universal Scaling Law. The temporal topology scale ($R_T \propto M^{1/3}$) vs. Mass. The solid line is the consistency check fixed by $\rho_T \approx 20$ g/cm³ (derived from terrestrial clocks). RBH-1 (star) falls on the expected scale where $R_T \approx 1.3 R_S$.
+Figure 10: Universal Scaling Law. The temporal topology scale ($R_T \propto M^{1/3}$) vs. Mass. The solid line is the consistency check fixed by $\rho_T \approx 20$ g/cm³ (derived from terrestrial clocks). RBH-1 (star) sits at the crossover mass where $R_T \approx 1.3 R_S$ — a theory-internal scale coincidence, since $R_T$ itself lies $\sim 8.6$ orders of magnitude below the resolved scale.
 
 Given $\rho_T \approx 20$ g/cm³ (from Paper 6), the consistency check for the temporal scale of RBH-1 ($M \approx 2 \times 10^7 M_\odot$) yields:
 
-$R_T = \left(\frac{3M}{4\pi \rho_T}\right)^{1/3} \approx 7.8 \times 10^7 \text{ km} \approx 1.3 R_S$
+\begin{equation} \label{eq:rt_falsification} R_T = \left(\frac{3M}{4\pi \rho_T}\right)^{1/3} \approx 7.8 \times 10^7 \text{ km} \approx 1.3 R_S \end{equation}
 
 ### Uncertainty Propagation
 
-The check uncertainty derives from two inputs: the mass estimate and the characteristic density. For the mass $M \sim 2 \times 10^7 M_\odot$ (van Dokkum et al. 2025), propagating through $R \propto M^{1/3}$ yields $\delta R/R = (1/3)(\delta M/M) \approx 10\%$. The characteristic density $\rho_T \approx 20$ g/cm³ carries systematic uncertainty of order $\pm 30\%$ from the GNSS calibration (Paper 6), contributing $\delta R/R = (1/3)(\delta\rho_T/\rho_T) \approx 10\%$. Combined in quadrature:
+The check uncertainty derives from two inputs: the mass estimate and the characteristic density. For the mass $M \sim 2 \times 10^7 M_\odot$ (van Dokkum et al. 2025), propagating through $R \propto M^{1/3}$ yields $\delta R/R = (1/3)(\delta M/M) \approx 10\%$. The density input is the larger term by far, and its uncertainty is not the $\pm 30\%$ formal figure quoted in earlier drafts: $\rho_T = 3M_\oplus/(4\pi\lambda_T^3)$ is set by the GNSS decoherence length, and the corpus's measured product-level ensemble spans $\lambda_T \approx 1{,}400$–$4{,}500$ km — pooled coherent-band estimates of 4,549 km (CODE), 3,764 km (IGS), and 3,328 km (ESA) from Paper 1, the Paper 33 value near 4,200 km, the Paper 14 multi-GNSS product at 1,862 km, and the held-out MGEX product at 1,396 km. Propagating each calibration through $\rho_T$ and $R_T$:
 
-$R_T = (7.8 \pm 1.1) \times 10^7 \text{ km} \quad (1\sigma)$
+| Calibration product | $\lambda_T$ (km) | $\rho_T$ (g/cm³) | $R_T$ (km) | $R_T/R_S$ | $M_\times$ ($M_\odot$) |
+| --- | --- | --- | --- | --- | --- |
+| CODE pooled (Paper 1) | 4,549 | 15.1 | $8.6\times10^7$ | 1.45 | $3.5\times10^7$ |
+| IGS pooled (Paper 1) | 3,764 | 26.7 | $7.1\times10^7$ | 1.20 | $2.6\times10^7$ |
+| ESA pooled (Paper 1) | 3,328 | 38.7 | $6.3\times10^7$ | 1.06 | $2.2\times10^7$ |
+| Paper 33 | 4,200 | 19.2 | $7.9\times10^7$ | 1.34 | $3.1\times10^7$ |
+| Paper 14 multi-GNSS | 1,862 | 221 | $3.5\times10^7$ | 0.59 | $9.1\times10^6$ |
+| MGEX held-out | 1,396 | 524 | $2.6\times10^7$ | 0.44 | $5.9\times10^6$ |
 
-The correspondence $R_T \approx 1.3 R_S$ places the temporal topology scale just outside the Schwarzschild horizon. This would predict a "naked halo" phenomenology if RBH-1 is a soliton: the object interacts with the environment via its metric gradient (the "hair") rather than just its horizon.
+Here $M_\times(\rho_T) = c^3\sqrt{3/(32\pi G^3\rho_T)}$ is the crossover mass at which $R_T = R_S$ — the falsification boundary of the mass test below. The ensemble returns $R_T/R_S \in [0.44, 1.45]$ and $M_\times \in [5.9\times10^6, 3.5\times10^7]\,M_\odot$: the three primary pooled calibrations and Paper 33 place RBH-1 ($2\times10^7\,M_\odot$) outside the horizon scale with margins of 6–45%, while the two finest-scale products place it inside. The honest statement is that the crossover check is uncalibrated at its own falsification boundary — the object's candidacy sits within the product-level systematic of the $\rho_T$ anchor, and the verdict tightens or reverses as the GNSS transfer map (Papers 1, 14, 33; the band-dependent $\lambda_T$ decomposition of Paper 1, Table 8a) is resolved. Under the nominal Paper 6 anchor alone, $R_T = 7.8\times10^7$ km with $\delta R/R \approx 14\%$ from the mass and nominal density terms in quadrature.
+
+The correspondence $R_T \approx 1.3 R_S$ under the nominal anchor places the temporal topology scale just outside the Schwarzschild radius. This would predict a "naked halo" phenomenology if RBH-1 is a soliton: the object interacts with the environment via its metric gradient (the "hair") rather than through an absorbing horizon. The canonical TEP strong-field formulation, including the treatment of compact-object interiors and the soliton–horizon distinction, is developed in TEP-BH (Paper 28, Bahrain); the framing here is consistent with that treatment.
 
 ## Explicit Falsification Criteria
 
 The hypothesis that RBH-1 is a candidate Temporal Topology soliton makes specific, falsifiable predictions. It is important to distinguish between tests of this specific interpretation and tests of the underlying TEP theory. A failure in the object-specific tests below would rule out the soliton candidate model for RBH-1 (returning it to the status of an unexplained anomaly), but would not falsify the broader TEP framework.
-- **Mass falsification (Object Specific):** The consistency check $R_T \approx 1.3 R_S$ is sensitive to mass. If future dynamical measurements revise $M_{\text{RBH-1}}$ to > 3 × 10$^7$ $M_\odot$ (where $R_T < R_S$), the predicted temporal topology scale would fall inside the horizon, falsifying the soliton interpretation for this specific object.
+- **Mass falsification (Object Specific):** The crossover check $R_T \approx 1.3 R_S$ is sensitive to both mass and the density anchor. Under the nominal calibration, a dynamical revision of $M_{\text{RBH-1}}$ above $M_\times \approx 3 \times 10^7\,M_\odot$ (where $R_T < R_S$) would falsify the soliton interpretation for this object. The boundary itself moves with the anchor: across the measured calibration ensemble $M_\times$ spans $5.9\times10^6$–$3.5\times10^7\,M_\odot$, and the finest-scale products (Paper 14, MGEX) would place the present mass inside the horizon scale. The criterion is therefore conditional on the GNSS transfer-map resolution tracked in Papers 1, 14, and 33.
 **Discriminant falsification (Spectroscopy):** If deep spectroscopy reveals:
-- Strong coronal-line emission ([Fe X], [Fe XIV]) or soft X-rays consistent with $T \sim 10^7$ K gas dominating the emission measure, the "no heating" claim is falsified for this object.
+- Strong coronal-line emission ([Fe X], [Fe XIV]) or soft X-rays consistent with $T \sim 10^7$ K gas dominating the emission measure would exclude a predominantly cold Temporal-Shear flow.
 - Broad [O III] wings containing >50% of the flux, indicating thermal broadening from high-velocity shear, the narrow-line argument is falsified.
-- No systematic velocity offsets in stellar absorption lines along the wake (contradicting the metric-gradient prediction).
+- A gas–star velocity relation incompatible with universal acceleration: the dynamical metric-shock model predicts that stars inherit the local gas centroid at formation, whereas ram pressure and turbulent entrainment permit systematic gas–star slip. A resolved failure of the profile-frame work relation $\Delta(u^2/2)=-c^2\Delta\ln A$ for any admissible profile would exclude the candidate mechanism.
 - **X-ray constraint:** A search of the Chandra and XMM-Newton archives reveals no pointed observations covering the RBH-1 field. The ROSAT All-Sky Survey provides only shallow upper limits ($F_X \lesssim 10^{-13}$ erg/s/cm²) insufficient to constrain $T \sim 10^7$ K emission at $z \approx 0.96$. Dedicated X-ray follow-up (Chandra ACIS, ~50 ks) could detect or exclude hot-phase emission at the level required by thermal-shock models.
 - **Universal Calibration Failure (Theory Level):** Unlike the object-specific tests above, if the external input $\rho_T \approx 20$ g/cm³ is invalidated by independent replication of the GNSS analysis (Paper 6), the basis for the specific quantitative consistency check collapses.
 
 #### Summary of Logic
-**Input:** $\rho_T \approx 20$ g/cm³ (External from Paper 6)
-**Consistency Check:** RBH-1 Wake Properties (Cold, Narrow, Immediate Star Formation)
+**Input:** $\rho_T \approx 20$ g/cm³ (External from Paper 6; product-level ensemble $\rho_T \approx 15$–$524$ g/cm³)
+**Consistency Check:** RBH-1 Wake Properties (ordered 650 km s$^{-1}$ span, narrow local component, prompt star formation)
 **Test:** Does the observed wake match the prediction?
-**Verdict:** Yes, but requires X-ray/Coronal confirmation to rule out hidden thermal components.
+**Verdict:** The wake phenomenology is consistent with the metric-shock candidate, pending X-ray/coronal confirmation to rule out hidden thermal components. The $R_T \approx 1.3\,R_S$ coincidence is a crossover-scale statement internal to the theory — uncalibrated at its falsification boundary under the current calibration ensemble — while the resolved $\sim$kpc onset is carried by the transition-radius parametrization $R_{\rm trans} = \xi R_T$ with $\xi \approx 4\times10^8$ (Section 2).
 
 ## 6. Discussion: Implications for Dark Matter
 
@@ -547,7 +639,7 @@ While recent hydrodynamic simulations (Ogiya & Nagai 2023) and ram-pressure stri
 
 ## Resolution via Temporal Solitons
 
-A metric-driven interpretation offers an alternative to a purely hydrodynamic bow-shock model. If RBH-1 is modeled as a propagating region of altered proper-time rate (a temporal soliton), then the dominant observational signature at the apex could be a spatial gravitational-redshift gradient rather than irreversible collisional heating. In this scenario, the wake can remain comparatively cold while the effective collapse threshold behind the front is modified, enabling star formation without a long-lived hot phase. The trail is then interpreted as an imprint of a transient metric perturbation rather than material entrained by a compact projectile.
+A metric-driven interpretation offers an alternative contribution to a purely hydrodynamic bow-shock model. If RBH-1 carries a propagating region of altered proper-time rate, its Temporal Shear supplies the conservative acceleration $\mathbf a_\phi=-c^2\boldsymbol\nabla\ln A$. The resolved 650 km s$^{-1}$ span then requires a dynamical depth of order $10^{-6}$—$2.35\times10^{-6}$ in the rest-entry normalization and $4.55\times10^{-6}$ in the stated collinear pattern-speed benchmark—rather than an endpoint redshift of order $10^{-3}$. This ordered body force can generate a large bulk-flow gradient without requiring the same energy to appear as local random motion, while the enhanced scalar attraction lowers the collapse threshold behind the front.
 
 Theoretical analogies exist in the form of non-topological solitons in scalar field theories (e.g., Kusenko 1997; Heeck et al. 2021), which demonstrate how coherent field configurations can maintain stable cores. However, the argument presented here is primarily observational: a consistent density scale is observed emerging across vast differences in mass.
 
@@ -561,7 +653,7 @@ One possible formation channel is a major merger or strong interaction. In the T
 
 Two features of the RBH-1 data point to the internal physics of the soliton.
 - Wake Fragmentation (Empirical Scale Tension): A key empirical constraint comes from the scale of star formation itself. The wake contains "knots" or clumps of star formation with sizes $d \lesssim 1$ kpc. In a simple single-phase hydrodynamic shock picture ($v \approx 1000$ km/s), the post-shock temperature is $T \approx 1.4 \times 10^7$ K. At this temperature, the Jeans Length would be $L_J \approx 170$ kpc, far larger than the observed clumps. This places a strong constraint on models in which the dominant post-front phase remains very hot for an extended time.
-- Gravitational Echoes: A future test lies in gravitational waves. When two black holes merge, the resulting "ringdown" signal decays exponentially. If the objects are horizonless solitons, gravitational waves could be partially trapped between the photon sphere and an interior reflective boundary, producing repeating pulses or "gravitational echoes" (Cardoso et al. 2016).
+- Gravitational Echoes: A future test lies in gravitational waves. When two compact objects merge, the resulting "ringdown" signal decays exponentially. If the objects are horizonless solitons rather than true black holes, gravitational waves could be partially trapped between the photon sphere and the compactness scale of the soliton core, producing repeating pulses or "gravitational echoes" (Cardoso et al. 2016). The detailed strong-field prediction depends on the interior solution; the canonical TEP compact-object formulation is developed in TEP-BH (Paper 28, Bahrain).
 
 Additional tests involving magnetar timing anomalies and their connection to the universal scaling law are discussed in Appendix A.
 
@@ -577,16 +669,17 @@ The fact that a single calibration, derived from terrestrial GNSS clocks, yields
 
 The identification of RBH-1 as a candidate runaway supermassive black hole presents a significant observational puzzle. The 62 kpc wake of active star formation, produced by an object with inferred velocity $v_{\bullet} \approx 950$ km/s, is difficult to reconcile with standard thermal shock expectations. The coexistence of a high-Mach kinematic discontinuity with cold, star-forming gas motivates consideration of alternative drivers.
 
-The TEP interpretation offers a candidate resolution: RBH-1 may be consistent with a Temporal Topology soliton rather than a conventional black hole. In this framework, the wake forms not through thermal compression but through a metric-induced reduction in the effective Jeans mass, enabling star formation without a prolonged hot phase.
+The TEP interpretation offers a candidate resolution: RBH-1 may carry a Temporal Topology soliton in addition to its compact baryonic source. In this framework, Temporal Shear supplies coherent bulk acceleration while the scalar fifth force reduces the effective Jeans mass, enabling star formation without assigning the full resolved velocity span to local thermal energy.
 
-The data currently available—specifically the coexistence of high-velocity kinematics ($\Delta v \sim 650$ km/s) with narrow spectral lines ($\sigma \approx 31$ km/s)—place strong constraints on single-phase thermal-shock interpretations. The soliton interpretation simultaneously addresses (i) the narrow morphology, (ii) the limited evidence for dominant hot-phase thermalization, and (iii) the characteristic scale predicted by the universal $\rho_T$ calibration.
+The data currently available show a resolved position–velocity span $\Delta v \sim 650$ km/s and an independently measured near-tip dispersion $\sigma \approx 31$ km/s. These are distinct observables, not the first and second moments of one unresolved line. Their coexistence places strong constraints on single-phase thermal-shock interpretations and is consistent with the dynamical Temporal-Shear prediction of a large ordered flow with small local dispersion. The work integral requires $|\Delta\ln A|=2.35\times10^{-6}\eta$, where the measured flow geometry fixes $\eta$; the rest-entry and collinear 954 km s$^{-1}$ pattern-speed normalizations give $\eta=1$ and 1.94, respectively. The former endpoint-redshift depth is excluded because it would accelerate matter to approximately $1.97\times10^4$ km s$^{-1}$.
 
 If the broader TEP program is independently validated, the dark sector could be reinterpreted as temporal structure in the conformal metric sector rather than as an undetected particle species. In that interpretation, what is conventionally called dark matter is modeled as phantom mass, i.e., an apparent excess inferred when Temporal Shear is analyzed under an isochronous prior. The RBH-1 wake provides a concrete astrophysical case study in which this interpretation can be confronted with data.
 
 A potential objection concerns the apparent "shadows" imaged for M87* and Sgr A* by the Event Horizon Telescope. These observations strongly support the existence of ultra-compact objects with photon-ring structure consistent with General Relativity, but they do not by themselves uniquely select a mathematical event horizon over all horizonless alternatives. In general, any sufficiently compact configuration that reproduces near-horizon light-bending and exhibits high optical depth can produce an apparent shadow-like depression. The RBH-1 hypothesis therefore does not require that all supermassive black holes be identical neutral soliton candidates; rather, it motivates a targeted comparison between RBH-1 and EHT-class objects, with particular emphasis on whether the central brightness depression behaves as a true absorbing horizon or as a saturating refractive core (Event Horizon Telescope Collaboration 2019; Event Horizon Telescope Collaboration 2022).
 
 The key next step is falsification. Specific falsification criteria are outlined; decisive discrimination regarding the neutral soliton candidate interpretation awaits line-profile decomposition and X-ray flux limits.
-- **Line-Width Thermometry:** Spectra should show redshift discontinuities with suppressed thermal broadening (the "Cold Shock"). This is the primary discriminant based on existing data.
+- **Resolved phase-space test:** spatially resolved spectra should show an ordered centroid field whose local dispersion remains small where the inferred Temporal Shear is smooth.
+- **Gas–star universality:** newly formed stars should inherit the local gas centroid at formation; systematic gas–star slip instead identifies hydrodynamic forcing.
 - **Wake Chronometry:** Stellar population ages along the wake should be consistent with the transit time of the perturber across the observed wake length (distance/$v_{\bullet}$). Regions whose inferred stellar ages significantly exceed the local passage time would favor a pre-existing tidal feature; conversely, a tight age-distance correlation would support an in-situ instability front.
 - **Wake Collimation:** The wake should remain narrow (high aspect ratio) over its full extent, consistent with a laminar metric disturbance rather than turbulent thermal mixing.
 
@@ -594,7 +687,7 @@ The key next step is falsification. Specific falsification criteria are outlined
 
 The following observations would falsify the specific candidate Temporal Topology soliton/wake interpretation of RBH-1, without necessarily invalidating the broader TEP framework:
 - **Hot X-ray Halo:** Detection of extended X-ray emission ($T \gtrsim 10^7$ K) coincident with the wake would indicate thermal shock heating, contradicting the metric-shock model for this object.
-- **Thermal Line Widths:** If [O III] or H$\alpha$ line widths at the apex exceed $\sigma \gtrsim 80$ km/s (consistent with $T \sim 10^7$ K thermalization), the cold-shock interpretation fails.
+- **Thermal Line Widths:** If the near-tip [O III] or H$\alpha$ emitting component has $\sigma \gtrsim 80$ km/s (consistent with $T \sim 10^7$ K thermalization), the cold-flow interpretation fails.
 - **Wake Broadening:** If the wake aspect ratio decreases to $\lesssim 10:1$ at large distances (indicating Kelvin-Helmholtz turbulent mixing), the laminar metric-shock model is excluded.
 - **Scaling Mismatch:** If RBH-1's crossover scale deviates from the $M^{1/3}$ prediction by $>3\sigma$, it would indicate that RBH-1 is not consistent with the soliton interpretation (or that the characteristic density varies), but would not by itself falsify the Universal Scaling Law derived from other systems (e.g., Milky Way).
 
@@ -700,33 +793,33 @@ Schive, H.-Y., Chiueh, T., & Broadhurst, T. 2014, *Phys. Rev. Lett.*, 113, 26130
 
 Seidel, E., & Suen, W.-M. 1991, *Phys. Rev. Lett.*, 66, 1659 (DOI: 10.1103/PhysRevLett.66.1659)
 
-Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Preprint v0.8 (Jakarta). Zenodo. DOI: [10.5281/zenodo.16921911](https://doi.org/10.5281/zenodo.16921911) (Paper 0)
+Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Preprint v0.14 (Jakarta). Zenodo. DOI: [10.5281/zenodo.16921911](https://doi.org/10.5281/zenodo.16921911) (Paper 0)
 
-Smawfield, M. L. (2025). *Global Time Echoes: Distance-Structured Correlations in GNSS Clocks*. Preprint v0.25 (Jaipur). Zenodo. DOI: [10.5281/zenodo.17127229](https://doi.org/10.5281/zenodo.17127229) (Paper 1)
+Smawfield, M. L. (2025). *Global Time Echoes: Distance-Structured Correlations in GNSS Clocks*. Preprint v0.27 (Jaipur). Zenodo. DOI: [10.5281/zenodo.17127229](https://doi.org/10.5281/zenodo.17127229) (Paper 1)
 
-Smawfield, M. L. (2025). *Global Time Echoes: 25-Year Analysis of CODE Precise Clock Products*. Preprint v0.18 (Cairo). Zenodo. DOI: [10.5281/zenodo.17517141](https://doi.org/10.5281/zenodo.17517141) (Paper 2)
+Smawfield, M. L. (2025). *Global Time Echoes: 25-Year Analysis of CODE Precise Clock Products*. Preprint v0.20 (Cairo). Zenodo. DOI: [10.5281/zenodo.17517141](https://doi.org/10.5281/zenodo.17517141) (Paper 2)
 
-Smawfield, M. L. (2025). *Global Time Echoes: Raw RINEX Consistency Test*. Preprint v0.5 (Kathmandu). Zenodo. DOI: [10.5281/zenodo.17860166](https://doi.org/10.5281/zenodo.17860166) (Paper 3)
+Smawfield, M. L. (2025). *Global Time Echoes: Raw RINEX Consistency Test*. Preprint v0.6 (Kathmandu). Zenodo. DOI: [10.5281/zenodo.17860166](https://doi.org/10.5281/zenodo.17860166) (Paper 3)
 
-Smawfield, M. L. (2025). *Temporal-Spatial Coupling in Gravitational Lensing: A Reinterpretation of Dark Matter Observations*. Preprint v0.5 (Tortola). Zenodo. DOI: [10.5281/zenodo.17982540](https://doi.org/10.5281/zenodo.17982540) (Paper 4)
+Smawfield, M. L. (2025). *Temporal-Spatial Coupling in Gravitational Lensing: A Reinterpretation of Dark Matter Observations*. Preprint v0.8 (Tortola). Zenodo. DOI: [10.5281/zenodo.17982540](https://doi.org/10.5281/zenodo.17982540) (Paper 4)
 
-Smawfield, M. L. (2025). *Global Time Echoes: Empirical Synthesis*. Preprint v0.4 (Singapore). Zenodo. DOI: [10.5281/zenodo.18004832](https://doi.org/10.5281/zenodo.18004832) (Paper 5)
+Smawfield, M. L. (2025). *Global Time Echoes: Empirical Synthesis*. Preprint v0.6 (Singapore). Zenodo. DOI: [10.5281/zenodo.18004832](https://doi.org/10.5281/zenodo.18004832) (Paper 5)
 
-Smawfield, M. L. (2025). *Universal Critical Density: Cross-Scale Consistency of ρ_T*. Preprint v0.3 (New Delhi). Zenodo. DOI: [10.5281/zenodo.18064365](https://doi.org/10.5281/zenodo.18064365) (Paper 6)
+Smawfield, M. L. (2025). *Temporal Topology Saturation Scale: Cross-Scale Consistency of ρ_T*. Preprint v0.8 (New Delhi). Zenodo. DOI: [10.5281/zenodo.18064365](https://doi.org/10.5281/zenodo.18064365) (Paper 6)
 
-Smawfield, M. L. (2025). *The Soliton Wake: Exploring RBH-1 as a Temporal Topology Candidate*. Preprint v0.3 (Blantyre). Zenodo. DOI: [10.5281/zenodo.18059250](https://doi.org/10.5281/zenodo.18059250) (Paper 7 — this work)
+Smawfield, M. L. (2025). *The Soliton Wake: Exploring RBH-1 as a Temporal Topology Candidate*. Preprint v0.4 (Blantyre). Zenodo. DOI: [10.5281/zenodo.18059250](https://doi.org/10.5281/zenodo.18059250) (Paper 7 — this work)
 
-Smawfield, M. L. (2025). *Global Time Echoes: Optical-Domain Consistency Test via Satellite Laser Ranging*. Preprint v0.3 (Mombasa). Zenodo. DOI: [10.5281/zenodo.18064581](https://doi.org/10.5281/zenodo.18064581) (Paper 8)
+Smawfield, M. L. (2025). *Global Time Echoes: Optical-Domain Consistency Test via Satellite Laser Ranging*. Preprint v0.4 (Mombasa). Zenodo. DOI: [10.5281/zenodo.18064581](https://doi.org/10.5281/zenodo.18064581) (Paper 8)
 
-Smawfield, M. L. (2025). *What Do Precision Tests of General Relativity Actually Measure?*. Preprint v0.3 (Istanbul). Zenodo. DOI: [10.5281/zenodo.18109760](https://doi.org/10.5281/zenodo.18109760) (Paper 9)
+Smawfield, M. L. (2025). *What Do Precision Tests of General Relativity Actually Measure?*. Preprint v0.7 (Istanbul). Zenodo. DOI: [10.5281/zenodo.18109760](https://doi.org/10.5281/zenodo.18109760) (Paper 9)
 
-Smawfield, M. L. (2026). *Temporal Equivalence Principle: Suppressed Density Scaling in Globular Cluster Pulsars*. Preprint v0.6 (Caracas). Zenodo. DOI: [10.5281/zenodo.18165798](https://doi.org/10.5281/zenodo.18165798) (Paper 10)
+Smawfield, M. L. (2026). *Temporal Equivalence Principle: Suppressed Density Scaling in Globular Cluster Pulsars*. Preprint v0.9 (Caracas). Zenodo. DOI: [10.5281/zenodo.18165798](https://doi.org/10.5281/zenodo.18165798) (Paper 10)
 
-Smawfield, M. L. (2026). *The Cepheid Bias: Resolving the Hubble Tension*. Preprint v0.6 (Kingston upon Hull). Zenodo. DOI: [10.5281/zenodo.18209702](https://doi.org/10.5281/zenodo.18209702) (Paper 11)
+Smawfield, M. L. (2026). *The Cepheid Bias: Resolving the Hubble Tension*. Preprint v0.10 (Kingston upon Hull). Zenodo. DOI: [10.5281/zenodo.18209702](https://doi.org/10.5281/zenodo.18209702) (Paper 11)
 
-Smawfield, M. L. (2026). *Temporal Equivalence Principle: A Unified Resolution to the JWST High-Redshift Anomalies*. Preprint v0.4 (Kos). Zenodo. DOI: [10.5281/zenodo.19000827](https://doi.org/10.5281/zenodo.19000827) (Paper 12)
+Smawfield, M. L. (2026). *Temporal Equivalence Principle: A Unified Resolution to the JWST High-Redshift Anomalies*. Preprint v0.7 (Kos). Zenodo. DOI: [10.5281/zenodo.19000827](https://doi.org/10.5281/zenodo.19000827) (Paper 12)
 
-Smawfield, M. L. (2026). *Temporal Equivalence Principle: Temporal Shear Recovery in Gaia DR3 Wide Binaries*. Preprint v0.3 (Kilifi). Zenodo. DOI: [10.5281/zenodo.19102061](https://doi.org/10.5281/zenodo.19102061) (Paper 13)
+Smawfield, M. L. (2026). *Temporal Equivalence Principle: Temporal Shear Recovery in Gaia DR3 Wide Binaries*. Preprint v0.6 (Kilifi). Zenodo. DOI: [10.5281/zenodo.19102061](https://doi.org/10.5281/zenodo.19102061) (Paper 13)
 
 Stevenson, S. D., et al. 2025, *MNRAS* (DOI: 10.1093/mnras/staf2087; arXiv:2509.06913)
 
@@ -777,7 +870,7 @@ Email: [matthew@mlsmawfield.com](mailto:matthew@mlsmawfield.com)
 ORCID: [0009-0003-8219-3159](https://orcid.org/0009-0003-8219-3159)
 GitHub: [github.com/matthewsmawfield](https://github.com/matthewsmawfield)
 License: This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
-Version: v0.3 (Blantyre) · Last updated: 29 April 2026
+Version: v0.4 (Blantyre) · Last updated: 13 September 2026
 
 ## Appendix A: Future Directions
 
@@ -828,24 +921,30 @@ The magnetar 1E 2259+586 is particularly significant—its period matches the TE
 These case studies are presented as *future directions* rather than current evidence for TEP. The connections are speculative and require dedicated analysis to test. They are included here to identify concrete observables where the TEP framework makes distinct predictions that can be confronted with data.
 
 ## Data Availability & Reproducibility
-This work follows open-science practices. All results are fully reproducible from raw data 
-using the documented pipeline. All numerical results, figures, and statistics are generated by deterministic 
-Python scripts processing real observational data from JWST and literature sources.
+This work follows open-science practices. Every numerical claim introduced by the transport-consistency revision is
+generated deterministically from explicitly cited published measurements or stated theory inputs.
+The registered calculations do not synthesize observational data. Diagrammatic figures are labelled as
+schematics and are not used as measurements. Reproduction of the published Keck/LRIS line fit remains
+contingent on release of its reduced spectrum.
 
 ### Repository & Code
 **GitHub Repository:** [github.com/matthewsmawfield/TEP-RBH](https://github.com/matthewsmawfield/TEP-RBH)
-The repository contains a deterministic, version-controlled analysis pipeline for gravitational soliton 
-characterization using RBH-1 and comparative magnetar data.
+The repository contains deterministic, version-controlled consistency calculations for the RBH-1 candidate
+interpretation, together with figure-generation and optional public-archive retrieval utilities.
 
 #### Repository Structure
 
 TEP-RBH/
-├── data/                          # Raw data and catalogs
 ├── results/                         # Analysis outputs and figures
 ├── scripts/
+│   ├── steps/                     # Registered manuscript calculations
+│   │   ├── step_01_transport_consistency.py
+│   │   └── step_02_soliton_existence.py
 │   ├── analysis_checks/           # Physics validation scripts
 │   │   ├── cooling_calculation.py
-│   │   └── jeans_analysis.py
+│   │   ├── jeans_analysis.py
+│   │   ├── soliton_scale_check.py
+│   │   └── stress_energy_check.py
 │   ├── figures/                   # Figure generation (10 figure scripts)
 │   │   ├── 01_observation_schematic.py
 │   │   ├── 01_wake_anatomy.py
@@ -865,13 +964,11 @@ TEP-RBH/
 
 | Data Source | Provider | Access Method | Download Size | Reference |
 | --- | --- | --- | --- | --- |
-| RBH-1 NIRSpec Data | van Dokkum et al. | Published spectra | ~100 MB (IFU cube) | Via GitHub repo |
-| JWST Archive | MAST | Public archive | ~500 MB (associated data) | [MAST](https://archive.stsci.edu/) |
-| Magnetar Catalog | Literature compilation | Published data | <1 MB (tables) | Via repository |
-| SGR 1935+2154 | CHIME/FRB, X-ray data | Public data | <1 MB | Literature |
-| 1E 2259+586 | Archibald et al. 2013 | Published data | <1 MB | ApJ |
-**Total Download Size:** ~600 MB for all data sources (primarily JWST NIRSpec IFU data).
-**Note:** RBH-1 data is included in the repository; MAST data is optional for extended analysis.
+| RBH-1 resolved kinematics | van Dokkum et al. (2026) | Published measurements | Not redistributed | arXiv:2512.04166v2 |
+| JWST Archive | MAST | Public archive | Archive-dependent | [MAST](https://archive.stsci.edu/) |
+**Repository data status:** no observational FITS products or reduced Keck/LRIS spectrum are
+redistributed. The registered transport calculation uses only the published numerical endpoints and their
+cited provenance. Archive download sizes depend on the products selected at MAST.
 
 ### Reproduction Instructions
 
@@ -885,6 +982,8 @@ cd TEP-RBH
 pip install -r requirements.txt
 
 # 3. Run physics validation checks
+python scripts/steps/step_01_transport_consistency.py
+python scripts/steps/step_02_soliton_existence.py
 python scripts/analysis_checks/cooling_calculation.py
 python scripts/analysis_checks/jeans_analysis.py
 
@@ -909,10 +1008,12 @@ npm run build
 | Runtime | ~10-20 minutes | ~10 minutes (M4 Pro) |
 
 #### Detailed Analysis Scripts
-The repository contains physics validation scripts and 10 figure generation scripts. Each produces publication-quality outputs with full metadata:
+The repository contains physics validation scripts and 10 diagram-generation scripts. The diagrams are explanatory schematics; they are not synthetic observations and do not enter the numerical evidence ledger.
 Physics Validation Scripts
+- **step_01_transport_consistency.py** — Applies the conformal endpoint theorem and the profile-frame work integral to the published RBH-1 position–velocity endpoints; records both the rest-entry normalization and a collinear benchmark using the published 954 km s$^{-1}$ pattern speed, together with the acceleration, equivalent mass, scalar stress-energy ledger, and conditional local-coherence bound in `results/step_01_transport_consistency.json`
+- **step_02_soliton_existence.py** — Solves the forced spherical boundary-value problem for the required matter-sourced temporal well under the corpus's canonical scalar sector ($P(X,\phi)=X-V+X|X|/\Lambda^{4}$ exterior shear profile; quartic amplitude-sector interior equilibrium); returns the shear-recovery radius $R_s=\sqrt{GM/g_t}$, the delivered halo-depth ledger, the conditioned amplitude-sector coupling, and the transit-coherence timescales in `results/step_02_soliton_existence.json`
 - **cooling_calculation.py** — Validates post-shock cooling times vs dynamical times for RBH-1 soliton; computes t_cool/t_dyn ratio to confirm shock persistence
-- **jeans_analysis.py** — Computes effective Jeans mass behind metric shock; derives M_Jeans from TEP field equations with screening corrections
+- **jeans_analysis.py** — Computes effective Jeans mass behind metric shock; derives M_Jeans from TEP field equations with screening corrections; evaluates the ambient-density bookkeeping and the compressed-condensate density table (output: results/jeans_analysis.json)
 Figure Generation Scripts (10 total)
 - **01_observation_schematic.py** — Figure 1: RBH-1 observation schematic showing JWST NIRSpec IFU layout, shock geometry, and wake orientation
 - **01_wake_anatomy.py** — Wake anatomy diagram: detailed shock structure, ionization fronts, and velocity field decomposition
@@ -944,7 +1045,7 @@ Run individual scripts via: `python scripts/figures/XX_script_name.py`
 *This document was automatically generated from the TEP-RBH research site. For the interactive version with figures and enhanced formatting, visit: https://matthewsmawfield.github.io/TEP-RBH/*
 
 *Related Work:*
-- [**TEP Theory**](https://doi.org/10.5281/zenodo.18059250) (Foundational framework)
-- [**TEP-UCD Paper 6**](https://doi.org/10.5281/zenodo.18064366) (Universal Critical Density)
+- [**TEP Theory**](https://doi.org/10.5281/zenodo.16921911) (Foundational framework)
+- [**TEP-UCD Paper 6**](https://doi.org/10.5281/zenodo.18064366) (Temporal Topology Saturation Scale)
 
 *Source code and data available at: https://github.com/matthewsmawfield/TEP-RBH*

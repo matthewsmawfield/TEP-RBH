@@ -6,6 +6,7 @@ Analysis code for the TEP-RBH manuscript: "The Soliton Wake: Exploring RBH-1 as 
 
 ```
 scripts/
+├── steps/             # Registered manuscript calculations
 ├── figures/           # Figure generation scripts (numbered sequentially)
 ├── analysis_checks/   # Supplementary validation scripts
 ├── utils/             # Shared utilities
@@ -65,6 +66,12 @@ python ../archive/05_sparc_analysis.py
 ```
 
 Output: `site/figures/figure_5_sparc_enhanced.png`
+
+## Registered Calculation Steps
+
+| Step | Output | Description |
+|------|--------|-------------|
+| `steps/step_01_transport_consistency.py` | `results/step_01_transport_consistency.json` | Separates conformal endpoint transport from matter dynamics, applies $a_\phi=-c^2\nabla\ln A$, and derives the transport-consistent RBH-1 field depth from the published 650 km/s resolved span. |
 
 ## Requirements
 

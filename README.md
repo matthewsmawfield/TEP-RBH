@@ -6,8 +6,8 @@
 ![TEP-RBH: The Soliton Wake](site/public/twitter-image.jpg)
 
 **Author:** Matthew Lukin Smawfield  
-**Version:** v0.3 (Blantyre)  
-**Date:** 28 December 2025 (Last updated: 29 April 2026)  
+**Version:** v0.4 (Blantyre)  
+**First published:** 28 December 2025 · **Last updated:** 13 September 2026
 **Status:** Preprint  
 **DOI:** [10.5281/zenodo.18059250](https://doi.org/10.5281/zenodo.18059250)  
 **Website:** [https://mlsmawfield.com/tep/rbh/](https://mlsmawfield.com/tep/rbh/)
@@ -16,13 +16,13 @@
 
 The runaway supermassive black hole RBH-1 ($z \approx 0.96$) presents a thermal paradox: JWST spectroscopy reveals a 650 km/s velocity discontinuity coexisting with cold, star-forming gas. Higher-resolution Keck/LRIS spectroscopy yields a narrow apex dispersion ($\sigma \approx 31 \pm 4$ km/s), far below the $\sigma \sim 80$–85 km/s expected if the emitting gas were predominantly at $T \sim 10^7$ K. Standard shock physics predicts post-shock temperatures $T \sim 10^7$ K, yielding a cooling time that exceeds the dynamical time by a factor of ~30. Yet the wake exhibits immediate star formation and extreme collimation (50:1 aspect ratio over 62 kpc).
 
-RBH-1 is explored as a candidate Temporal Topology soliton/wake interpretation: a coherent region of altered proper-time rate. Under this candidate framing, the observed velocity discontinuity is reinterpreted as a metric shock (spatial gradient in gravitational redshift) rather than bulk thermalization, and the effective Jeans mass is reduced behind the front via time dilation, enabling immediate star formation without heating.
+RBH-1 is explored as a candidate Temporal Topology soliton/wake interpretation: a coherent region with a spatially varying proper-time factor. Universal matter coupling makes that gradient a real body force, so the resolved 650 km/s position–velocity span is interpreted as ordered bulk acceleration rather than as a force-free endpoint redshift. The profile-frame work integral requires a depth of order $10^{-6}$: $|\Delta\ln A|=2.35\times10^{-6}$ for rest entry and $4.55\times10^{-6}$ for the stated collinear 954 km/s pattern-speed benchmark. The formerly used endpoint assignment is dynamically inconsistent and is excluded. The same fifth-force sector lowers the Jeans threshold in compressed condensations without requiring the resolved bulk span to be thermalized locally.
 
 The characteristic temporal scale $R_T$, calibrated from terrestrial GNSS correlations (Smawfield 2025g), is applied as a consistency check rather than as proof that RBH-1 is a soliton. For RBH-1 ($M \approx 2 \times 10^7 M_\odot$), the calibration yields $R_T \approx 7.8 \times 10^7$ km $\approx 1.3 R_S$, comparable to the near-source transition scale, not the full 62 kpc wake length. The amplitude of the observed kinematic discontinuity depends on screening/transition physics (via $\beta_{\rm eff}$ at $R_{\rm trans}$) and is treated as an empirical constraint rather than an independent prediction. Specific falsification criteria are outlined; decisive discrimination awaits line-profile decomposition and X-ray flux limits.
 
 ## Key Findings
 
-RBH-1 (z ≈ 0.96) presents a thermal paradox: a 650 km/s velocity discontinuity coexists with cold, star-forming gas, yet standard shock physics predicts T ~ 10⁷ K requiring ~30× cooling time. JWST NIRSpec [O III] spectroscopy reveals narrow line widths (σ ~ 30 km/s vs expected ~85 km/s for thermal shock), supporting a cold "metric shock" interpretation rather than thermal shock. The temporal topology model predicts R_T ≈ 1.3 R_S with no free parameters—the scale is fixed by the universal critical density ρ_T ≈ 20 g/cm³ calibrated from terrestrial GNSS correlations, applied as a consistency check. This parameter-free prediction enables direct falsification via mass determination, X-ray flux limits, and line-profile decomposition.
+RBH-1 (z ≈ 0.96) presents a thermal paradox: a resolved 650 km/s position–velocity span coexists with a near-tip [O III] component having $\sigma=31\pm4$ km/s. These are distinct measurements and are not treated as the width of one unresolved line. The transport-consistent TEP branch predicts ordered, universally coupled matter acceleration with a profile depth of order $10^{-6}$ across the transition. The temporal-topology scale $R_T\approx1.3R_S$, fixed by the corpus critical-density calibration, is retained as a consistency check. Resolved phase-space mapping, gas–star velocity universality, X-ray limits, and access to the reduced Keck spectrum provide direct falsification tests.
 
 ---
 
@@ -44,7 +44,7 @@ RBH-1 (z ≈ 0.96) presents a thermal paradox: a 650 km/s velocity discontinuity
 | **Paper 11** | [TEP-H0](https://github.com/matthewsmawfield/TEP-H0) | The Cepheid Bias: Resolving the Hubble Tension | [10.5281/zenodo.18209702](https://doi.org/10.5281/zenodo.18209702) |
 | **Paper 12** | [TEP-JWST](https://github.com/matthewsmawfield/TEP-JWST) | The Temporal Equivalence Principle: A Unified Resolution to the JWST High-Redshift Anomalies | [10.5281/zenodo.19000827](https://doi.org/10.5281/zenodo.19000827) |
 | **Paper 13** | [TEP-WB](https://github.com/matthewsmawfield/TEP-WB) | Temporal Equivalence Principle: Temporal Shear Recovery in Gaia DR3 Wide Binaries | [10.5281/zenodo.19102061](https://doi.org/10.5281/zenodo.19102061) |
-| **Paper 15** | [TEP-EFA](https://github.com/matthewsmawfield/TEP-EFA) | Temporal Equivalence Principle: Temporal Shear in the Earth Flyby Anomaly | [10.5281/zenodo.19454863](https://doi.org/10.5281/zenodo.19454863) |
+| **Paper 15** | [TEP-EFA](https://github.com/matthewsmawfield/TEP-EFA) | Temporal Equivalence Principle: Temporal Shear in the Earth Flyby Anomaly | [10.5281/zenodo.19454862](https://doi.org/10.5281/zenodo.19454862) |
 | **Paper 16** | [TEP-J0437](https://github.com/matthewsmawfield/TEP-J0437) | Synchronization Holonomy in Pulsar Scintillation | [10.5281/zenodo.19454620](https://doi.org/10.5281/zenodo.19454620) |
 | **Paper 17** | [TEP-LLR](https://github.com/matthewsmawfield/TEP-LLR) | Lunar Laser Ranging and the Nordtvedt Effect | [10.5281/zenodo.19446029](https://doi.org/10.5281/zenodo.19446029) |
 
@@ -125,7 +125,7 @@ python scripts/run_rbh1_line_analysis.py              # Complete RBH-1 pipeline
   journal={Zenodo},
   year={2025},
   doi={10.5281/zenodo.18059250},
-  note={Preprint v0.3 (Blantyre)}
+  note={Preprint v0.4 (Blantyre)}
 }
 ```
 

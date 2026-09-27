@@ -1,6 +1,8 @@
 {
-  "version": "0.3",
+  "version": "0.4",
   "codename": "Blantyre",
   "description": "Paper 7: The Soliton Wake: Exploring RBH-1 as a Temporal Topology Candidate",
-  "date": "2026-04-29"
+  "date": "2026-09-13",
+  "paper": "7",
+  "previous_version": "0.3"
 }

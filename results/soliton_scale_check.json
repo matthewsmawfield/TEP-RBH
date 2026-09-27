@@ -1,0 +1,108 @@
+{
+  "inputs": {
+    "M_RBH_msun": 20000000.0,
+    "R_S_km": 59066787.64133757,
+    "lambda_products_km": {
+      "CODE pooled (Paper 1)": 4549.0,
+      "IGS pooled (Paper 1)": 3764.0,
+      "ESA pooled (Paper 1)": 3328.0,
+      "Paper 33": 4200.0,
+      "Paper 14 multi-GNSS": 1862.0,
+      "MGEX held-out (6-7)": 1396.0
+    }
+  },
+  "product_ensemble": [
+    {
+      "product": "CODE pooled (Paper 1)",
+      "lambda_T_km": 4549.0,
+      "rho_T_g_cm3": 15.145491785183244,
+      "R_T_km": 85583954.5851219,
+      "R_T_over_R_S": 1.4489353154737408,
+      "M_cross_msun": 34882169.84133824,
+      "soliton_passes_RT_gt_RS": true
+    },
+    {
+      "product": "IGS pooled (Paper 1)",
+      "lambda_T_km": 3764.0,
+      "rho_T_g_cm3": 26.735132817951087,
+      "R_T_km": 70815125.31510197,
+      "R_T_over_R_S": 1.198899214650068,
+      "M_cross_msun": 26254515.55962624,
+      "soliton_passes_RT_gt_RS": true
+    },
+    {
+      "product": "ESA pooled (Paper 1)",
+      "lambda_T_km": 3328.0,
+      "rho_T_g_cm3": 38.67953437445513,
+      "R_T_km": 62612310.58678515,
+      "R_T_over_R_S": 1.0600256605620155,
+      "M_cross_msun": 21827528.478656314,
+      "soliton_passes_RT_gt_RS": true
+    },
+    {
+      "product": "Paper 33",
+      "lambda_T_km": 4200.0,
+      "rho_T_g_cm3": 19.24346698313235,
+      "R_T_km": 79017940.04341878,
+      "R_T_over_R_S": 1.337772768738121,
+      "M_cross_msun": 30945928.850417554,
+      "soliton_passes_RT_gt_RS": true
+    },
+    {
+      "product": "Paper 14 multi-GNSS",
+      "lambda_T_km": 1862.0,
+      "rho_T_g_cm3": 220.84733367050399,
+      "R_T_km": 35031286.75258232,
+      "R_T_over_R_S": 0.5930792608072335,
+      "M_cross_msun": 9134801.237629106,
+      "soliton_passes_RT_gt_RS": false
+    },
+    {
+      "product": "MGEX held-out (6-7)",
+      "lambda_T_km": 1396.0,
+      "rho_T_g_cm3": 524.0526668258798,
+      "R_T_km": 26264058.166812528,
+      "R_T_over_R_S": 0.44465018694248015,
+      "M_cross_msun": 5930041.252062142,
+      "soliton_passes_RT_gt_RS": false
+    }
+  ],
+  "ensemble_summary": {
+    "rho_T_range_g_cm3": [
+      15.145491785183244,
+      524.0526668258798
+    ],
+    "R_T_over_R_S_range": [
+      0.44465018694248015,
+      1.4489353154737408
+    ],
+    "M_cross_range_msun": [
+      5930041.252062142,
+      34882169.84133824
+    ],
+    "straddles_falsification_boundary": true
+  },
+  "resolution": {
+    "R_T_kpc_nominal": 2.5278282113415873e-09,
+    "resolved_scale_kpc": 1.0,
+    "R_T_over_resolved": 2.5278282113415873e-09,
+    "orders_below_resolution": 8.597252443602251
+  },
+  "transition_parametrization": {
+    "parametrization": "R_trans = xi * R_T",
+    "xi_required_1kpc": 395596502.7660138,
+    "xi_range_0p1_1kpc": [
+      39559650.27660138,
+      395596502.7660138
+    ],
+    "constant_density_recovery": {
+      "R_trans_cd_pc": 3.4104502856753535e-05,
+      "R_trans_cd_AU": 7.03519357058432,
+      "xi_cd": 13.491622058705227,
+      "note": "shear recovery where enclosed mean density of the M_eff ~ 4.9e10 Msun dynamical-equivalent halo falls to rho_T"
+    },
+    "observed_over_naive_recovery": 29321641.31523105,
+    "m_eff_recovery_eV": 6.3942644199611145e-27
+  },
+  "interpretation": "R_T ~ 1.3 R_S is the crossover-mass coincidence: the constant-density radius meets the horizon at M_x(rho_T) ~ 3e7 Msun for rho_T = 20 g/cm^3, and RBH-1 (2e7 Msun) sits at that single crossover point. R_T ~ 2.5e-9 kpc lies ~8.6 orders below the ~1 kpc resolved scale, so the check cannot match resolved morphology; the observable onset is R_trans. Propagating the product-level calibration ensemble (rho_T ~ 15-524 g/cm^3) returns R_T/R_S in [0.44, 1.45] and M_x in [5.8e6, 3.5e7] Msun -- the ensemble straddles the paper's own falsification boundary, so the object's candidacy sits inside the anchor's systematic uncertainty rather than passing cleanly. The transition parametrization R_trans = xi R_T requires xi ~ 4e8, ~3e6x the constant-density recovery radius; this quantifies the shear-recovery transfer function that the soliton profile must supply."
+}

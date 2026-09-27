@@ -1,0 +1,105 @@
+{
+  "profile": {
+    "delta_lnA": 2.350473243413269e-06,
+    "normalization": "rest-entry fiducial; multiply depth by flow-frame factor eta",
+    "R_transition_kpc": 1.0,
+    "scalings_with_eta": {
+      "gradient_acceleration_and_apparent_mass": "proportional to eta",
+      "canonical_scalar_shell_mass_and_surface_density": "proportional to eta^2",
+      "kinematic_to_scalar_mass_ratio": "proportional to eta^-1"
+    }
+  },
+  "sigma_crit_msun_pc2": 2052.39057242325,
+  "rows": [
+    {
+      "w_kpc": 0.05,
+      "grad_lnA_m^-1": 1.5233138324130065e-24,
+      "u_msun_per_kpc3": 918438.374903634,
+      "E_shell_msun": 577071.8496150402,
+      "Sigma_msun_per_pc2": 0.0459219187451817,
+      "Sigma_over_Sigma_crit": 2.2374843931855456e-05,
+      "M_apparent_msun": 982421522323.9238,
+      "kinematic_to_gravitating_ratio": 1702424.9631640997
+    },
+    {
+      "w_kpc": 0.1,
+      "grad_lnA_m^-1": 7.616569162065032e-25,
+      "u_msun_per_kpc3": 229609.5937259085,
+      "E_shell_msun": 288535.9248075201,
+      "Sigma_msun_per_pc2": 0.02296095937259085,
+      "Sigma_over_Sigma_crit": 1.1187421965927728e-05,
+      "M_apparent_msun": 491210761161.9619,
+      "kinematic_to_gravitating_ratio": 1702424.9631640997
+    },
+    {
+      "w_kpc": 0.3,
+      "grad_lnA_m^-1": 2.5388563873550104e-25,
+      "u_msun_per_kpc3": 25512.177080656496,
+      "E_shell_msun": 96178.6416025067,
+      "Sigma_msun_per_pc2": 0.007653653124196949,
+      "Sigma_over_Sigma_crit": 3.7291406553092418e-06,
+      "M_apparent_msun": 163736920387.32062,
+      "kinematic_to_gravitating_ratio": 1702424.9631640997
+    },
+    {
+      "w_kpc": 1.0,
+      "grad_lnA_m^-1": 7.616569162065032e-26,
+      "u_msun_per_kpc3": 2296.095937259085,
+      "E_shell_msun": 28853.592480752013,
+      "Sigma_msun_per_pc2": 0.002296095937259085,
+      "Sigma_over_Sigma_crit": 1.1187421965927729e-06,
+      "M_apparent_msun": 49121076116.19619,
+      "kinematic_to_gravitating_ratio": 1702424.9631640997
+    },
+    {
+      "w_kpc": 3.0,
+      "grad_lnA_m^-1": 2.5388563873550108e-26,
+      "u_msun_per_kpc3": 255.12177080656497,
+      "E_shell_msun": 9617.86416025067,
+      "Sigma_msun_per_pc2": 0.0007653653124196949,
+      "Sigma_over_Sigma_crit": 3.729140655309242e-07,
+      "M_apparent_msun": 16373692038.732063,
+      "kinematic_to_gravitating_ratio": 1702424.9631640997
+    },
+    {
+      "w_kpc": 10.0,
+      "grad_lnA_m^-1": 7.616569162065032e-27,
+      "u_msun_per_kpc3": 22.960959372590853,
+      "E_shell_msun": 2885.3592480752013,
+      "Sigma_msun_per_pc2": 0.00022960959372590853,
+      "Sigma_over_Sigma_crit": 1.118742196592773e-07,
+      "M_apparent_msun": 4912107611.619619,
+      "kinematic_to_gravitating_ratio": 1702424.9631640997
+    },
+    {
+      "w_kpc": 30.0,
+      "grad_lnA_m^-1": 2.5388563873550106e-27,
+      "u_msun_per_kpc3": 2.5512177080656495,
+      "E_shell_msun": 961.786416025067,
+      "Sigma_msun_per_pc2": 7.653653124196948e-05,
+      "Sigma_over_Sigma_crit": 3.729140655309242e-08,
+      "M_apparent_msun": 1637369203.8732064,
+      "kinematic_to_gravitating_ratio": 1702424.9631641
+    }
+  ],
+  "amplitude_bookkeeping": {
+    "M_bary_msun": 20000000.0,
+    "v_obs_km_s": 650.0,
+    "Phi_N_over_c2": 9.57012113437096e-10,
+    "dynamical_depth_required": 2.350473243413269e-06,
+    "alpha_RBH_eff_linear_response": 2456.0538058098095,
+    "M_eff_newtonian_equiv_msun": 49121076116.19619,
+    "note": "Delta(v^2/2) = c^2 alpha_eff GM/(R c^2) at the rest-entry |Delta ln A|=2.35e-6 and Phi_N/c^2~9.6e-10 implies alpha_eff~2.46e3, i.e. a Newtonian-equivalent enclosed mass ~4.9e10 Msun. Under the soliton reading this is the field configuration's internal depth, not a response coefficient; read linearly it is an open ~1e3 response-normalization channel."
+  },
+  "decoupling": {
+    "closed_form": "M_apparent / E_scalar = 4 / Delta_lnA",
+    "value": 1701784.9538211932,
+    "note": "independent of transition width; the conformal coupling amplifies the matter response per unit field excursion without amplifying the field's own gravity"
+  },
+  "thin_shell_benchmark": {
+    "E_claim_msun": 5000000000000.0,
+    "implied_width_pc": 5.7685097632027965e-06,
+    "note": "historical 5e12 Msun comparison retained only as a scale diagnostic; it is incompatible with the transport-consistent dynamical depth"
+  },
+  "interpretation": "At the observed ~1 kpc transition width and rest-entry normalization the canonical scalar stress-energy is ~2.9e4 Msun distributed through the transition volume, ~1.7e6x below the apparent kinematic mass. The lensing contribution is negligible -- it cannot form the compact arcsecond-scale arc a particulate ~4.9e10 Msun halo would produce. 'Strong kinematics, weak lensing' is thereby a derived quantitative asymmetry (kinematic:lensing ~ 4/Delta_lnA ~ 1.7e6 : 1), not an assumption; any particulate model gives ratio 1. Evaluation is on the canonical kinetic branch -- the corpus's derived weak-field baseline; candidate non-canonical K(X) completions modify the stress-energy bookkeeping and are part of the open action-closure calculation."
+}

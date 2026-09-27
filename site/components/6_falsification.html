@@ -1,7 +1,7 @@
 <h2>5. Falsification Criteria</h2>
 
 <p>
-    This paper treats the characteristic density $\rho_T \approx 20$ g/cm³ as a fixed input derived in Paper 6. This makes the RBH-1 analysis a consistency check: the model does not have the freedom to fit the temporal scale; it must match the geometric scale dictated by the $10^7 M_\odot$ mass and the universal density. Note that $R_T$ itself is not directly observable at $z \sim 1$; the testable prediction is that the transition-zone phenomenology (at $R_{\rm trans} \sim$ kpc scales) should be consistent with this temporal topology scale.
+    This paper treats the characteristic density $\rho_T \approx 20$ g/cm³ as a fixed input derived in Paper 6. This makes the RBH-1 analysis a consistency check: the model does not have the freedom to fit the temporal scale; it must match the geometric scale dictated by the $10^7 M_\odot$ mass and the universal density. Two bookkeeping facts delimit what the check establishes. First, $R_T \approx 2.5 \times 10^{-9}$ kpc lies $\sim 8.6$ orders of magnitude below the resolved scale at $z \approx 0.96$ ($\sim 1$ kpc per $0.1''$): the comparison $R_T \approx 1.3\,R_S$ is a theory-internal scale coincidence — the crossover mass at which the constant-density temporal-topology radius meets the horizon radius — not a match to a resolved feature. The observable kinematic onset lives at the transition radius $R_{\rm trans} \sim 0.1$–$1$ kpc, parametrized explicitly in Section 2 as $R_{\rm trans} = \xi\,R_T$. Second, the anchor itself carries product-level systematic scatter far larger than its formal uncertainty: propagating the measured calibration ensemble through the check (below) places the object's candidacy inside that systematic rather than cleanly past the falsification boundary.
 </p>
 
 <h2>The Soliton Size Prediction</h2>
@@ -9,7 +9,7 @@
 <figure style="margin: 30px 0;">
     <img src="figures/figure_10_scaling.png" alt="Universal Scaling Law" style="width: 100%; height: auto; border-radius: 4px;">
     <figcaption style="margin-top: 10px; font-size: 13px; color: #495773; font-style: italic; line-height: 1.4;">
-        Figure 10: Universal Scaling Law. The temporal topology scale ($R_T \propto M^{1/3}$) vs. Mass. The solid line is the consistency check fixed by $\rho_T \approx 20$ g/cm³ (derived from terrestrial clocks). RBH-1 (star) falls on the expected scale where $R_T \approx 1.3 R_S$.
+        Figure 10: Universal Scaling Law. The temporal topology scale ($R_T \propto M^{1/3}$) vs. Mass. The solid line is the consistency check fixed by $\rho_T \approx 20$ g/cm³ (derived from terrestrial clocks). RBH-1 (star) sits at the crossover mass where $R_T \approx 1.3 R_S$ — a theory-internal scale coincidence, since $R_T$ itself lies $\sim 8.6$ orders of magnitude below the resolved scale.
     </figcaption>
 </figure>
 
@@ -17,17 +17,33 @@
     Given $\rho_T \approx 20$ g/cm³ (from Paper 6), the consistency check for the temporal scale of RBH-1 ($M \approx 2 \times 10^7 M_\odot$) yields:
 </p>
 
-<div class="equation">$$R_T = \left(\frac{3M}{4\pi \rho_T}\right)^{1/3} \approx 7.8 \times 10^7 \text{ km} \approx 1.3 R_S$$</div>
+<div class="equation">\begin{equation} \label{eq:rt_falsification} R_T = \left(\frac{3M}{4\pi \rho_T}\right)^{1/3} \approx 7.8 \times 10^7 \text{ km} \approx 1.3 R_S \end{equation}</div>
 
 <h3>Uncertainty Propagation</h3>
 <p>
-    The check uncertainty derives from two inputs: the mass estimate and the characteristic density. For the mass $M \sim 2 \times 10^7 M_\odot$ (van Dokkum et al. 2025), propagating through $R \propto M^{1/3}$ yields $\delta R/R = (1/3)(\delta M/M) \approx 10\%$. The characteristic density $\rho_T \approx 20$ g/cm³ carries systematic uncertainty of order $\pm 30\%$ from the GNSS calibration (Paper 6), contributing $\delta R/R = (1/3)(\delta\rho_T/\rho_T) \approx 10\%$. Combined in quadrature:
+    The check uncertainty derives from two inputs: the mass estimate and the characteristic density. For the mass $M \sim 2 \times 10^7 M_\odot$ (van Dokkum et al. 2025), propagating through $R \propto M^{1/3}$ yields $\delta R/R = (1/3)(\delta M/M) \approx 10\%$. The density input is the larger term by far, and its uncertainty is not the $\pm 30\%$ formal figure quoted in earlier drafts: $\rho_T = 3M_\oplus/(4\pi\lambda_T^3)$ is set by the GNSS decoherence length, and the corpus's measured product-level ensemble spans $\lambda_T \approx 1{,}400$–$4{,}500$ km — pooled coherent-band estimates of 4,549 km (CODE), 3,764 km (IGS), and 3,328 km (ESA) from Paper 1, the Paper 33 value near 4,200 km, the Paper 14 multi-GNSS product at 1,862 km, and the held-out MGEX product at 1,396 km. Propagating each calibration through $\rho_T$ and $R_T$:
 </p>
 
-<div class="equation">$$R_T = (7.8 \pm 1.1) \times 10^7 \text{ km} \quad (1\sigma)$$</div>
+<table class="data-table">
+    <thead>
+        <tr><th>Calibration product</th><th>$\lambda_T$ (km)</th><th>$\rho_T$ (g/cm³)</th><th>$R_T$ (km)</th><th>$R_T/R_S$</th><th>$M_\times$ ($M_\odot$)</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>CODE pooled (Paper 1)</td><td>4,549</td><td>15.1</td><td>$8.6\times10^7$</td><td>1.45</td><td>$3.5\times10^7$</td></tr>
+        <tr><td>IGS pooled (Paper 1)</td><td>3,764</td><td>26.7</td><td>$7.1\times10^7$</td><td>1.20</td><td>$2.6\times10^7$</td></tr>
+        <tr><td>ESA pooled (Paper 1)</td><td>3,328</td><td>38.7</td><td>$6.3\times10^7$</td><td>1.06</td><td>$2.2\times10^7$</td></tr>
+        <tr><td>Paper 33</td><td>4,200</td><td>19.2</td><td>$7.9\times10^7$</td><td>1.34</td><td>$3.1\times10^7$</td></tr>
+        <tr><td>Paper 14 multi-GNSS</td><td>1,862</td><td>221</td><td>$3.5\times10^7$</td><td>0.59</td><td>$9.1\times10^6$</td></tr>
+        <tr><td>MGEX held-out</td><td>1,396</td><td>524</td><td>$2.6\times10^7$</td><td>0.44</td><td>$5.9\times10^6$</td></tr>
+    </tbody>
+</table>
 
 <p>
-    The correspondence $R_T \approx 1.3 R_S$ places the temporal topology scale just outside the Schwarzschild horizon. This would predict a "naked halo" phenomenology if RBH-1 is a soliton: the object interacts with the environment via its metric gradient (the "hair") rather than just its horizon.
+    Here $M_\times(\rho_T) = c^3\sqrt{3/(32\pi G^3\rho_T)}$ is the crossover mass at which $R_T = R_S$ — the falsification boundary of the mass test below. The ensemble returns $R_T/R_S \in [0.44, 1.45]$ and $M_\times \in [5.9\times10^6, 3.5\times10^7]\,M_\odot$: the three primary pooled calibrations and Paper 33 place RBH-1 ($2\times10^7\,M_\odot$) outside the horizon scale with margins of 6–45%, while the two finest-scale products place it inside. The honest statement is that the crossover check is uncalibrated at its own falsification boundary — the object's candidacy sits within the product-level systematic of the $\rho_T$ anchor, and the verdict tightens or reverses as the GNSS transfer map (Papers 1, 14, 33; the band-dependent $\lambda_T$ decomposition of Paper 1, Table 8a) is resolved. Under the nominal Paper 6 anchor alone, $R_T = 7.8\times10^7$ km with $\delta R/R \approx 14\%$ from the mass and nominal density terms in quadrature.
+</p>
+
+<p>
+    The correspondence $R_T \approx 1.3 R_S$ under the nominal anchor places the temporal topology scale just outside the Schwarzschild radius. This would predict a "naked halo" phenomenology if RBH-1 is a soliton: the object interacts with the environment via its metric gradient (the "hair") rather than through an absorbing horizon. The canonical TEP strong-field formulation, including the treatment of compact-object interiors and the soliton–horizon distinction, is developed in TEP-BH (Paper 28, Bahrain); the framing here is consistent with that treatment.
 </p>
 
 <h2>Explicit Falsification Criteria</h2>
@@ -37,13 +53,13 @@
 </p>
 
 <ol>
-    <li><strong>Mass falsification (Object Specific):</strong> The consistency check $R_T \approx 1.3 R_S$ is sensitive to mass. If future dynamical measurements revise $M_{\text{RBH-1}}$ to &gt; 3 × 10$^7$ $M_\odot$ (where $R_T < R_S$), the predicted temporal topology scale would fall inside the horizon, falsifying the soliton interpretation for this specific object.</li>
+    <li><strong>Mass falsification (Object Specific):</strong> The crossover check $R_T \approx 1.3 R_S$ is sensitive to both mass and the density anchor. Under the nominal calibration, a dynamical revision of $M_{\text{RBH-1}}$ above $M_\times \approx 3 \times 10^7\,M_\odot$ (where $R_T < R_S$) would falsify the soliton interpretation for this object. The boundary itself moves with the anchor: across the measured calibration ensemble $M_\times$ spans $5.9\times10^6$–$3.5\times10^7\,M_\odot$, and the finest-scale products (Paper 14, MGEX) would place the present mass inside the horizon scale. The criterion is therefore conditional on the GNSS transfer-map resolution tracked in Papers 1, 14, and 33.</li>
     
     <li><strong>Discriminant falsification (Spectroscopy):</strong> If deep spectroscopy reveals:
         <ul>
-            <li>Strong coronal-line emission ([Fe X], [Fe XIV]) or soft X-rays consistent with $T \sim 10^7$ K gas dominating the emission measure, the "no heating" claim is falsified for this object.</li>
+            <li>Strong coronal-line emission ([Fe X], [Fe XIV]) or soft X-rays consistent with $T \sim 10^7$ K gas dominating the emission measure would exclude a predominantly cold Temporal-Shear flow.</li>
             <li>Broad [O III] wings containing &gt;50% of the flux, indicating thermal broadening from high-velocity shear, the narrow-line argument is falsified.</li>
-            <li>No systematic velocity offsets in stellar absorption lines along the wake (contradicting the metric-gradient prediction).</li>
+            <li>A gas–star velocity relation incompatible with universal acceleration: the dynamical metric-shock model predicts that stars inherit the local gas centroid at formation, whereas ram pressure and turbulent entrainment permit systematic gas–star slip. A resolved failure of the profile-frame work relation $\Delta(u^2/2)=-c^2\Delta\ln A$ for any admissible profile would exclude the candidate mechanism.</li>
         </ul>
     </li>
     
@@ -55,9 +71,9 @@
 <div class="principle">
     <h4>Summary of Logic</h4>
     <p>
-        <strong>Input:</strong> $\rho_T \approx 20$ g/cm³ (External from Paper 6)<br>
-        <strong>Consistency Check:</strong> RBH-1 Wake Properties (Cold, Narrow, Immediate Star Formation)<br>
+        <strong>Input:</strong> $\rho_T \approx 20$ g/cm³ (External from Paper 6; product-level ensemble $\rho_T \approx 15$–$524$ g/cm³)<br>
+        <strong>Consistency Check:</strong> RBH-1 Wake Properties (ordered 650 km s$^{-1}$ span, narrow local component, prompt star formation)<br>
         <strong>Test:</strong> Does the observed wake match the prediction?<br>
-        <strong>Verdict:</strong> Yes, but requires X-ray/Coronal confirmation to rule out hidden thermal components.
+        <strong>Verdict:</strong> The wake phenomenology is consistent with the metric-shock candidate, pending X-ray/coronal confirmation to rule out hidden thermal components. The $R_T \approx 1.3\,R_S$ coincidence is a crossover-scale statement internal to the theory — uncalibrated at its falsification boundary under the current calibration ensemble — while the resolved $\sim$kpc onset is carried by the transition-radius parametrization $R_{\rm trans} = \xi R_T$ with $\xi \approx 4\times10^8$ (Section 2).
     </p>
 </div>

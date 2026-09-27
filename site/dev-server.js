@@ -14,6 +14,7 @@ class DevServer {
         this.liveServerProcess = null;
         this.watcherReady = false;
         this.watcherRestarting = false;
+        this.port = 55507; // Unique port for TEP-RBH (Paper 7)
     }
 
     async startLiveServer() {
@@ -28,7 +29,7 @@ class DevServer {
         this.liveServerProcess = spawn('npx', [
             'live-server',
             'dist',
-            '--port=8353',
+            `--port=${this.port}`,
             '--host=localhost',
             '--no-browser',
             '--wait=500'
@@ -183,7 +184,7 @@ class DevServer {
         console.log('   • figures/*.png');
         console.log('   • data/*.json');
         console.log('   • public/*');
-        console.log('\n🌐 Server running at: http://localhost:8352');
+        console.log(`\n🌐 Server running at: http://localhost:${this.port}`);
         console.log('📱 The page will auto-reload when you make changes!');
         console.log('📝 Markdown will be auto-generated after each build!');
         console.log('💡 If auto-reload doesn\'t work, run: npm run build');

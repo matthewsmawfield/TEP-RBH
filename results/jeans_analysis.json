@@ -1,0 +1,53 @@
+{
+  "ambient": {
+    "T_K": 10000.0,
+    "n_cm3": 0.001,
+    "c_s_kms": 15.14250125831614,
+    "M_J_Newtonian_Msun": 1296072871.911541,
+    "lambda_J_kpc": 46.436622565990135,
+    "M_J_tilde_bare_Msun": 249429340.4958332,
+    "lambda_J_tilde_kpc": 26.810196538731457
+  },
+  "bare_coupling": {
+    "beta_A": -1.0,
+    "alpha0_sq": 2.0,
+    "G_eff_over_G": 3.0,
+    "M_J_reduction_factor": 0.19245008972987526,
+    "rho_crit_reduction_factor": 27.0
+  },
+  "timescales": {
+    "core_transit_days": 1.1574074074074074,
+    "wake_transit_Myr": 0.9778943899409335,
+    "free_fall_Myr_at_n_0p1_cm3": 299.8851505470236,
+    "wake_to_free_fall_ratio": 0.0032608963403394473,
+    "interpretation": "wake transit is much shorter than the ambient free-fall time; collapse requires denser condensations or post-passage completion"
+  },
+  "compressed_density_table": [
+    {
+      "n_cm3": 0.001,
+      "M_J_Msun": 1296072871.911541,
+      "M_J_tilde_Msun": 249429340.4958332
+    },
+    {
+      "n_cm3": 0.1,
+      "M_J_Msun": 129607287.19115405,
+      "M_J_tilde_Msun": 24942934.04958331
+    },
+    {
+      "n_cm3": 1.0,
+      "M_J_Msun": 40985422.88796139,
+      "M_J_tilde_Msun": 7887648.312405052
+    },
+    {
+      "n_cm3": 10.0,
+      "M_J_Msun": 12960728.719115404,
+      "M_J_tilde_Msun": 2494293.4049583306
+    },
+    {
+      "n_cm3": 100.0,
+      "M_J_Msun": 4098542.2887961394,
+      "M_J_tilde_Msun": 788764.8312405053
+    }
+  ],
+  "contingency": "deeper reduction requires alpha_eff > bare value (corpus open response-amplification gap, Papers 5, 10, 11)"
+}

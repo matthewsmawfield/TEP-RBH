@@ -110,11 +110,31 @@ class HTMLToMarkdownConverter {
         html = html.replace(/<(?!\/?[a-zA-Z!])/g, '&lt;');
 
         // Remove remaining HTML tags
+        // Preserve sub/sup tags before generic stripping
+        const subTags = [];
+        html = html.replace(/<sub>(.*?)<\/sub>/gi, (match, inner) => {
+            subTags.push(inner);
+            return `__SUB_${subTags.length - 1}__`;
+        });
+        const supTags = [];
+        html = html.replace(/<sup>(.*?)<\/sup>/gi, (match, inner) => {
+            supTags.push(inner);
+            return `__SUP_${supTags.length - 1}__`;
+        });
+
         html = html.replace(/<[^>]+>/g, '');
         
         // Restore MathJax expressions
         mathExpressions.forEach((expr, index) => {
             html = html.replace(`__MATH_EXPRESSION_${index}__`, expr);
+        });
+
+        // Restore sub/sup tags
+        subTags.forEach((inner, index) => {
+            html = html.replace(`__SUB_${index}__`, `<sub>${inner}</sub>`);
+        });
+        supTags.forEach((inner, index) => {
+            html = html.replace(`__SUP_${index}__`, `<sup>${inner}</sup>`);
         });
         
         // Decode HTML entities
@@ -274,6 +294,24 @@ class HTMLToMarkdownConverter {
             // Write to file
             const outputPath = path.join(__dirname, '..', filename);
             fs.writeFileSync(outputPath, markdown, 'utf8');
+
+            // Keep the shared collection archive (../manuscripts/) in sync
+            try {
+                const sharedArchiveDir = path.join(__dirname, '..', '..', 'manuscripts');
+                if (fs.existsSync(sharedArchiveDir)) {
+                    const archiveName = path.basename(outputPath);
+                    const paperPrefix = archiveName.split('-')[0];
+                    for (const staleFile of fs.readdirSync(sharedArchiveDir)) {
+                        if (staleFile !== archiveName && staleFile.endsWith('.md') && staleFile.startsWith(`${paperPrefix}-TEP`)) {
+                            fs.rmSync(path.join(sharedArchiveDir, staleFile));
+                        }
+                    }
+                    fs.copyFileSync(outputPath, path.join(sharedArchiveDir, archiveName));
+                    console.log(`📄 Copied to shared archive: manuscripts/${archiveName}`);
+                }
+            } catch (archiveError) {
+                console.warn(`⚠️  Could not update shared manuscripts archive: ${archiveError.message}`);
+            }
             
             console.log('✅ Markdown conversion complete!');
             console.log(`📄 Output: ${outputPath}`);
@@ -317,8 +355,8 @@ ${cleanedContent}
 *This document was automatically generated from the TEP-RBH research site. For the interactive version with figures and enhanced formatting, visit: https://matthewsmawfield.github.io/TEP-RBH/*
 
 *Related Work:*
-- [**TEP Theory**](https://doi.org/10.5281/zenodo.18059250) (Foundational framework)
-- [**TEP-UCD Paper 6**](https://doi.org/10.5281/zenodo.18064366) (Universal Critical Density)
+- [**TEP Theory**](https://doi.org/10.5281/zenodo.16921911) (Foundational framework)
+- [**TEP-UCD Paper 6**](https://doi.org/10.5281/zenodo.18064366) (Temporal Topology Saturation Scale)
 
 *Source code and data available at: https://github.com/matthewsmawfield/TEP-RBH*
 `;
