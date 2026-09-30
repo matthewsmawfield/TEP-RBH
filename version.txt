@@ -1,5 +1,9 @@
 v0.4 (Blantyre) — 13 September 2026 — Canonical TEP architecture alignment: replaced "Schwarzschild horizon" with "Schwarzschild radius"; added Bahrain (TEP-BH) successor reference for canonical strong-field formulation; updated gravitational echo language to soliton compactness scale
 
+- Rewrote the forward-model section around the dynamical metric-shock predictions
+- Updated references and the reproducibility section
+- Aligned abstract and introduction wording with the canonical corpus framing
+
 v0.3 (Blantyre) – Temporal Topology Alignment
 
 - Aligned with TEP v0.7 framework: Replaced Vainshtein/screening terminology with continuous Temporal Topology nomenclature, introducing Temporal Shear as the operative field gradient describing continuous spatial profile recovery.

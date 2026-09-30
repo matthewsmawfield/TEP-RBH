@@ -21,7 +21,7 @@
 
 <h3>Uncertainty Propagation</h3>
 <p>
-    The check uncertainty derives from two inputs: the mass estimate and the characteristic density. For the mass $M \sim 2 \times 10^7 M_\odot$ (van Dokkum et al. 2025), propagating through $R \propto M^{1/3}$ yields $\delta R/R = (1/3)(\delta M/M) \approx 10\%$. The density input is the larger term by far, and its uncertainty is not the $\pm 30\%$ formal figure quoted in earlier drafts: $\rho_T = 3M_\oplus/(4\pi\lambda_T^3)$ is set by the GNSS decoherence length, and the corpus's measured product-level ensemble spans $\lambda_T \approx 1{,}400$–$4{,}500$ km — pooled coherent-band estimates of 4,549 km (CODE), 3,764 km (IGS), and 3,328 km (ESA) from Paper 1, the Paper 33 value near 4,200 km, the Paper 14 multi-GNSS product at 1,862 km, and the held-out MGEX product at 1,396 km. Propagating each calibration through $\rho_T$ and $R_T$:
+    The check uncertainty derives from two inputs: the mass estimate and the characteristic density. For the mass $M \sim 2 \times 10^7 M_\odot$ (van Dokkum et al. 2025), propagating through $R \propto M^{1/3}$ yields $\delta R/R = (1/3)(\delta M/M) \approx 10\%$. The density input is the larger term by far, and its uncertainty is not the $\pm 30\%$ formal figure quoted in earlier drafts: $\rho_T = 3M_\oplus/(4\pi\lambda_T^3)$ is set by the GNSS decoherence length, and the corpus's measured product-level ensemble spans $\lambda_T \approx 1{,}900$–$4{,}500$ km on the precise-product branch — pooled coherent-band estimates of 4,549 km (CODE), 3,764 km (IGS), and 3,328 km (ESA) from Paper 1, the Paper 33 value near 4,200 km, and the corrected Paper 14 multi-GNSS (MGEX) pooled estimate at 1,862 km. Propagating each calibration through $\rho_T$ and $R_T$:
 </p>
 
 <table class="data-table">
@@ -34,12 +34,11 @@
         <tr><td>ESA pooled (Paper 1)</td><td>3,328</td><td>38.7</td><td>$6.3\times10^7$</td><td>1.06</td><td>$2.2\times10^7$</td></tr>
         <tr><td>Paper 33</td><td>4,200</td><td>19.2</td><td>$7.9\times10^7$</td><td>1.34</td><td>$3.1\times10^7$</td></tr>
         <tr><td>Paper 14 multi-GNSS</td><td>1,862</td><td>221</td><td>$3.5\times10^7$</td><td>0.59</td><td>$9.1\times10^6$</td></tr>
-        <tr><td>MGEX held-out</td><td>1,396</td><td>524</td><td>$2.6\times10^7$</td><td>0.44</td><td>$5.9\times10^6$</td></tr>
     </tbody>
 </table>
 
 <p>
-    Here $M_\times(\rho_T) = c^3\sqrt{3/(32\pi G^3\rho_T)}$ is the crossover mass at which $R_T = R_S$ — the falsification boundary of the mass test below. The ensemble returns $R_T/R_S \in [0.44, 1.45]$ and $M_\times \in [5.9\times10^6, 3.5\times10^7]\,M_\odot$: the three primary pooled calibrations and Paper 33 place RBH-1 ($2\times10^7\,M_\odot$) outside the horizon scale with margins of 6–45%, while the two finest-scale products place it inside. The honest statement is that the crossover check is uncalibrated at its own falsification boundary — the object's candidacy sits within the product-level systematic of the $\rho_T$ anchor, and the verdict tightens or reverses as the GNSS transfer map (Papers 1, 14, 33; the band-dependent $\lambda_T$ decomposition of Paper 1, Table 8a) is resolved. Under the nominal Paper 6 anchor alone, $R_T = 7.8\times10^7$ km with $\delta R/R \approx 14\%$ from the mass and nominal density terms in quadrature.
+    Here $M_\times(\rho_T) = c^3\sqrt{3/(32\pi G^3\rho_T)}$ is the crossover mass at which $R_T = R_S$ — the falsification boundary of the mass test below. The ensemble returns $R_T/R_S \in [0.59, 1.45]$ and $M_\times \in [9.1\times10^6, 3.5\times10^7]\,M_\odot$: the three primary pooled calibrations and Paper 33 place RBH-1 ($2\times10^7\,M_\odot$) outside the horizon scale with margins of 6–45%, while the shortest-baseline product (the ~1-year MGEX span, corroborating rather than anchoring) places it inside. The honest statement is that the crossover check is uncalibrated at its own falsification boundary — the object's candidacy sits within the product-level systematic of the $\rho_T$ anchor, and the verdict tightens or reverses as the GNSS transfer map (Papers 1, 14, 33; the band-dependent $\lambda_T$ decomposition of Paper 1, Table 8a) is resolved. Under the nominal Paper 6 anchor alone, $R_T = 7.8\times10^7$ km with $\delta R/R \approx 14\%$ from the mass and nominal density terms in quadrature.
 </p>
 
 <p>
@@ -71,7 +70,7 @@
 <div class="principle">
     <h4>Summary of Logic</h4>
     <p>
-        <strong>Input:</strong> $\rho_T \approx 20$ g/cm³ (External from Paper 6; product-level ensemble $\rho_T \approx 15$–$524$ g/cm³)<br>
+        <strong>Input:</strong> $\rho_T \approx 20$ g/cm³ (External from Paper 6; product-level ensemble $\rho_T \approx 15$–$221$ g/cm³)<br>
         <strong>Consistency Check:</strong> RBH-1 Wake Properties (ordered 650 km s$^{-1}$ span, narrow local component, prompt star formation)<br>
         <strong>Test:</strong> Does the observed wake match the prediction?<br>
         <strong>Verdict:</strong> The wake phenomenology is consistent with the metric-shock candidate, pending X-ray/coronal confirmation to rule out hidden thermal components. The $R_T \approx 1.3\,R_S$ coincidence is a crossover-scale statement internal to the theory — uncalibrated at its falsification boundary under the current calibration ensemble — while the resolved $\sim$kpc onset is carried by the transition-radius parametrization $R_{\rm trans} = \xi R_T$ with $\xi \approx 4\times10^8$ (Section 2).

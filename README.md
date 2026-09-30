@@ -7,18 +7,19 @@
 
 **Author:** Matthew Lukin Smawfield  
 **Version:** v0.4 (Blantyre)  
-**First published:** 28 December 2025 · **Last updated:** 13 September 2026
+**First published:** 28 December 2025 · **Last updated:** 30 September 2026
 **Status:** Preprint  
 **DOI:** [10.5281/zenodo.18059250](https://doi.org/10.5281/zenodo.18059250)  
 **Website:** [https://mlsmawfield.com/tep/rbh/](https://mlsmawfield.com/tep/rbh/)
 
 ## Abstract
 
-The runaway supermassive black hole RBH-1 ($z \approx 0.96$) presents a thermal paradox: JWST spectroscopy reveals a 650 km/s velocity discontinuity coexisting with cold, star-forming gas. Higher-resolution Keck/LRIS spectroscopy yields a narrow apex dispersion ($\sigma \approx 31 \pm 4$ km/s), far below the $\sigma \sim 80$–85 km/s expected if the emitting gas were predominantly at $T \sim 10^7$ K. Standard shock physics predicts post-shock temperatures $T \sim 10^7$ K, yielding a cooling time that exceeds the dynamical time by a factor of ~30. Yet the wake exhibits immediate star formation and extreme collimation (50:1 aspect ratio over 62 kpc).
 
-RBH-1 is explored as a candidate Temporal Topology soliton/wake interpretation: a coherent region with a spatially varying proper-time factor. Universal matter coupling makes that gradient a real body force, so the resolved 650 km/s position–velocity span is interpreted as ordered bulk acceleration rather than as a force-free endpoint redshift. The profile-frame work integral requires a depth of order $10^{-6}$: $|\Delta\ln A|=2.35\times10^{-6}$ for rest entry and $4.55\times10^{-6}$ for the stated collinear 954 km/s pattern-speed benchmark. The formerly used endpoint assignment is dynamically inconsistent and is excluded. The same fifth-force sector lowers the Jeans threshold in compressed condensations without requiring the resolved bulk span to be thermalized locally.
 
-The characteristic temporal scale $R_T$, calibrated from terrestrial GNSS correlations (Smawfield 2025g), is applied as a consistency check rather than as proof that RBH-1 is a soliton. For RBH-1 ($M \approx 2 \times 10^7 M_\odot$), the calibration yields $R_T \approx 7.8 \times 10^7$ km $\approx 1.3 R_S$, comparable to the near-source transition scale, not the full 62 kpc wake length. The amplitude of the observed kinematic discontinuity depends on screening/transition physics (via $\beta_{\rm eff}$ at $R_{\rm trans}$) and is treated as an empirical constraint rather than an independent prediction. Specific falsification criteria are outlined; decisive discrimination awaits line-profile decomposition and X-ray flux limits.
+
+
+The runaway supermassive black hole RBH-1 (z ≈ 0.96) presents a thermal paradox: JWST spectroscopy resolves a 650 km/s position–velocity span across approximately 1 kpc in a cold, star-forming system. Higher-resolution Keck/LRIS spectroscopy of the near-tip [O III] knot yields a narrow intrinsic dispersion (σ ≈ 31 ± 4 km/s), far below the σ ~ 80–85 km/s expected if that emitting component were predominantly at T ~ 10⁷ K. Standard shock physics predicts post-shock temperatures T ~ 10⁷ K, yielding a cooling time that exceeds the dynamical time by a factor of ~30. Yet the wake exhibits immediate star formation and extreme collimation (50:1 aspect ratio over 62 kpc). RBH-1 is explored as a candidate Temporal Topology soliton/wake interpretation: a coherent region of altered proper-time rate whose Temporal Shear supplies a conservative body force. The corpus-wide endpoint theorem excludes the former assignment of the full velocity span to an apparent conformal redshift: |Δln A| ≈ Δ v/c ≈ 2.2 × 10⁻³ would accelerate universally coupled gas to approximately 1.97 × 10⁴ km/s. The dynamically consistent assignment instead treats the resolved span as coherent matter motion and applies the work integral in the profile frame. It requires a depth of order 10⁻⁶: 2.35 × 10⁻⁶ for the stated rest-entry normalization and 4.55 × 10⁻⁶ for a collinear benchmark using the published 954 km/s pattern speed. Either value is hundreds of times shallower than the excluded endpoint assignment and permits a small local dispersion when the shear is spatially coherent. The same scalar sector enhances the effective gravitational coupling behind the front, reducing the effective Jeans mass without identifying the resolved bulk velocity span with microscopic thermal motion. The characteristic temporal scale R_T, calibrated from terrestrial GNSS correlations (Smawfield 2025g), is applied as a consistency check rather than as proof that RBH-1 is a soliton. For RBH-1 (M ≈ 2 × 10⁷ M_⊙), the calibration yields R_T ≈ 7.8 × 10⁷ km ≈ 1.3 R_S — a crossover-mass coincidence internal to the theory, since R_T lies ~ 8.6 orders of magnitude below the resolved scale; the observed ~kpc kinematic onset is carried separately by the transition-radius parametrization R_trans = ξ R_T with measured ξ ≈ 4 × 10⁸. The amplitude of the observed kinematic discontinuity depends on screening/transition physics (via α_RBH,eff at R_trans) and is treated as an empirical constraint rather than an independent prediction. Specific falsification criteria are outlined; decisive discrimination awaits line-profile decomposition and X-ray flux limits.
+
 
 ## Key Findings
 
@@ -46,7 +47,7 @@ RBH-1 (z ≈ 0.96) presents a thermal paradox: a resolved 650 km/s position–ve
 | **Paper 13** | [TEP-WB](https://github.com/matthewsmawfield/TEP-WB) | Temporal Equivalence Principle: Temporal Shear Recovery in Gaia DR3 Wide Binaries | [10.5281/zenodo.19102061](https://doi.org/10.5281/zenodo.19102061) |
 | **Paper 15** | [TEP-EFA](https://github.com/matthewsmawfield/TEP-EFA) | Temporal Equivalence Principle: Temporal Shear in the Earth Flyby Anomaly | [10.5281/zenodo.19454862](https://doi.org/10.5281/zenodo.19454862) |
 | **Paper 16** | [TEP-J0437](https://github.com/matthewsmawfield/TEP-J0437) | Synchronization Holonomy in Pulsar Scintillation | [10.5281/zenodo.19454620](https://doi.org/10.5281/zenodo.19454620) |
-| **Paper 17** | [TEP-LLR](https://github.com/matthewsmawfield/TEP-LLR) | Lunar Laser Ranging and the Nordtvedt Effect | [10.5281/zenodo.19446029](https://doi.org/10.5281/zenodo.19446029) |
+| **Paper 17** | [TEP-LLR](https://github.com/matthewsmawfield/TEP-LLR) | Lunar Laser Ranging and the Nordtvedt Effect | [10.5281/zenodo.19446028](https://doi.org/10.5281/zenodo.19446028) |
 
 ## Theoretical Framework
 
@@ -57,7 +58,7 @@ This work builds on the Temporal Equivalence Principle (TEP), which proposes:
 -   **Soliton Solutions**: The non-linear kinetic structure supports coherent field configurations ("Time Stars"), allowing for the macroscopic phenomenology observed in RBH-1.
 
 **TEP Theory Reference:**
-> Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed (v0.7 (Jakarta))*. Zenodo. DOI: [10.5281/zenodo.16921911](https://doi.org/10.5281/zenodo.16921911)
+> Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed (v0.15 (Jakarta))*. Zenodo. DOI: [10.5281/zenodo.16921911](https://doi.org/10.5281/zenodo.16921911)
 
 ## File Structure
 

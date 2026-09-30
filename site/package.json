@@ -30,7 +30,7 @@
     "type": "git",
     "url": "https://github.com/matthewsmawfield/TEP-RBH.git"
   },
-  "homepage": "https://matthewsmawfield.github.io/TEP-RBH/",
+  "homepage": "https://mlsmawfield.com/tep/rbh/",
   "devDependencies": {
     "chokidar": "^4.0.3",
     "live-server": "^1.2.2",
