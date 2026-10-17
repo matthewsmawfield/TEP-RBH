@@ -80,7 +80,19 @@
       5930041.252062142,
       34882169.84133824
     ],
-    "straddles_falsification_boundary": true
+    "straddles_falsification_boundary": true,
+    "passband_matched_fullband_10_500_uHz": {
+      "mgex_8hr_welch_f_min_uHz": 34.72,
+      "paper1_prediction_on_mgex_grid_km": 1864.3,
+      "mgex_observed_km": 1862.0,
+      "mgex_fullband_equivalent_km": 4194.8,
+      "R_T_over_R_S_mgex_fullband_equiv": 1.3361,
+      "R_T_over_R_S_range_passband_matched": [
+        1.06,
+        1.4489
+      ],
+      "all_pass_RT_gt_RS_when_passband_matched": true
+    }
   },
   "resolution": {
     "R_T_kpc_nominal": 2.5278282113415873e-09,

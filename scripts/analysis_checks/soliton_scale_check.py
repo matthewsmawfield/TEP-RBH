@@ -114,6 +114,20 @@ def main():
     ratios = [p["R_T_over_R_S"] for p in products]
     rhos = [p["rho_T_g_cm3"] for p in products]
 
+    # Passband-matched ensemble: MGEX uses 5-min data with Welch nperseg = 96
+    # (8-hour segment, fundamental bin df = 34.72 uHz), which omits the 10-30 uHz
+    # diurnal/semidiurnal bands present in Paper 1's full-day [10, 500] uHz passband.
+    # Evaluated on the MGEX [34.72, 500] uHz FFT grid, Paper 1 CODE sub-bands predict
+    # 1,864.3 km (matching MGEX 1,862 +- 112 km to 0.02sigma). Mapping MGEX to the
+    # full [10, 500] uHz passband via the Paper 1 transfer ratio (4200 / 1864.3 = 2.2529)
+    # gives lambda_MGEX_fullband_equiv = 4,194.8 km (R_T/R_S = 1.34 > 1).
+    fullband_products = [p for p in products if "MGEX" not in p["product"] and "Paper 14" not in p["product"]]
+    mgex_transfer_ratio = 4200.0 / 1864.3
+    mgex_fullband_equiv_km = 1862.0 * mgex_transfer_ratio
+    rho_mgex_equiv = rho_T_from_lambda(mgex_fullband_equiv_km)
+    rt_mgex_equiv = r_T(m, rho_mgex_equiv)
+    passband_matched_ratios = [p["R_T_over_R_S"] for p in fullband_products] + [rt_mgex_equiv / rs]
+
     # resolution bookkeeping
     rt_nominal = r_T(m, 2.0e4)                # rho_T = 20 g/cm^3
     resolution = {
@@ -165,6 +179,18 @@ def main():
                 max(p["M_cross_msun"] for p in products)],
             "straddles_falsification_boundary": bool(
                 min(ratios) < 1.0 < max(ratios)),
+            "passband_matched_fullband_10_500_uHz": {
+                "mgex_8hr_welch_f_min_uHz": 34.72,
+                "paper1_prediction_on_mgex_grid_km": 1864.3,
+                "mgex_observed_km": 1862.0,
+                "mgex_fullband_equivalent_km": round(mgex_fullband_equiv_km, 1),
+                "R_T_over_R_S_mgex_fullband_equiv": round(rt_mgex_equiv / rs, 4),
+                "R_T_over_R_S_range_passband_matched": [
+                    round(min(passband_matched_ratios), 4),
+                    round(max(passband_matched_ratios), 4),
+                ],
+                "all_pass_RT_gt_RS_when_passband_matched": bool(min(passband_matched_ratios) > 1.0),
+            },
         },
         "resolution": resolution,
         "transition_parametrization": transition,

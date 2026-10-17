@@ -209,17 +209,17 @@ c_obs = COLORS['observation']
 ax1 = axes[0]
 
 positions = line_ratio_data['position']
-ax1.plot(positions, line_ratio_data['OIII_Ha'], 'o-', color=c_obs, 
-         linewidth=2, markersize=8, label='[OIII]/Hα')
-ax1.plot(positions, line_ratio_data['SIII_SII'], 's-', color=c_metric, 
-         linewidth=2, markersize=8, label='[SIII]/[SII]')
-ax1.plot(positions, line_ratio_data['NII_Ha'] * 10, '^-', color=c_thermal, 
-         linewidth=2, markersize=8, label='[NII]/Hα × 10')
+ax1.plot(positions, line_ratio_data['OIII_Ha'], '-', color=c_obs, 
+         linewidth=2.5, label='[OIII]/Hα (schematic trend)')
+ax1.plot(positions, line_ratio_data['SIII_SII'], '--', color=c_metric, 
+         linewidth=2.5, label='[SIII]/[SII] (schematic trend)')
+ax1.plot(positions, line_ratio_data['NII_Ha'] * 10, '-.', color=c_thermal, 
+         linewidth=2.5, label='[NII]/Hα × 10 (schematic trend)')
 
 ax1.axvline(x=64.6, color='black', linewidth=1.5, linestyle='--', label='Apex')
 ax1.set_xlabel('Distance from Galaxy [kpc]')
-ax1.set_ylabel('Line Ratio')
-ax1.set_title(r"$\bf{a)}$ Emission Line Ratios Along Wake", loc='left')
+ax1.set_ylabel('Line Ratio (schematic)')
+ax1.set_title(r"$\bf{a)}$ Schematic Emission-Line Trends Toward Apex", loc='left')
 ax1.legend(loc='upper left', fontsize=8)
 ax1.grid(True, alpha=0.3)
 

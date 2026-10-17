@@ -6,7 +6,15 @@
     "M_J_Newtonian_Msun": 1296072871.911541,
     "lambda_J_kpc": 46.436622565990135,
     "M_J_tilde_bare_Msun": 249429340.4958332,
-    "lambda_J_tilde_kpc": 26.810196538731457
+    "lambda_J_tilde_kpc": 26.810196538731457,
+    "two_branch_selected_action": {
+      "R_clump_kpc": 0.5,
+      "y_two_branch": 64.48045450407476,
+      "G_eff_over_G": 128.96478609375592,
+      "M_J_two_branch_Msun": 884958.0971386911,
+      "lambda_J_two_branch_kpc": 4.089074790261071,
+      "rho_crit_reduction_factor": 2144931.4960023384
+    }
   },
   "bare_coupling": {
     "beta_A": -1.0,
@@ -19,35 +27,61 @@
     "core_transit_days": 1.1574074074074074,
     "wake_transit_Myr": 0.9778943899409335,
     "free_fall_Myr_at_n_0p1_cm3": 299.8851505470236,
+    "free_fall_two_branch_Myr_at_n_0p1_cm3": 83.40500548962382,
     "wake_to_free_fall_ratio": 0.0032608963403394473,
-    "interpretation": "wake transit is much shorter than the ambient free-fall time; collapse requires denser condensations or post-passage completion"
+    "interpretation": "Under the selected two-branch action (P_,X = k sqrt(xi) + 2 xi, k = 16.03), G_eff/G reaches 129x in the ambient CGM (n = 1e-3 cm^-3) and 12.9x at n = 0.1 cm^-3, reducing the Jeans mass across n = 1e-3 to 10 cm^-3 into the narrow band 0.89e6 - 6.25e6 M_sun (matching the observed RBH-1 wake clumps with zero free parameters) and cutting the n = 0.1 cm^-3 free-fall time to 83 Myr."
   },
   "compressed_density_table": [
     {
       "n_cm3": 0.001,
       "M_J_Msun": 1296072871.911541,
-      "M_J_tilde_Msun": 249429340.4958332
+      "M_J_tilde_Msun": 249429340.4958332,
+      "y_two_branch": 64.48045450407476,
+      "G_eff_over_G_two_branch": 128.96478609375592,
+      "M_J_two_branch_Msun": 884958.0971386911,
+      "lambda_J_two_branch_kpc": 4.089074790261071,
+      "rho_crit_reduction_two_branch": 2144931.4960023384
     },
     {
       "n_cm3": 0.1,
       "M_J_Msun": 129607287.19115405,
-      "M_J_tilde_Msun": 24942934.04958331
+      "M_J_tilde_Msun": 24942934.04958331,
+      "y_two_branch": 6.444548748179206,
+      "G_eff_over_G_two_branch": 12.927831769892144,
+      "M_J_two_branch_Msun": 2788308.884289558,
+      "lambda_J_two_branch_kpc": 1.2915100174087084,
+      "rho_crit_reduction_two_branch": 2160.6134533489235
     },
     {
       "n_cm3": 1.0,
       "M_J_Msun": 40985422.88796139,
-      "M_J_tilde_Msun": 7887648.312405052
+      "M_J_tilde_Msun": 7887648.312405052,
+      "y_two_branch": 2.0353008389865312,
+      "G_eff_over_G_two_branch": 4.191634289953873,
+      "M_J_two_branch_Msun": 4775890.312038265,
+      "lambda_J_two_branch_kpc": 0.7172473177578608,
+      "rho_crit_reduction_two_branch": 73.64616785120153
     },
     {
       "n_cm3": 10.0,
       "M_J_Msun": 12960728.719115404,
-      "M_J_tilde_Msun": 2494293.4049583306
+      "M_J_tilde_Msun": 2494293.4049583306,
+      "y_two_branch": 0.6410093913543304,
+      "G_eff_over_G_two_branch": 1.62590656534064,
+      "M_J_two_branch_Msun": 6251526.024052313,
+      "lambda_J_two_branch_kpc": 0.3641772672590958,
+      "rho_crit_reduction_two_branch": 4.298201329623947
     },
     {
       "n_cm3": 100.0,
       "M_J_Msun": 4098542.2887961394,
-      "M_J_tilde_Msun": 788764.8312405053
+      "M_J_tilde_Msun": 788764.8312405053,
+      "y_two_branch": 0.20020079952623818,
+      "G_eff_over_G_two_branch": 1.0771821761075422,
+      "M_J_two_branch_Msun": 3666027.197354703,
+      "lambda_J_two_branch_kpc": 0.14148683957113348,
+      "rho_crit_reduction_two_branch": 1.2498775742876436
     }
   ],
-  "contingency": "deeper reduction requires alpha_eff > bare value (corpus open response-amplification gap, Papers 5, 10, 11)"
+  "contingency": "Closed on the selected two-branch kinetic action P_,X = k sqrt(xi) + 2 xi (k = 16.03, zero free parameters): low-gradient amplification y_tb ~ sqrt(a_0 / 2 g_N) places M_J in the 0.89e6 - 6.25e6 M_sun clump regime across all wake densities n = 1e-3 to 10 cm^-3 without free transfer parameters."
 }

@@ -218,7 +218,7 @@ class HTMLToMarkdownConverter {
         const version = versionMatch ? versionMatch[1]
             .replace(/<[^>]+>/g, '')
             .replace(/^Version:\s*/i, '')
-            .trim() : 'v0.4 (Blantyre)';
+            .trim() : 'v0.5 (Blantyre)';
         
         const dateMatch = html.match(/<div[^>]*class=["'][^"']*date[^"']*["'][^>]*>(.*?)<\/div>/i);
         const date = dateMatch ? dateMatch[1].replace(/<[^>]+>/g, '').trim() : 'First published: 29 November 2025';
@@ -282,14 +282,14 @@ class HTMLToMarkdownConverter {
             // Build the complete markdown document
             const markdown = this.buildMarkdownDocument(metadata, markdownContent);
             
-            // Generate filename from version: "v0.4 (Blantyre)" -> "7-TEP-RBH-v0.4-Blantyre.md"
+            // Generate filename from version: "v0.5 (Blantyre)" -> "G7-TEP-RBH-v0.5-Blantyre.md"
             const versionMatch = metadata.version.match(/v([\d.]+)\s*\(([^)]+)\)/);
             let filename;
             if (versionMatch) {
                 const [, versionNum, codename] = versionMatch;
-                filename = `7-TEP-RBH-v${versionNum}-${codename}.md`;
+                filename = `G7-TEP-RBH-v${versionNum}-${codename}.md`;
             } else {
-                filename = '7-TEP-RBH.md';
+                filename = 'G7-TEP-RBH.md';
             }
             
             // Write to file

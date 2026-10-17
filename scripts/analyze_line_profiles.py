@@ -468,7 +468,7 @@ def analyze_line_profile(velocity, flux, flux_err, line_name='[O III]',
     # Panel A: Single-component fit
     ax1 = axes[0, 0]
     ax1.errorbar(velocity, flux, yerr=flux_err, fmt='o', color=c_data, 
-                 markersize=3, alpha=0.6, label='Data', capsize=1, elinewidth=0.8)
+                 markersize=3, alpha=0.6, label='Synthetic spectrum', capsize=1, elinewidth=0.8)
     v_model = np.linspace(velocity.min(), velocity.max(), 500)
     ax1.plot(v_model, single_component(v_model, *params1), '-', 
              color=c_single, linewidth=2, label='Single-component fit')
@@ -486,7 +486,7 @@ def analyze_line_profile(velocity, flux, flux_err, line_name='[O III]',
     # Panel B: Two-component fit
     ax2 = axes[0, 1]
     ax2.errorbar(velocity, flux, yerr=flux_err, fmt='o', color=c_data,
-                 markersize=3, alpha=0.6, label='Data', capsize=1, elinewidth=0.8)
+                 markersize=3, alpha=0.6, label='Synthetic spectrum', capsize=1, elinewidth=0.8)
     ax2.plot(v_model, two_component(v_model, *params2), '-',
              color=c_double, linewidth=2, label='Total fit')
     ax2.plot(v_model, gaussian(v_model, A1_2, v0_2, sigma1_2) + cont2, '--',
@@ -526,7 +526,7 @@ def analyze_line_profile(velocity, flux, flux_err, line_name='[O III]',
     ax4.axis('off')
     
     # Clean, minimal text without box
-    title_text = "MODEL SELECTION"
+    title_text = "SYNTHETIC BENCHMARK"
     ax4.text(0.05, 0.95, title_text, transform=ax4.transAxes,
              fontsize=12, fontweight='bold', color=COLORS['text_neutral'], va='top')
              

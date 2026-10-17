@@ -1,11 +1,5 @@
-v0.4 (Blantyre) — 13 September 2026 — Canonical TEP architecture alignment: replaced "Schwarzschild horizon" with "Schwarzschild radius"; added Bahrain (TEP-BH) successor reference for canonical strong-field formulation; updated gravitational echo language to soliton compactness scale
+v0.5 (Blantyre) — 17 October 2026 — Two-branch kinetic soliton solve, Jeans kinematic audit, and corpus resync
 
-- Rewrote the forward-model section around the dynamical metric-shock predictions
-- Updated references and the reproducibility section
-- Aligned abstract and introduction wording with the canonical corpus framing
-
-v0.3 (Blantyre) – Temporal Topology Alignment
-
-- Aligned with TEP v0.7 framework: Replaced Vainshtein/screening terminology with continuous Temporal Topology nomenclature, introducing Temporal Shear as the operative field gradient describing continuous spatial profile recovery.
-- Reclassified paper numbering: Updated to Paper 7 (TEP-RBH) with corrected cross-references to TEP-UCD (Paper 6) and standardized citation formatting across the manuscript series.
-- Clarified soliton scale interpretation: R_T ~ 1.3 R_S represents the near-source transition scale, not the full 62 kpc wake length.
+- Re-solved the forced spherical boundary-value problem under the selected two-branch kinetic sector (P_,X = k sqrt(xi) + 2xi, k = 16.03): two-branch exterior shear enhancement 3.28x at 1 kpc, 32.8x at 10 kpc, with shear-recovery radius R_s = sqrt(GM/g_t)
+- Expanded the Jeans kinematic and emission-line wake analysis and aligned the optical and dynamical sections with the unified (3+1) ADM unstretched-space metric
+- Rolled companion citations forward and synchronized the shared core library

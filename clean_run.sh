@@ -45,8 +45,8 @@ find site/figures -name "*.txt" -delete 2>/dev/null || true
 
 # Remove generated manuscript files
 echo "  🧹 Removing generated manuscript files..."
-rm -f "7-TEP-RBH-v0.3-Blantyre.md"
-rm -f "7-TEP-RBH-v0.3-Blantyre.pdf"
+rm -f "G7-TEP-RBH-v0.5-Blantyre.md"
+rm -f "G7-TEP-RBH-v0.5-Blantyre.pdf"
 
 # Remove Python cache files
 echo "  🧹 Cleaning Python cache..."

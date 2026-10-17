@@ -188,6 +188,43 @@ def main() -> None:
                              0.0, s0_env(r), xtol=1e-45)
     deep_depth_env, _ = quad(s_env, R_T, R_OUT, epsabs=1e-42, limit=400)
 
+    # Also evaluate Paper 0's selected two-branch kinetic sector P_,X = k sqrt(xi) + 2 xi (k = 16.03)
+    import sys as _sys
+    _sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+    from core.scalar_field import screening_y_two_branch
+
+    def s_two_branch(r: float, M_src: float = M_BARY) -> float:
+        g_n = G * M_src / (r * r)
+        y_tb = float(screening_y_two_branch(g_n))
+        return 2.0 * BETA_A**2 * y_tb * g_n / (C**2)
+
+    R_WAKE_OUT = 62.0 * KPC  # 62 kpc wake length
+    # Integrate in log(r) to maintain machine precision across 10.6 decades (R_T = 7.8e10 m to R_WAKE_OUT = 1.9e21 m)
+    depth_tb_bary, _ = quad(
+        lambda ln_r: math.exp(ln_r) * s_two_branch(math.exp(ln_r), M_BARY),
+        math.log(R_T), math.log(R_WAKE_OUT), epsrel=1e-10, limit=400
+    )
+    depth_tb_env, _ = quad(
+        lambda ln_r: math.exp(ln_r) * s_two_branch(math.exp(ln_r), M_env),
+        math.log(R_T), math.log(R_WAKE_OUT), epsrel=1e-10, limit=400
+    )
+    # Observed stellar+gas wake mass from van Dokkum et al. (2023, 2025): M_wake,obs ~ 4e8 M_sun
+    M_wake_obs = 4.0e8 * M_SUN
+    M_env_obs = M_BARY + M_wake_obs
+    depth_tb_env_obs, _ = quad(
+        lambda ln_r: math.exp(ln_r) * s_two_branch(math.exp(ln_r), M_env_obs),
+        math.log(R_T), math.log(R_WAKE_OUT), epsrel=1e-10, limit=400
+    )
+    v_circ_tb_kms = math.sqrt(C**2 * 1.0 * KPC * s_two_branch(1.0 * KPC, M_env)) / 1.0e3
+    v_circ_tb_obs_wake_kms = math.sqrt(C**2 * 1.0 * KPC * s_two_branch(1.0 * KPC, M_env_obs)) / 1.0e3
+
+    for name, r_pc in radii_pc.items():
+        r = r_pc * PC
+        s_tb = s_two_branch(r, M_BARY)
+        profile_table[name]["two_branch_shear_m_inv"] = s_tb
+        profile_table[name]["two_branch_a_phi_m_s2"] = C**2 * s_tb
+        profile_table[name]["two_branch_over_unit_term"] = s_tb / profile_table[name]["shear_m_inv"] if profile_table[name]["shear_m_inv"] > 0 else None
+
     # ------------------------------------------------------------------
     # 2. amplitude/interior sector: corpus quartic equilibrium
     # ------------------------------------------------------------------
@@ -281,6 +318,16 @@ def main() -> None:
             "R_shear_pc": R_shear / PC,
             "r_star_pc": r_star / PC,
             "deep_halo_depth_delta_ln_A": deep_depth,
+            "two_branch_selected_sector": {
+                "equation": "P_,X = k sqrt(xi) + 2 xi (k = 16.03, zero free parameters)",
+                "deep_halo_depth_baryonic_62kpc": depth_tb_bary,
+                "deep_halo_depth_with_envelope_62kpc": depth_tb_env,
+                "deep_halo_depth_with_observed_wake_4e8Msun_62kpc": depth_tb_env_obs,
+                "v_circ_at_1kpc_kms": v_circ_tb_kms,
+                "v_circ_at_1kpc_observed_wake_4e8Msun_kms": v_circ_tb_obs_wake_kms,
+                "shear_boost_at_1kpc_over_unit_term": profile_table["1_kpc"]["two_branch_over_unit_term"],
+                "shear_boost_at_10kpc_over_unit_term": profile_table["10_kpc"]["two_branch_over_unit_term"],
+            },
             "profile_table": profile_table,
             "existence_checks": {
                 "positive_unique_root_all_radii": True,

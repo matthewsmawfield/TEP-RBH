@@ -224,9 +224,11 @@ ax1.plot(distances_plot, ages_thermal_plot, '-', color=c_thermal, linewidth=2.5,
          label=f'Thermal Shock (t_cool = {t_cool} Myr delay)')
 ax1.plot(distances_plot, ages_metric_plot, '-', color=c_metric, linewidth=2.5,
          label='Metric Shock (TEP, immediate)')
-ax1.errorbar(distances, ages_observed, yerr=stellar_data['age_error'], 
-             fmt='o', color=c_obs, markersize=8, capsize=5,
-             label='Observed (van Dokkum 2023)')
+ax1.plot(distances, ages_observed, '--', color=c_obs, linewidth=2.2,
+         label='Reported monotonic trend (van Dokkum 2023, schematic)')
+ax1.fill_between(distances, ages_observed - stellar_data['age_error'],
+                 ages_observed + stellar_data['age_error'],
+                 color=c_obs, alpha=0.15)
 
 # Mark the delay zone
 ax1.axvspan(0, delay_zone, alpha=0.15, color=c_thermal, 
